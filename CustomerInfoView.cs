@@ -44,5 +44,15 @@ namespace EasyBizPos
         {
 
         }
+
+        private void Search_Click(object sender, EventArgs e)
+        {
+            CustomerInformationDAO customerInfoDAO = new CustomerInformationDAO();
+            customerInfoBindingSource.DataSource = customerInfoDAO.searchCustomerName(SearchText.Text);
+            customerView.DataSource = customerInfoBindingSource;
+
+
+
+        }
     }
 }

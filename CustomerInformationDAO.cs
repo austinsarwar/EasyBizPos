@@ -28,7 +28,7 @@ namespace EasyBizPos
                     {
                         ID = reader.GetInt32(0),
                         Name = reader.GetString(1),
-                        PhoneNumber = reader.GetInt32(2),
+                        PhoneNumber = reader.GetString(2),
                         Email = reader.GetString(3),
                         Date = reader.GetDateTime(4),
                     };
@@ -43,6 +43,42 @@ namespace EasyBizPos
 
 
         }
-        
+        public List<CustomerInformation> searchCustomerName(string searchTerm)
+        {
+            // start with empty list
+            List<CustomerInformation> returnThese = new List<CustomerInformation>();
+            // connect to mysql server
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            connection.Open();
+            String searchWildPhrase = "%" + searchTerm + "%";
+            MySqlCommand command = new MySqlCommand();
+            command.CommandText = "SELECT ID, NAME, PHONE_NUMBER, EMAIL, DATE FROM customerinfo WHERE NAME LIKE @search";
+            command.Parameters.AddWithValue("@search", searchWildPhrase);
+            command.Connection = connection;
+
+            using (MySqlDataReader reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    CustomerInformation c = new CustomerInformation
+                    {
+                        ID = reader.GetInt32(0),
+                        Name = reader.GetString(1),
+                        PhoneNumber = reader.GetString(2),
+                        Email = reader.GetString(3),
+                        Date = reader.GetDateTime(4),
+                    };
+                    returnThese.Add(c);
+
+                }
+            }
+
+            connection.Close();
+
+            return returnThese;
+
+
+        }
+
     }
 }

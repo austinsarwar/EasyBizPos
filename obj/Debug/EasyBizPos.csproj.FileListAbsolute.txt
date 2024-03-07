@@ -33,7 +33,6 @@ C:\Users\austin\Desktop\c_projects\EasyBizPos\bin\Debug\System.Numerics.Vectors.
 C:\Users\austin\Desktop\c_projects\EasyBizPos\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\austin\Desktop\c_projects\EasyBizPos\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.csproj.AssemblyReference.cache
-C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.Form1.resources
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.Properties.Resources.resources
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.csproj.GenerateResource.cache
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.csproj.CoreCompileInputs.cache
@@ -41,3 +40,4 @@ C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.csproj.CopyCo
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.exe
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.pdb
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.CatalogView.resources
+C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.CustomerInfoView.resources

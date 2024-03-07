@@ -37,6 +37,8 @@
             this.RegisterBtn = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.SearchBtn = new System.Windows.Forms.Button();
+            this.SearchText = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.customerView)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +59,7 @@
             // customerView
             // 
             this.customerView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.customerView.Location = new System.Drawing.Point(696, 75);
+            this.customerView.Location = new System.Drawing.Point(708, 182);
             this.customerView.Name = "customerView";
             this.customerView.RowHeadersWidth = 62;
             this.customerView.RowTemplate.Height = 28;
@@ -127,10 +129,10 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button4.BackColor = System.Drawing.Color.LightSlateGray;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Location = new System.Drawing.Point(1374, 882);
+            this.button4.Location = new System.Drawing.Point(1386, 984);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(173, 64);
             this.button4.TabIndex = 3;
@@ -148,11 +150,34 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Customer Information";
             // 
+            // SearchBtn
+            // 
+            this.SearchBtn.BackColor = System.Drawing.Color.LightSlateGray;
+            this.SearchBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.SearchBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.SearchBtn.Location = new System.Drawing.Point(1346, 118);
+            this.SearchBtn.Name = "SearchBtn";
+            this.SearchBtn.Size = new System.Drawing.Size(230, 49);
+            this.SearchBtn.TabIndex = 5;
+            this.SearchBtn.Text = "Search";
+            this.SearchBtn.UseVisualStyleBackColor = false;
+            this.SearchBtn.Click += new System.EventHandler(this.Search_Click);
+            // 
+            // SearchText
+            // 
+            this.SearchText.Location = new System.Drawing.Point(883, 127);
+            this.SearchText.Name = "SearchText";
+            this.SearchText.Size = new System.Drawing.Size(457, 26);
+            this.SearchText.TabIndex = 6;
+            // 
             // CustomerInfoView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(1778, 1544);
+            this.Controls.Add(this.SearchText);
+            this.Controls.Add(this.SearchBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.panel1);
@@ -178,6 +203,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button HomeBtn;
+        private System.Windows.Forms.Button SearchBtn;
+        private System.Windows.Forms.TextBox SearchText;
     }
 }
 

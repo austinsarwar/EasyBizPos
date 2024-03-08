@@ -41,3 +41,5 @@ C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.exe
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.pdb
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.CatalogView.resources
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.CustomerInfoView.resources
+C:\Users\austin\Desktop\c_projects\EasyBizPos\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\austin\Desktop\c_projects\EasyBizPos\bin\Debug\FontAwesome.Sharp.dll

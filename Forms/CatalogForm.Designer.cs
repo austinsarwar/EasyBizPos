@@ -43,12 +43,13 @@
             // catView
             // 
             this.catView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.catView.Location = new System.Drawing.Point(696, 75);
+            this.catView.Location = new System.Drawing.Point(600, 101);
             this.catView.Name = "catView";
             this.catView.RowHeadersWidth = 62;
             this.catView.RowTemplate.Height = 28;
-            this.catView.Size = new System.Drawing.Size(851, 796);
+            this.catView.Size = new System.Drawing.Size(439, 485);
             this.catView.TabIndex = 0;
+            this.catView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.catView_CellContentClick);
             // 
             // panel1
             // 
@@ -58,13 +59,14 @@
             this.panel1.Controls.Add(this.RegisterBtn);
             this.panel1.Controls.Add(this.CatalogBtn);
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(500, 1800);
             this.panel1.TabIndex = 1;
             // 
             // HomeBtn
             // 
-            this.HomeBtn.BackColor = System.Drawing.Color.MidnightBlue;
+            this.HomeBtn.BackColor = System.Drawing.Color.DarkSlateGray;
             this.HomeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.HomeBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.HomeBtn.Location = new System.Drawing.Point(96, 197);
@@ -76,10 +78,11 @@
             // 
             // CustomerBtn
             // 
-            this.CustomerBtn.BackColor = System.Drawing.Color.MidnightBlue;
+            this.CustomerBtn.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.CustomerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CustomerBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.CustomerBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.CustomerBtn.Location = new System.Drawing.Point(96, 431);
+            this.CustomerBtn.Location = new System.Drawing.Point(96, 371);
             this.CustomerBtn.Name = "CustomerBtn";
             this.CustomerBtn.Size = new System.Drawing.Size(208, 81);
             this.CustomerBtn.TabIndex = 4;
@@ -89,10 +92,11 @@
             // 
             // RegisterBtn
             // 
-            this.RegisterBtn.BackColor = System.Drawing.Color.MidnightBlue;
+            this.RegisterBtn.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.RegisterBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RegisterBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.RegisterBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.RegisterBtn.Location = new System.Drawing.Point(96, 317);
+            this.RegisterBtn.Location = new System.Drawing.Point(96, 284);
             this.RegisterBtn.Name = "RegisterBtn";
             this.RegisterBtn.Size = new System.Drawing.Size(208, 81);
             this.RegisterBtn.TabIndex = 3;
@@ -101,10 +105,11 @@
             // 
             // CatalogBtn
             // 
-            this.CatalogBtn.BackColor = System.Drawing.Color.MidnightBlue;
+            this.CatalogBtn.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.CatalogBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CatalogBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.CatalogBtn.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.CatalogBtn.Location = new System.Drawing.Point(96, 537);
+            this.CatalogBtn.Location = new System.Drawing.Point(96, 458);
             this.CatalogBtn.Name = "CatalogBtn";
             this.CatalogBtn.Size = new System.Drawing.Size(208, 81);
             this.CatalogBtn.TabIndex = 2;
@@ -129,23 +134,26 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1007, 18);
+            this.label1.Location = new System.Drawing.Point(727, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(159, 54);
             this.label1.TabIndex = 7;
             this.label1.Text = "Catalog";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // CatalogView
+            // CatalogForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1778, 1544);
+            this.ClientSize = new System.Drawing.Size(1124, 726);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.RefreshBtn);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.catView);
-            this.Name = "CatalogView";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "CatalogForm";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "CatalogView";
             this.Load += new System.EventHandler(this.CatalogView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.catView)).EndInit();

@@ -19,7 +19,7 @@ namespace EasyBizPos
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
             MySqlCommand command = new MySqlCommand("SELECT * FROM customerinfo", connection);
-
+            // Get All data from database and store it in a list
             using(MySqlDataReader reader = command.ExecuteReader())
             {
                 while (reader.Read())
@@ -43,6 +43,7 @@ namespace EasyBizPos
 
 
         }
+        // Search database for data "like" the search string" 
         public List<Customer> searchCustomerName(string searchTerm)
         {
             // start with empty list

@@ -44,5 +44,10 @@ namespace EasyBizPos
         {
 
         }
+
+        private void catView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

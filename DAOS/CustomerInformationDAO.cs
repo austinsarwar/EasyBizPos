@@ -11,10 +11,10 @@ namespace EasyBizPos
     {
 
         string connectionString = "datasource=localhost;port=3306;username=root;password=root;database=easybizpos;";
-        public List<CustomerInformation> getAllCustomerInfo()
+        public List<Customer> getAllCustomerInfo()
         {
             // start with empty list
-            List<CustomerInformation> returnThese = new List<CustomerInformation>();
+            List<Customer> returnThese = new List<Customer>();
             // connect to mysql server
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
@@ -24,7 +24,7 @@ namespace EasyBizPos
             {
                 while (reader.Read())
                 {
-                    CustomerInformation c = new CustomerInformation
+                    Customer c = new Customer
                     {
                         ID = reader.GetInt32(0),
                         Name = reader.GetString(1),
@@ -43,10 +43,10 @@ namespace EasyBizPos
 
 
         }
-        public List<CustomerInformation> searchCustomerName(string searchTerm)
+        public List<Customer> searchCustomerName(string searchTerm)
         {
             // start with empty list
-            List<CustomerInformation> returnThese = new List<CustomerInformation>();
+            List<Customer> returnThese = new List<Customer>();
             // connect to mysql server
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
@@ -60,7 +60,7 @@ namespace EasyBizPos
             {
                 while (reader.Read())
                 {
-                    CustomerInformation c = new CustomerInformation
+                    Customer c = new Customer
                     {
                         ID = reader.GetInt32(0),
                         Name = reader.GetString(1),

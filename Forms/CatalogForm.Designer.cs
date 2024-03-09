@@ -1,6 +1,6 @@
 ﻿namespace EasyBizPos
 {
-    partial class CatalogView
+    partial class CatalogForm
     {
         /// <summary>
         /// Required designer variable.

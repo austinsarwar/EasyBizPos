@@ -16,7 +16,7 @@ namespace EasyBizPos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CustomerInfoView());
+            Application.Run(new HomeFormMain());
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EasyBizPos
 {
-    internal class CustomerInformation
+    internal class Customer
     {
         public int ID { get; set; }
         public string Name { get; set; }

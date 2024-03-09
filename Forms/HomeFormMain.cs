@@ -11,12 +11,12 @@ using FontAwesome.Sharp;
 
 namespace EasyBizPos
 {
-    public partial class CustomerInfoView : Form
+    public partial class HomeFormMain : Form
     {
         BindingSource customerInfoBindingSource = new BindingSource();
         
         
-        public CustomerInfoView()
+        public HomeFormMain()
         {
             InitializeComponent();
            
@@ -38,7 +38,7 @@ namespace EasyBizPos
 
         private void Catalog_Click(object sender, EventArgs e)
         {
-            var cat = new CatalogView();
+            var cat = new CatalogForm();
             cat.Show();
             
 
@@ -72,7 +72,7 @@ namespace EasyBizPos
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
-            var cat = new CatalogView();
+            var cat = new CatalogForm();
             cat.Show();
         }
 

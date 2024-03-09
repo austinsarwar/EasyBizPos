@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace EasyBizPos
 {
-    public partial class CatalogView : Form
+    public partial class CatalogForm : Form
     {
         BindingSource catalogBindingSource = new BindingSource();
-        public CatalogView()
+        public CatalogForm()
         {
             InitializeComponent();
         }

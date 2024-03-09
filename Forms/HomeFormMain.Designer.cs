@@ -1,6 +1,6 @@
 ﻿namespace EasyBizPos
 {
-    partial class CustomerInfoView
+    partial class HomeFormMain
     {
         /// <summary>
         /// Required designer variable.

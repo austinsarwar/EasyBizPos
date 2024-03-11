@@ -44,3 +44,4 @@ C:\Users\austin\Desktop\c_projects\EasyBizPos\bin\Debug\FontAwesome.Sharp.dll
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.CatalogForm.resources
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.HomeFormMain.resources
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.Forms.CustomerForm.resources
+C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.Forms.AddCustomer.resources

@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Xml.Linq;
 
 namespace EasyBizPos
 {
@@ -20,7 +22,7 @@ namespace EasyBizPos
             connection.Open();
             MySqlCommand command = new MySqlCommand("SELECT * FROM customerinfo", connection);
             // Get All data from database and store it in a list
-            using(MySqlDataReader reader = command.ExecuteReader())
+            using (MySqlDataReader reader = command.ExecuteReader())
             {
                 while (reader.Read())
                 {
@@ -36,9 +38,9 @@ namespace EasyBizPos
 
                 }
             }
-            
+
             connection.Close();
-           
+
             return returnThese;
 
 
@@ -73,13 +75,32 @@ namespace EasyBizPos
 
                 }
             }
-
             connection.Close();
-
             return returnThese;
 
 
         }
+        public void AddCustomer(string name, string phone_number, string email)
 
+        {
+            DateTime currentDate = DateTime.Now;
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            connection.Open();
+            MySqlCommand command = new MySqlCommand("INSERT INTO customerInfo (NAME, PHONE_NUMBER, EMAIL, DATE) " +
+                                        "VALUES (@name, @phone_number, @email, @currentDate)", connection);
+
+            // Add parameters to the command
+
+
+            command.Parameters.AddWithValue("@name", name);
+            command.Parameters.AddWithValue("@phone_number", phone_number);
+            command.Parameters.AddWithValue("@email", email);
+            command.Parameters.AddWithValue("@currentDate", currentDate);
+
+            // Execute the command
+            command.ExecuteNonQuery();
+
+
+        }
     }
-}
+    }

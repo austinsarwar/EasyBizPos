@@ -19,6 +19,7 @@ namespace EasyBizPos
         
         public HomeFormMain()
         {
+            // starts the form
             InitializeComponent();
            
 
@@ -27,26 +28,24 @@ namespace EasyBizPos
 
         
 
-        private void CatalogClick(object sender, EventArgs e)
+        
+
+        private void CatalogBtn_Click(object sender, EventArgs e)
         {
+            // Opens the catalog form
             var cat = new CatalogForm();
             cat.MdiParent = this;
             cat.Show();
         }
 
-      
-        
-
-        private void CatalogBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void CustomerBtn_Click(object sender, EventArgs e)
         {
+            // Opens the customer form 
             CustomerForm customerForm = new CustomerForm();
             customerForm.MdiParent = this;
             customerForm.Show();
+
+           
         }
     }
 }

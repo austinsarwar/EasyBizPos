@@ -15,39 +15,14 @@ namespace EasyBizPos
         BindingSource catalogBindingSource = new BindingSource();
         public CatalogForm()
         {
+            // starts the form
             InitializeComponent();
-        }
-
-        private void Refresh_Click(object sender, EventArgs e)
-        {
+            // Loads database into the datagrid
             CatalogDAO catalogDAO = new CatalogDAO();
             catalogBindingSource.DataSource = catalogDAO.getAllCatalog();
-            catView.DataSource = catalogBindingSource;
+            catalogView.DataSource = catalogBindingSource;
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CatalogView_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void catView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+    
     }
 }

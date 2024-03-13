@@ -2,6 +2,7 @@ C:\Users\austin\Desktop\c_projects\EasyBizPos\bin\Debug\EasyBizPos.exe.config
 C:\Users\austin\Desktop\c_projects\EasyBizPos\bin\Debug\EasyBizPos.exe
 C:\Users\austin\Desktop\c_projects\EasyBizPos\bin\Debug\EasyBizPos.pdb
 C:\Users\austin\Desktop\c_projects\EasyBizPos\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\austin\Desktop\c_projects\EasyBizPos\bin\Debug\FontAwesome.Sharp.dll
 C:\Users\austin\Desktop\c_projects\EasyBizPos\bin\Debug\Google.Protobuf.dll
 C:\Users\austin\Desktop\c_projects\EasyBizPos\bin\Debug\K4os.Compression.LZ4.dll
 C:\Users\austin\Desktop\c_projects\EasyBizPos\bin\Debug\K4os.Compression.LZ4.Streams.dll
@@ -26,6 +27,7 @@ C:\Users\austin\Desktop\c_projects\EasyBizPos\bin\Debug\K4os.Hash.xxHash.xml
 C:\Users\austin\Desktop\c_projects\EasyBizPos\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
 C:\Users\austin\Desktop\c_projects\EasyBizPos\bin\Debug\MySql.Data.xml
 C:\Users\austin\Desktop\c_projects\EasyBizPos\bin\Debug\System.Buffers.xml
+C:\Users\austin\Desktop\c_projects\EasyBizPos\bin\Debug\System.Configuration.ConfigurationManager.xml
 C:\Users\austin\Desktop\c_projects\EasyBizPos\bin\Debug\System.Diagnostics.DiagnosticSource.xml
 C:\Users\austin\Desktop\c_projects\EasyBizPos\bin\Debug\System.IO.Pipelines.xml
 C:\Users\austin\Desktop\c_projects\EasyBizPos\bin\Debug\System.Memory.xml
@@ -33,15 +35,14 @@ C:\Users\austin\Desktop\c_projects\EasyBizPos\bin\Debug\System.Numerics.Vectors.
 C:\Users\austin\Desktop\c_projects\EasyBizPos\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\austin\Desktop\c_projects\EasyBizPos\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.csproj.AssemblyReference.cache
+C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.Cart.resources
+C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.Forms.AddCustomer.resources
+C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.CatalogForm.resources
+C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.Forms.CustomerForm.resources
+C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.HomeFormMain.resources
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.Properties.Resources.resources
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.csproj.GenerateResource.cache
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.csproj.CoreCompileInputs.cache
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.csproj.CopyComplete
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.exe
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.pdb
-C:\Users\austin\Desktop\c_projects\EasyBizPos\bin\Debug\System.Configuration.ConfigurationManager.xml
-C:\Users\austin\Desktop\c_projects\EasyBizPos\bin\Debug\FontAwesome.Sharp.dll
-C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.CatalogForm.resources
-C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.HomeFormMain.resources
-C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.Forms.CustomerForm.resources
-C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.Forms.AddCustomer.resources

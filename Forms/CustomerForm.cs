@@ -21,11 +21,17 @@ namespace EasyBizPos.Forms
             // Loads database into the datagrid
             CustomerInformationDAO customerInfoDAO = new CustomerInformationDAO();
             customerInfoBindingSource.DataSource = customerInfoDAO.getAllCustomerInfo();
-            CustomerDataGrid.DataSource = customerInfoBindingSource;
+            dataGridCustomer.DataSource = customerInfoBindingSource;
         }
 
      
-     
+        public void refreshDataGrid()
+        {
+            // Refreshes the datagrid
+            CustomerInformationDAO customerInfoDAO = new CustomerInformationDAO();
+            customerInfoBindingSource.DataSource = customerInfoDAO.getAllCustomerInfo();
+            dataGridCustomer.DataSource = customerInfoBindingSource;
+        }
 
         private void SearchBtn_Click(object sender, EventArgs e)
         {
@@ -33,14 +39,42 @@ namespace EasyBizPos.Forms
             string searchTerm = searchQuery.Text;
             CustomerInformationDAO customerFormInfo = new CustomerInformationDAO();
             customerInfoBindingSource.DataSource = customerFormInfo.searchCustomerName(searchTerm);
-            CustomerDataGrid.DataSource = customerInfoBindingSource;
+            dataGridCustomer.DataSource = customerInfoBindingSource;
 
         }
 
         private void addCustomer_Click(object sender, EventArgs e)
         {
             AddCustomer addCustomer = new AddCustomer();
-            addCustomer.Show();
+            addCustomer.ShowDialog();
+            refreshDataGrid();
+
+
+
+        }
+
+     
+
+     
+
+        private void btnDeleteCustomer_Click(object sender, EventArgs e)
+        {
+            int rowIndex = dataGridCustomer.CurrentCell.RowIndex;
+
+            int columnIndex = 1;
+            string name = (string)dataGridCustomer.Rows[rowIndex].Cells[columnIndex].Value;
+            int id = (int)dataGridCustomer.Rows[rowIndex].Cells[0].Value;
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this customer " + name + "?", "Delete Confirmation", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                CustomerInformationDAO customerInfoDAO = new CustomerInformationDAO();
+                customerInfoDAO.DeleteCustomer(id);
+                customerInfoBindingSource.DataSource = customerInfoDAO.getAllCustomerInfo();
+                dataGridCustomer.DataSource = customerInfoBindingSource;
+
+
+
+            }
 
         }
     }

@@ -12,7 +12,8 @@ namespace EasyBizPos.Forms
 {
     public partial class AddCustomer : Form
     {
-        
+        BindingSource customerInfoBindingSource = new BindingSource();
+
         public AddCustomer()
         {
             InitializeComponent();
@@ -21,11 +22,15 @@ namespace EasyBizPos.Forms
         
         private void iconButton1_Click_1(object sender, EventArgs e)
         {
+            // set the customer name, phone number, and email to the textboxes
             string name = nameTxt.Text;
             string phoneNumber = phoneNumberTxt.Text;
             string email = emailTxt.Text;
+            // Create a new instance of the CustomerInformationDAO Database Access Object
             CustomerInformationDAO customerInformationDAO = new CustomerInformationDAO();
+            // Add the customer info to the database
             customerInformationDAO.AddCustomer(name, phoneNumber, email);
+            // Close the form
             this.Close();
 
         }

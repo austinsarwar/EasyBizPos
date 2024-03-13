@@ -1,4 +1,6 @@
-﻿namespace EasyBizPos
+﻿using System.Windows.Forms;
+
+namespace EasyBizPos
 {
     partial class HomeFormMain
     {
@@ -38,7 +40,8 @@
             this.HomeBtn = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelMainLogo = new System.Windows.Forms.Label();
+            this.panelMdiParent = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +60,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.panel1.Controls.Add(this.SettingBtn);
             this.panel1.Controls.Add(this.TransactionsBtn);
             this.panel1.Controls.Add(this.CustomerBtn);
@@ -82,7 +85,7 @@
             this.SettingBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.SettingBtn.IconSize = 55;
             this.SettingBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.SettingBtn.Location = new System.Drawing.Point(0, 440);
+            this.SettingBtn.Location = new System.Drawing.Point(0, 430);
             this.SettingBtn.Name = "SettingBtn";
             this.SettingBtn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.SettingBtn.Size = new System.Drawing.Size(250, 60);
@@ -103,7 +106,7 @@
             this.TransactionsBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.TransactionsBtn.IconSize = 55;
             this.TransactionsBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.TransactionsBtn.Location = new System.Drawing.Point(0, 380);
+            this.TransactionsBtn.Location = new System.Drawing.Point(0, 370);
             this.TransactionsBtn.Name = "TransactionsBtn";
             this.TransactionsBtn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.TransactionsBtn.Size = new System.Drawing.Size(250, 60);
@@ -124,7 +127,7 @@
             this.CustomerBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.CustomerBtn.IconSize = 55;
             this.CustomerBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.CustomerBtn.Location = new System.Drawing.Point(0, 320);
+            this.CustomerBtn.Location = new System.Drawing.Point(0, 310);
             this.CustomerBtn.Name = "CustomerBtn";
             this.CustomerBtn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.CustomerBtn.Size = new System.Drawing.Size(250, 60);
@@ -146,7 +149,7 @@
             this.CartBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.CartBtn.IconSize = 55;
             this.CartBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.CartBtn.Location = new System.Drawing.Point(0, 260);
+            this.CartBtn.Location = new System.Drawing.Point(0, 250);
             this.CartBtn.Name = "CartBtn";
             this.CartBtn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.CartBtn.Size = new System.Drawing.Size(250, 60);
@@ -167,7 +170,7 @@
             this.CatalogBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.CatalogBtn.IconSize = 55;
             this.CatalogBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.CatalogBtn.Location = new System.Drawing.Point(0, 200);
+            this.CatalogBtn.Location = new System.Drawing.Point(0, 190);
             this.CatalogBtn.Name = "CatalogBtn";
             this.CatalogBtn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.CatalogBtn.Size = new System.Drawing.Size(250, 60);
@@ -189,7 +192,7 @@
             this.HomeBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.HomeBtn.IconSize = 55;
             this.HomeBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.HomeBtn.Location = new System.Drawing.Point(0, 140);
+            this.HomeBtn.Location = new System.Drawing.Point(0, 130);
             this.HomeBtn.Name = "HomeBtn";
             this.HomeBtn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.HomeBtn.Size = new System.Drawing.Size(250, 60);
@@ -198,47 +201,59 @@
             this.HomeBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.HomeBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.HomeBtn.UseVisualStyleBackColor = true;
+            this.HomeBtn.Click += new System.EventHandler(this.HomeBtn_Click);
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(250, 140);
+            this.panel2.Size = new System.Drawing.Size(250, 130);
             this.panel2.TabIndex = 8;
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.panel3.Controls.Add(this.label1);
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.panel3.Controls.Add(this.labelMainLogo);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(250, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1116, 80);
+            this.panel3.Size = new System.Drawing.Size(1116, 120);
             this.panel3.TabIndex = 18;
             // 
-            // label1
+            // labelMainLogo
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(401, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(228, 54);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "EasyBizPos";
+            this.labelMainLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.labelMainLogo.AutoSize = true;
+            this.labelMainLogo.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMainLogo.ForeColor = System.Drawing.Color.White;
+            this.labelMainLogo.Location = new System.Drawing.Point(431, 35);
+            this.labelMainLogo.Name = "labelMainLogo";
+            this.labelMainLogo.Size = new System.Drawing.Size(137, 54);
+            this.labelMainLogo.TabIndex = 0;
+            this.labelMainLogo.Text = "Home";
+            // 
+            // panelMdiParent
+            // 
+            this.panelMdiParent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panelMdiParent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMdiParent.Location = new System.Drawing.Point(250, 120);
+            this.panelMdiParent.Name = "panelMdiParent";
+            this.panelMdiParent.Size = new System.Drawing.Size(1116, 742);
+            this.panelMdiParent.TabIndex = 20;
             // 
             // HomeFormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.SystemColors.Menu;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1366, 862);
+            this.Controls.Add(this.panelMdiParent);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.RegisterBtn);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IsMdiContainer = true;
             this.Name = "HomeFormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -262,7 +277,8 @@
         private FontAwesome.Sharp.IconButton CartBtn;
         private FontAwesome.Sharp.IconButton CatalogBtn;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelMainLogo;
+        private Panel panelMdiParent;
     }
 }
 

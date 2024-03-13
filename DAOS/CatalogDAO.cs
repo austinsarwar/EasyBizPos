@@ -24,7 +24,7 @@ namespace EasyBizPos
                     {
                         ProductId = reader.GetInt32(0),
                         ProductName = reader.GetString(1),
-                        Price = reader.GetInt32(2),
+                        Price = reader.GetDecimal(2),
                         Stock = reader.GetInt32(3),
 
 

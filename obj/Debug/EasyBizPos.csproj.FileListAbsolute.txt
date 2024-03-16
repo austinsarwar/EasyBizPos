@@ -35,7 +35,6 @@ C:\Users\austin\Desktop\c_projects\EasyBizPos\bin\Debug\System.Numerics.Vectors.
 C:\Users\austin\Desktop\c_projects\EasyBizPos\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\austin\Desktop\c_projects\EasyBizPos\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.csproj.AssemblyReference.cache
-C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.Cart.resources
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.Forms.AddCustomer.resources
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.CatalogForm.resources
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.Forms.CustomerForm.resources
@@ -46,3 +45,6 @@ C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.csproj.CoreCo
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.csproj.CopyComplete
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.exe
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.pdb
+C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.Forms.CartForm.resources
+C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.Forms.PreviewCartForm.resources
+C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.Forms.ToastSuccessForm.resources

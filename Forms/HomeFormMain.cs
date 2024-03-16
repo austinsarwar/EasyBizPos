@@ -24,20 +24,6 @@ namespace EasyBizPos
             // starts the form
             InitializeComponent();
 
-            // Loads database into the datagrid
-            foreach (Control ctrl in this.Controls)
-            {
-                // Set the background color of the mdi parent form
-                Color mdiParentColor = Color.FromArgb(34, 34, 74);
-                // If the control is a MdiClient
-                if (ctrl is MdiClient)
-                {
-                    // Set the background color of the mdi parent form  
-                    ctrl.BackColor = mdiParentColor; // Or any other color
-
-                    break;
-                }
-            }
 
 
         }
@@ -49,6 +35,8 @@ namespace EasyBizPos
 
         private void CatalogBtn_Click(object sender, EventArgs e)
         {
+            // Hides the panel
+            this.panelMdiParent.Visible = false;
             // Create a new instance of the catalog form
             var catalog = new CatalogForm();
             // Sets the parent form to the main form
@@ -61,7 +49,7 @@ namespace EasyBizPos
 
         private void CustomerBtn_Click(object sender, EventArgs e)
         {
-            // Opens the customer form 
+            // Hides the panel
             this.panelMdiParent.Visible = false;
             // Creates a new instance of the customer form
             CustomerForm customerForm = new CustomerForm();
@@ -77,13 +65,28 @@ namespace EasyBizPos
 
         private void HomeBtn_Click(object sender, EventArgs e)
         {
-                // Closes all the child forms
-                foreach (Form form in this.MdiChildren)
+            this.panelMdiParent.Visible = true;
+            // Closes all the child forms
+            foreach (Form form in this.MdiChildren)
                 {
                     form.Close();
                 }
             // Set the main logo to Home
             labelMainLogo.Text = "Home";
+        }
+
+        private void HomeFormMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CartBtn_Click(object sender, EventArgs e)
+        {
+            this.panelMdiParent.Visible=false;
+            CartForm cartForm = new CartForm();
+            cartForm.MdiParent = this;
+            cartForm.Show();
+
         }
     }
 }

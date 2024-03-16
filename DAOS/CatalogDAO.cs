@@ -4,13 +4,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EasyBizPos.Models;
+using EasyBizPos.DAOS;
 
-namespace EasyBizPos
+
+namespace EasyBizPos.DAOS
 {
     internal class CatalogDAO
     {
-        string connectionString = "datasource=localhost;port=3306;username=root;password=root;database=easybizpos;";
+        string connectionString = Environment.GetEnvironmentVariable("DATABASE_CONNECTION_STRING");
+
         List<Catalog> returnThese = new List<Catalog>();
+
 
         public List<Catalog> getAllCatalog()
         {
@@ -36,6 +41,7 @@ namespace EasyBizPos
             return returnThese;
 
         }
+       
 
     }
 }

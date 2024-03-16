@@ -42,6 +42,7 @@ namespace EasyBizPos
             this.panel3 = new System.Windows.Forms.Panel();
             this.labelMainLogo = new System.Windows.Forms.Label();
             this.panelMdiParent = new System.Windows.Forms.Panel();
+            this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -60,7 +61,7 @@ namespace EasyBizPos
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.panel1.Controls.Add(this.SettingBtn);
             this.panel1.Controls.Add(this.TransactionsBtn);
             this.panel1.Controls.Add(this.CustomerBtn);
@@ -71,7 +72,7 @@ namespace EasyBizPos
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 862);
+            this.panel1.Size = new System.Drawing.Size(250, 880);
             this.panel1.TabIndex = 7;
             // 
             // SettingBtn
@@ -158,6 +159,7 @@ namespace EasyBizPos
             this.CartBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CartBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.CartBtn.UseVisualStyleBackColor = true;
+            this.CartBtn.Click += new System.EventHandler(this.CartBtn_Click);
             // 
             // CatalogBtn
             // 
@@ -205,7 +207,7 @@ namespace EasyBizPos
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -214,12 +216,12 @@ namespace EasyBizPos
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.panel3.Controls.Add(this.labelMainLogo);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(250, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1116, 120);
+            this.panel3.Size = new System.Drawing.Size(1199, 130);
             this.panel3.TabIndex = 18;
             // 
             // labelMainLogo
@@ -228,7 +230,7 @@ namespace EasyBizPos
             this.labelMainLogo.AutoSize = true;
             this.labelMainLogo.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMainLogo.ForeColor = System.Drawing.Color.White;
-            this.labelMainLogo.Location = new System.Drawing.Point(431, 35);
+            this.labelMainLogo.Location = new System.Drawing.Point(472, 35);
             this.labelMainLogo.Name = "labelMainLogo";
             this.labelMainLogo.Size = new System.Drawing.Size(137, 54);
             this.labelMainLogo.TabIndex = 0;
@@ -236,19 +238,26 @@ namespace EasyBizPos
             // 
             // panelMdiParent
             // 
-            this.panelMdiParent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panelMdiParent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.panelMdiParent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMdiParent.Location = new System.Drawing.Point(250, 120);
+            this.panelMdiParent.Location = new System.Drawing.Point(250, 130);
             this.panelMdiParent.Name = "panelMdiParent";
-            this.panelMdiParent.Size = new System.Drawing.Size(1116, 742);
-            this.panelMdiParent.TabIndex = 20;
+            this.panelMdiParent.Size = new System.Drawing.Size(1199, 750);
+            this.panelMdiParent.TabIndex = 22;
+            // 
+            // mySqlCommand1
+            // 
+            this.mySqlCommand1.CacheAge = 0;
+            this.mySqlCommand1.Connection = null;
+            this.mySqlCommand1.EnableCaching = false;
+            this.mySqlCommand1.Transaction = null;
             // 
             // HomeFormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1366, 862);
+            this.ClientSize = new System.Drawing.Size(1449, 880);
             this.Controls.Add(this.panelMdiParent);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -259,6 +268,7 @@ namespace EasyBizPos
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.HomeFormMain_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -279,6 +289,7 @@ namespace EasyBizPos
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label labelMainLogo;
         private Panel panelMdiParent;
+        private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
     }
 }
 

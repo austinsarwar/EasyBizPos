@@ -36,9 +36,12 @@
             this.CartIcon = new FontAwesome.Sharp.IconPictureBox();
             this.labelCartCounter = new System.Windows.Forms.Label();
             this.btnAddToCart = new FontAwesome.Sharp.IconButton();
-            this.dataGridCatalog = new System.Windows.Forms.DataGridView();
+            this.dataGridCart = new System.Windows.Forms.DataGridView();
+            this.btnCartPreview = new FontAwesome.Sharp.IconButton();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.CartIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridCatalog)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCart)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // mySqlDataAdapter1
@@ -50,7 +53,7 @@
             // 
             // CartIcon
             // 
-            this.CartIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
+            this.CartIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.CartIcon.IconChar = FontAwesome.Sharp.IconChar.ShoppingCart;
             this.CartIcon.IconColor = System.Drawing.Color.White;
             this.CartIcon.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -68,21 +71,22 @@
             this.labelCartCounter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelCartCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCartCounter.ForeColor = System.Drawing.Color.Black;
-            this.labelCartCounter.Location = new System.Drawing.Point(2064, 142);
+            this.labelCartCounter.Location = new System.Drawing.Point(2064, 158);
             this.labelCartCounter.Name = "labelCartCounter";
-            this.labelCartCounter.Size = new System.Drawing.Size(31, 32);
+            this.labelCartCounter.Size = new System.Drawing.Size(0, 32);
             this.labelCartCounter.TabIndex = 2;
-            this.labelCartCounter.Text = "0";
             // 
             // btnAddToCart
             // 
-            this.btnAddToCart.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnAddToCart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(207)))), ((int)(((byte)(250)))));
             this.btnAddToCart.FlatAppearance.BorderSize = 0;
             this.btnAddToCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddToCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddToCart.ForeColor = System.Drawing.Color.Black;
             this.btnAddToCart.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnAddToCart.IconColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAddToCart.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddToCart.Location = new System.Drawing.Point(1777, 1149);
+            this.btnAddToCart.Location = new System.Drawing.Point(1103, 3);
             this.btnAddToCart.Name = "btnAddToCart";
             this.btnAddToCart.Size = new System.Drawing.Size(318, 97);
             this.btnAddToCart.TabIndex = 3;
@@ -91,18 +95,18 @@
             this.btnAddToCart.UseVisualStyleBackColor = false;
             this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click);
             // 
-            // dataGridCatalog
+            // dataGridCart
             // 
-            this.dataGridCatalog.AllowUserToAddRows = false;
-            this.dataGridCatalog.AllowUserToDeleteRows = false;
-            this.dataGridCatalog.AllowUserToOrderColumns = true;
-            this.dataGridCatalog.AllowUserToResizeColumns = false;
-            this.dataGridCatalog.AllowUserToResizeRows = false;
-            this.dataGridCatalog.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridCatalog.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridCatalog.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.dataGridCatalog.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridCatalog.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridCart.AllowUserToAddRows = false;
+            this.dataGridCart.AllowUserToDeleteRows = false;
+            this.dataGridCart.AllowUserToOrderColumns = true;
+            this.dataGridCart.AllowUserToResizeColumns = false;
+            this.dataGridCart.AllowUserToResizeRows = false;
+            this.dataGridCart.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridCart.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridCart.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.dataGridCart.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridCart.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.HotTrack;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -110,8 +114,8 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridCatalog.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridCatalog.ColumnHeadersHeight = 100;
+            this.dataGridCart.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridCart.ColumnHeadersHeight = 100;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.Salmon;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -119,14 +123,14 @@
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridCatalog.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridCatalog.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
-            this.dataGridCatalog.EnableHeadersVisualStyles = false;
-            this.dataGridCatalog.GridColor = System.Drawing.Color.SlateBlue;
-            this.dataGridCatalog.Location = new System.Drawing.Point(300, 193);
-            this.dataGridCatalog.Name = "dataGridCatalog";
-            this.dataGridCatalog.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dataGridCatalog.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridCart.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridCart.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
+            this.dataGridCart.EnableHeadersVisualStyles = false;
+            this.dataGridCart.GridColor = System.Drawing.Color.SlateBlue;
+            this.dataGridCart.Location = new System.Drawing.Point(300, 193);
+            this.dataGridCart.Name = "dataGridCart";
+            this.dataGridCart.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dataGridCart.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -134,27 +138,56 @@
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridCatalog.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dataGridCatalog.RowHeadersWidth = 62;
+            this.dataGridCart.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridCart.RowHeadersWidth = 62;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridCatalog.RowsDefaultCellStyle = dataGridViewCellStyle8;
-            this.dataGridCatalog.RowTemplate.Height = 28;
-            this.dataGridCatalog.Size = new System.Drawing.Size(1800, 950);
-            this.dataGridCatalog.TabIndex = 17;
+            this.dataGridCart.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridCart.RowTemplate.Height = 28;
+            this.dataGridCart.Size = new System.Drawing.Size(1800, 950);
+            this.dataGridCart.TabIndex = 17;
+            // 
+            // btnCartPreview
+            // 
+            this.btnCartPreview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            this.btnCartPreview.FlatAppearance.BorderSize = 0;
+            this.btnCartPreview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCartPreview.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCartPreview.ForeColor = System.Drawing.Color.Black;
+            this.btnCartPreview.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnCartPreview.IconColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCartPreview.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCartPreview.Location = new System.Drawing.Point(1427, 3);
+            this.btnCartPreview.Name = "btnCartPreview";
+            this.btnCartPreview.Size = new System.Drawing.Size(318, 97);
+            this.btnCartPreview.TabIndex = 18;
+            this.btnCartPreview.Text = "Cart Preview";
+            this.btnCartPreview.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCartPreview.UseVisualStyleBackColor = false;
+            this.btnCartPreview.Click += new System.EventHandler(this.btnCartPreview_Click);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.btnCartPreview);
+            this.flowLayoutPanel1.Controls.Add(this.btnAddToCart);
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(352, 1186);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1748, 125);
+            this.flowLayoutPanel1.TabIndex = 19;
             // 
             // CatalogForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(74)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.ClientSize = new System.Drawing.Size(2417, 1520);
             this.ControlBox = false;
-            this.Controls.Add(this.dataGridCatalog);
-            this.Controls.Add(this.btnAddToCart);
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.dataGridCart);
             this.Controls.Add(this.labelCartCounter);
             this.Controls.Add(this.CartIcon);
             this.ForeColor = System.Drawing.Color.White;
@@ -165,7 +198,8 @@
             this.Text = "CatalogView";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.CartIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridCatalog)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCart)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,6 +210,8 @@
         private FontAwesome.Sharp.IconPictureBox CartIcon;
         private System.Windows.Forms.Label labelCartCounter;
         private FontAwesome.Sharp.IconButton btnAddToCart;
-        private System.Windows.Forms.DataGridView dataGridCatalog;
+        private System.Windows.Forms.DataGridView dataGridCart;
+        private FontAwesome.Sharp.IconButton btnCartPreview;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

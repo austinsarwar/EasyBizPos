@@ -6,13 +6,20 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Xml.Linq;
+using EasyBizPos.Models;
+using EasyBizPos.DAOS;
+using System.Windows;
 
-namespace EasyBizPos
+
+namespace EasyBizPos.DAOS
 {
     internal class CustomerInformationDAO
     {
 
-        string connectionString = "datasource=localhost;port=3306;username=root;password=root;database=easybizpos;";
+        string connectionString = Environment.GetEnvironmentVariable("DATABASE_CONNECTION_STRING");
+        
+        
+        
         public List<Customer> getAllCustomerInfo()
         {
             // start with empty list
@@ -98,7 +105,7 @@ namespace EasyBizPos
             // Open the connection
             connection.Open();
             // Prepare an INSERT command to add a new customer to the 'customerinfo' table.
-            MySqlCommand command = new MySqlCommand("INSERT INTO customerInfo (NAME, PHONE_NUMBER, EMAIL, DATE) " +
+            MySqlCommand command = new MySqlCommand("INSERT INTO customerinfo (NAME, PHONE_NUMBER, EMAIL, DATE) " +
                                         "VALUES (@name, @phone_number, @email, @currentDate)", connection);
 
             // Add parameters to the command prevents SQL injection by ensuring that the value of id is treated as data,

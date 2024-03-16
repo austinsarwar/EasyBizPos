@@ -8,7 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
+using EasyBizPos.DAOS;
+using EasyBizPos.Models;
 namespace EasyBizPos.Forms
+
 {
     public partial class CustomerForm : Form
     {
@@ -60,7 +63,6 @@ namespace EasyBizPos.Forms
         private void btnDeleteCustomer_Click(object sender, EventArgs e)
         {
             int rowIndex = dataGridCustomer.CurrentCell.RowIndex;
-
             int columnIndex = 1;
             string name = (string)dataGridCustomer.Rows[rowIndex].Cells[columnIndex].Value;
             int id = (int)dataGridCustomer.Rows[rowIndex].Cells[0].Value;

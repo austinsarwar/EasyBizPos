@@ -25,7 +25,7 @@ namespace EasyBizPos.Forms
 
             cartBindingSource.DataSource = cart.getCart();
             dataGridCartPreview.DataSource = cartBindingSource;
-
+            
 
         }
     }

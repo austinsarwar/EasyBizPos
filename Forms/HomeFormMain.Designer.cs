@@ -32,6 +32,7 @@ namespace EasyBizPos
         {
             this.RegisterBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.EmployeeBtn = new FontAwesome.Sharp.IconButton();
             this.SettingBtn = new FontAwesome.Sharp.IconButton();
             this.TransactionsBtn = new FontAwesome.Sharp.IconButton();
             this.CustomerBtn = new FontAwesome.Sharp.IconButton();
@@ -62,6 +63,7 @@ namespace EasyBizPos
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.panel1.Controls.Add(this.EmployeeBtn);
             this.panel1.Controls.Add(this.SettingBtn);
             this.panel1.Controls.Add(this.TransactionsBtn);
             this.panel1.Controls.Add(this.CustomerBtn);
@@ -74,6 +76,28 @@ namespace EasyBizPos
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 880);
             this.panel1.TabIndex = 7;
+            // 
+            // EmployeeBtn
+            // 
+            this.EmployeeBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.EmployeeBtn.FlatAppearance.BorderSize = 0;
+            this.EmployeeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EmployeeBtn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.EmployeeBtn.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
+            this.EmployeeBtn.IconColor = System.Drawing.Color.Gainsboro;
+            this.EmployeeBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.EmployeeBtn.IconSize = 55;
+            this.EmployeeBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.EmployeeBtn.Location = new System.Drawing.Point(0, 490);
+            this.EmployeeBtn.Name = "EmployeeBtn";
+            this.EmployeeBtn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.EmployeeBtn.Size = new System.Drawing.Size(250, 60);
+            this.EmployeeBtn.TabIndex = 17;
+            this.EmployeeBtn.Text = "Employee";
+            this.EmployeeBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EmployeeBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.EmployeeBtn.UseVisualStyleBackColor = true;
+            this.EmployeeBtn.Click += new System.EventHandler(this.EmployeeBtn_Click);
             // 
             // SettingBtn
             // 
@@ -286,6 +310,7 @@ namespace EasyBizPos
         private FontAwesome.Sharp.IconButton CustomerBtn;
         private FontAwesome.Sharp.IconButton CartBtn;
         private FontAwesome.Sharp.IconButton CatalogBtn;
+        private FontAwesome.Sharp.IconButton EmployeeBtn;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label labelMainLogo;
         private Panel panelMdiParent;

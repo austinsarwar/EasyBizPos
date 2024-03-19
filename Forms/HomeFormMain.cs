@@ -17,8 +17,8 @@ namespace EasyBizPos
     {
         // Binding source connects the database to the datagrid
         BindingSource customerInfoBindingSource = new BindingSource();
-        
-        
+        BindingSource employeeInfoBindingSource = new BindingSource();
+
         public HomeFormMain()
         {
             // starts the form
@@ -29,9 +29,9 @@ namespace EasyBizPos
         }
 
 
-        
 
-        
+
+
 
         private void CatalogBtn_Click(object sender, EventArgs e)
         {
@@ -68,9 +68,9 @@ namespace EasyBizPos
             this.panelMdiParent.Visible = true;
             // Closes all the child forms
             foreach (Form form in this.MdiChildren)
-                {
-                    form.Close();
-                }
+            {
+                form.Close();
+            }
             // Set the main logo to Home
             labelMainLogo.Text = "Home";
         }
@@ -82,11 +82,24 @@ namespace EasyBizPos
 
         private void CartBtn_Click(object sender, EventArgs e)
         {
-            this.panelMdiParent.Visible=false;
+            this.panelMdiParent.Visible = false;
             CartForm cartForm = new CartForm();
             cartForm.MdiParent = this;
             cartForm.Show();
 
+        }
+        private void EmployeeBtn_Click(object sender, EventArgs e)
+        {
+            // Hides the panel
+            this.panelMdiParent.Visible = false;
+            // Creates a new instance of the employee form
+            EmployeeForm employeeForm = new EmployeeForm();
+            // Sets the parent form to the main form
+            employeeForm.MdiParent = this;
+            // Shows the employee form
+            employeeForm.Show();
+            // Set the main logo to Employee
+            labelMainLogo.Text = "Login";
         }
     }
 }

@@ -1,0 +1,77 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\joedu\\source\\repos\\EasyBizPos\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6B624A39-3698-41BF-BAAC-3118817C139C}|EasyBizPos.csproj|c:\\users\\joedu\\source\\repos\\easybizpos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B624A39-3698-41BF-BAAC-3118817C139C}|EasyBizPos.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B624A39-3698-41BF-BAAC-3118817C139C}|EasyBizPos.csproj|C:\\Users\\joedu\\source\\repos\\EasyBizPos\\forms\\homeformmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B624A39-3698-41BF-BAAC-3118817C139C}|EasyBizPos.csproj|solutionrelative:forms\\homeformmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B624A39-3698-41BF-BAAC-3118817C139C}|EasyBizPos.csproj|C:\\Users\\joedu\\source\\repos\\EasyBizPos\\forms\\homeformmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B624A39-3698-41BF-BAAC-3118817C139C}|EasyBizPos.csproj|solutionrelative:forms\\homeformmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\joedu\\source\\repos\\EasyBizPos\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\joedu\\source\\repos\\EasyBizPos\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T02:17:10.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeFormMain.cs",
+              "DocumentMoniker": "C:\\Users\\joedu\\source\\repos\\EasyBizPos\\Forms\\HomeFormMain.cs",
+              "RelativeDocumentMoniker": "Forms\\HomeFormMain.cs",
+              "ToolTip": "C:\\Users\\joedu\\source\\repos\\EasyBizPos\\Forms\\HomeFormMain.cs",
+              "RelativeToolTip": "Forms\\HomeFormMain.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T04:57:45.846Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeFormMain.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\joedu\\source\\repos\\EasyBizPos\\Forms\\HomeFormMain.Designer.cs",
+              "RelativeDocumentMoniker": "Forms\\HomeFormMain.Designer.cs",
+              "ToolTip": "C:\\Users\\joedu\\source\\repos\\EasyBizPos\\Forms\\HomeFormMain.Designer.cs",
+              "RelativeToolTip": "Forms\\HomeFormMain.Designer.cs",
+              "ViewState": "AQIAAFoAAAAAAAAAAAAowCsAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T06:22:08.569Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

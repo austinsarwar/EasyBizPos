@@ -14,6 +14,9 @@ namespace EasyBizPos.Forms
 {
     public partial class UserLogin : Form
     {
+        public HomeFormMain MainForm { get; set; }
+        public static string ActiveUsername { get; private set; }
+
         public UserLogin()
         {
             InitializeComponent();
@@ -33,20 +36,69 @@ namespace EasyBizPos.Forms
 
             // Hash the password
             string hashedPassword = HashPassword(password);
-      
+
             // Check if the username and hashed password exist in the database
             bool isAuthenticated = CheckCredentials(username, hashedPassword);
 
             if (isAuthenticated)
             {
-                // Allow access to the main form
-                OpenMainForm();
+                string connectionString = Environment.GetEnvironmentVariable("DATABASE_CONNECTION_STRING");
+                string nameQuery = "SELECT name FROM employeeinfo WHERE employee_ID = @username";
+                string name;
+
+                try
+                {
+                    using (MySqlConnection connection = new MySqlConnection(connectionString))
+                    {
+                        using (MySqlCommand command = new MySqlCommand(nameQuery, connection))
+                        {
+                            command.Parameters.AddWithValue("@username", username);
+                            connection.Open();
+                            name = command.ExecuteScalar()?.ToString();
+                            ActiveUsername = name;
+                        }
+                        OpenMainForm();
+                    }
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show($"Error connecting to the database: {ex.Message}");
+                }
             }
             else
             {
-                MessageBox.Show("Invalid username or password. Please try again.");
+                string errorMessage = "Invalid username or password. Please try again.";
+
+                // Check if the username exists in the database
+                string connectionString = Environment.GetEnvironmentVariable("DATABASE_CONNECTION_STRING");
+                string userQuery = "SELECT COUNT(*) FROM employeeinfo WHERE employee_ID = @username";
+
+                try
+                {
+                    using (MySqlConnection connection = new MySqlConnection(connectionString))
+                    {
+                        using (MySqlCommand userCommand = new MySqlCommand(userQuery, connection))
+                        {
+                            userCommand.Parameters.AddWithValue("@username", username);
+                            connection.Open();
+                            int userCount = Convert.ToInt32(userCommand.ExecuteScalar());
+
+                            if (userCount == 0)
+                            {
+                                errorMessage = "User does not exist.";
+                            }
+                        }
+                    }
+                }
+                catch (MySqlException ex)
+                {
+                    errorMessage = $"Error connecting to the database: {ex.Message}";
+                }
+
+                MessageBox.Show(errorMessage);
             }
         }
+
 
         private string HashPassword(string password)
         {
@@ -68,40 +120,49 @@ namespace EasyBizPos.Forms
             // Query to get the hashed password for the username
             string passwordQuery = "SELECT Password FROM employeeinfo WHERE employee_ID = @username";
 
-            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            try
             {
-                // Check if the username exists
-                using (MySqlCommand userCommand = new MySqlCommand(userQuery, connection))
+                using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
-                    userCommand.Parameters.AddWithValue("@username", username);
-                    connection.Open();
-                    int userCount = Convert.ToInt32(userCommand.ExecuteScalar());
-
-                    if (userCount == 0)
+                    // Check if the username exists
+                    using (MySqlCommand userCommand = new MySqlCommand(userQuery, connection))
                     {
-                        // Username doesn't exist
-                        return false;
-                    }
-                }
+                        userCommand.Parameters.AddWithValue("@username", username);
+                        connection.Open();
+                        int userCount = Convert.ToInt32(userCommand.ExecuteScalar());
 
-                // Get the hashed password for the username
-                using (MySqlCommand passwordCommand = new MySqlCommand(passwordQuery, connection))
-                {
-                    passwordCommand.Parameters.AddWithValue("@username", username);
-
-                    string hashedPassword = passwordCommand.ExecuteScalar()?.ToString();
-
-                    if (hashedPassword == null)
-                    {
-                        // Unable to retrieve hashed password
-                        return false;
+                        if (userCount == 0)
+                        {
+                            // Username doesn't exist
+                            return false;
+                        }
                     }
 
-                    // Compare the hashed password with the input password
-                    return VerifyHashedPassword(password, hashedPassword);
+                    // Get the hashed password for the username
+                    using (MySqlCommand passwordCommand = new MySqlCommand(passwordQuery, connection))
+                    {
+                        passwordCommand.Parameters.AddWithValue("@username", username);
+
+                        string hashedPassword = passwordCommand.ExecuteScalar()?.ToString();
+
+                        if (hashedPassword == null)
+                        {
+                            // Unable to retrieve hashed password
+                            return false;
+                        }
+
+                        // Compare the hashed password with the input password
+                        return VerifyHashedPassword(password, hashedPassword);
+                    }
                 }
             }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show($"Error connecting to the database: {ex.Message}");
+                return false;
+            }
         }
+
 
         private bool VerifyHashedPassword(string password, string hashedPassword)
         {
@@ -114,6 +175,7 @@ namespace EasyBizPos.Forms
         {
             this.Hide(); // Hide the login form
             HomeFormMain mainForm = new HomeFormMain();
+            mainForm.ActiveUsername = ActiveUsername; // Pass the active username to HomeFormMain
             mainForm.ShowDialog(); // Show the main form as a dialog
             this.Close(); // Close the login form after the main form is closed
         }

@@ -44,6 +44,10 @@ namespace EasyBizPos
             this.labelMainLogo = new System.Windows.Forms.Label();
             this.panelMdiParent = new System.Windows.Forms.Panel();
             this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
+            this.activeUser = new System.Windows.Forms.Label();
+            this.activeUserLabel = new System.Windows.Forms.Label();
+            this.activeUsernameLabel = new System.Windows.Forms.Label();
+            this.logoutBtn = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +67,7 @@ namespace EasyBizPos
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.panel1.Controls.Add(this.logoutBtn);
             this.panel1.Controls.Add(this.EmployeeBtn);
             this.panel1.Controls.Add(this.SettingBtn);
             this.panel1.Controls.Add(this.TransactionsBtn);
@@ -241,6 +246,9 @@ namespace EasyBizPos
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panel3.Controls.Add(this.activeUsernameLabel);
+            this.panel3.Controls.Add(this.activeUserLabel);
+            this.panel3.Controls.Add(this.activeUser);
             this.panel3.Controls.Add(this.labelMainLogo);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(250, 0);
@@ -275,6 +283,57 @@ namespace EasyBizPos
             this.mySqlCommand1.Connection = null;
             this.mySqlCommand1.EnableCaching = false;
             this.mySqlCommand1.Transaction = null;
+            // 
+            // activeUser
+            // 
+            this.activeUser.AutoSize = true;
+            this.activeUser.ForeColor = System.Drawing.Color.White;
+            this.activeUser.Location = new System.Drawing.Point(3, 98);
+            this.activeUser.Name = "activeUser";
+            this.activeUser.Size = new System.Drawing.Size(140, 29);
+            this.activeUser.TabIndex = 1;
+            this.activeUser.Text = "Active User:";
+            this.activeUser.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // activeUserLabel
+            // 
+            this.activeUserLabel.AutoSize = true;
+            this.activeUserLabel.ForeColor = System.Drawing.Color.White;
+            this.activeUserLabel.Location = new System.Drawing.Point(149, 98);
+            this.activeUserLabel.Name = "activeUserLabel";
+            this.activeUserLabel.Size = new System.Drawing.Size(0, 29);
+            this.activeUserLabel.TabIndex = 2;
+            // 
+            // activeUsernameLabel
+            // 
+            this.activeUsernameLabel.AutoSize = true;
+            this.activeUsernameLabel.ForeColor = System.Drawing.SystemColors.Window;
+            this.activeUsernameLabel.Location = new System.Drawing.Point(155, 98);
+            this.activeUsernameLabel.Name = "activeUsernameLabel";
+            this.activeUsernameLabel.Size = new System.Drawing.Size(79, 29);
+            this.activeUsernameLabel.TabIndex = 3;
+            this.activeUsernameLabel.Text = "label1";
+            // 
+            // logoutBtn
+            // 
+            this.logoutBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.logoutBtn.FlatAppearance.BorderSize = 0;
+            this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logoutBtn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.logoutBtn.IconChar = FontAwesome.Sharp.IconChar.ArrowRotateBackward;
+            this.logoutBtn.IconColor = System.Drawing.Color.Gainsboro;
+            this.logoutBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.logoutBtn.IconSize = 55;
+            this.logoutBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.logoutBtn.Location = new System.Drawing.Point(0, 550);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.logoutBtn.Size = new System.Drawing.Size(250, 60);
+            this.logoutBtn.TabIndex = 18;
+            this.logoutBtn.Text = "Logout";
+            this.logoutBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.logoutBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.logoutBtn.UseVisualStyleBackColor = true;
             // 
             // HomeFormMain
             // 
@@ -315,6 +374,10 @@ namespace EasyBizPos
         private System.Windows.Forms.Label labelMainLogo;
         private Panel panelMdiParent;
         private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
+        private Label activeUser;
+        private Label activeUserLabel;
+        private Label activeUsernameLabel;
+        private FontAwesome.Sharp.IconButton logoutBtn;
     }
 }
 

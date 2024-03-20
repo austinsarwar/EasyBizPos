@@ -19,13 +19,17 @@ namespace EasyBizPos
         BindingSource customerInfoBindingSource = new BindingSource();
         BindingSource employeeInfoBindingSource = new BindingSource();
 
+        public string ActiveUsername { get; set; }
+
+
         public HomeFormMain()
         {
             // starts the form
             InitializeComponent();
 
-
-
+            activeUsernameLabel.Text = UserLogin.ActiveUsername;
+            // Wire up the logout button click event
+            logoutBtn.Click += LogoutBtn_Click;
         }
 
 
@@ -100,6 +104,26 @@ namespace EasyBizPos
             employeeForm.Show();
             // Set the main logo to Employee
             labelMainLogo.Text = "Login";
+        }
+
+        private void LogoutBtn_Click(object sender, EventArgs e)
+        {
+            // Reset the active username
+            ActiveUsername = string.Empty;
+
+            // Show the login form
+            UserLogin loginForm = new UserLogin();
+            loginForm.Show();
+
+            // Hide the current form (main form)
+            this.Hide();
+        }
+
+
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -15,9 +15,9 @@ namespace EasyBizPos
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UserLogin());
+            var main_form = new UserLogin();
+            main_form.Show();
+            Application.Run();
         }
     }
 }

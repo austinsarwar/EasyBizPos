@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Forms"
+    "\\DAOS",
+    "\\Forms",
+    "\\Models"
   ],
-  "SelectedNode": "\\Forms\\CatalogForm.cs",
+  "SelectedNode": "\\DAOS\\EmployeeInformationDAO.cs",
   "PreviewInSolutionExplorer": false
 }

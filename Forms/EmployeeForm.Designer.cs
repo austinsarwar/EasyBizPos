@@ -70,6 +70,46 @@
             this.searchQuery.Name = "searchQuery";
             this.searchQuery.Size = new System.Drawing.Size(1544, 53);
             this.searchQuery.TabIndex = 18;
+            //
+            // Clock In Button
+            //
+            this.btnClockIn = new FontAwesome.Sharp.IconButton();
+            this.btnClockIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btnClockIn.FlatAppearance.BorderSize = 0;
+            this.btnClockIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClockIn.ForeColor = System.Drawing.Color.White;
+            this.btnClockIn.IconChar = FontAwesome.Sharp.IconChar.Clock;
+            this.btnClockIn.IconColor = System.Drawing.Color.White;
+            this.btnClockIn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnClockIn.IconSize = 40;
+            this.btnClockIn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClockIn.Location = new System.Drawing.Point(700, 1149);
+            this.btnClockIn.Name = "btnClockIn";
+            this.btnClockIn.Size = new System.Drawing.Size(150, 50);
+            this.btnClockIn.Text = "Clock In";
+            this.btnClockIn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClockIn.UseVisualStyleBackColor = false;
+            this.btnClockIn.Click += new System.EventHandler(this.btnClockIn_Click);
+            //
+            // Clock Out Button
+            //
+            this.btnClockOut = new FontAwesome.Sharp.IconButton();
+            this.btnClockOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
+            this.btnClockOut.FlatAppearance.BorderSize = 0;
+            this.btnClockOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClockOut.ForeColor = System.Drawing.Color.White;
+            this.btnClockOut.IconChar = FontAwesome.Sharp.IconChar.Clock;
+            this.btnClockOut.IconColor = System.Drawing.Color.White;
+            this.btnClockOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnClockOut.IconSize = 40;
+            this.btnClockOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClockOut.Location = new System.Drawing.Point(900, 1149); // Adjust location as needed
+            this.btnClockOut.Name = "btnClockOut";
+            this.btnClockOut.Size = new System.Drawing.Size(150, 50); // Adjust size as needed
+            this.btnClockOut.Text = "Clock Out";
+            this.btnClockOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClockOut.UseVisualStyleBackColor = false;
+            this.btnClockOut.Click += new System.EventHandler(this.btnClockOut_Click);
             // 
             // btnAddEmployee
             // 
@@ -181,6 +221,8 @@
             this.ControlBox = false;
             this.Controls.Add(this.btnDeleteEmployee);
             this.Controls.Add(this.btnAddEmployee);
+            this.Controls.Add(this.btnClockIn);
+            this.Controls.Add(this.btnClockOut);
             this.Controls.Add(this.searchQuery);
             this.Controls.Add(this.btnSearchEmployee);
             this.Controls.Add(this.dataGridEmployee);
@@ -198,6 +240,8 @@
         #endregion
         private FontAwesome.Sharp.IconButton btnSearchEmployee;
         private System.Windows.Forms.TextBox searchQuery;
+        private FontAwesome.Sharp.IconButton btnClockIn;
+        private FontAwesome.Sharp.IconButton btnClockOut;
         private FontAwesome.Sharp.IconButton btnAddEmployee;
         private FontAwesome.Sharp.IconButton btnDeleteEmployee;
         private System.Windows.Forms.DataGridView dataGridEmployee;

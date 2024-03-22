@@ -9,6 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using EasyBizPos.DAOS;
 using EasyBizPos.Models;
+<<<<<<< HEAD
+=======
+
+
+namespace EasyBizPos.Forms
+>>>>>>> main
 
 namespace EasyBizPos.Forms
 {
@@ -72,6 +78,66 @@ namespace EasyBizPos.Forms
             EmployeeInformationDAO employeeFormInfo = new EmployeeInformationDAO();
             employeeInfoBindingSource.DataSource = employeeFormInfo.searchEmployeeName(searchTerm);
             dataGridEmployee.DataSource = employeeInfoBindingSource;
+        }
+        private int GetSelectedEmployeeId()
+        {
+            if (dataGridEmployee.CurrentRow != null)
+            {
+                return Convert.ToInt32(dataGridEmployee.CurrentRow.Cells[0].Value);
+            }
+            return -1;
+        }
+
+        private void btnClockIn_Click(object sender, EventArgs e)
+        {
+            int rowIndex = dataGridEmployee.CurrentCell.RowIndex;
+            int columnIndex = 1;
+            string name = (string)dataGridEmployee.Rows[rowIndex].Cells[columnIndex].Value;
+            int id = (int)dataGridEmployee.Rows[rowIndex].Cells[0].Value;
+            try
+            {
+                int employeeId = GetSelectedEmployeeId();
+                if (employeeId != -1)
+                {
+                    TimeTrackingDAO timeTrackingDao = new TimeTrackingDAO();
+                    timeTrackingDao.Clockin(employeeId);
+                    MessageBox.Show("Employee clocked in successfully.");
+                }
+                else
+                {
+                    MessageBox.Show("Please select an employee.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error clocking in: {ex.Message}");
+            }
+        }
+
+        private void btnClockOut_Click(object sender, EventArgs e)
+        {
+            int rowIndex = dataGridEmployee.CurrentCell.RowIndex;
+            int columnIndex = 1;
+            string name = (string)dataGridEmployee.Rows[rowIndex].Cells[columnIndex].Value;
+            int id = (int)dataGridEmployee.Rows[rowIndex].Cells[0].Value;
+            try
+            {
+                int employeeId = GetSelectedEmployeeId();
+                if (employeeId != -1)
+                {
+                    TimeTrackingDAO timeTrackingDao = new TimeTrackingDAO();
+                    timeTrackingDao.Clockout(employeeId);
+                    MessageBox.Show("Employee clocked out successfully.");
+                }
+                else
+                {
+                    MessageBox.Show("Please select an employee.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error clocking out: {ex.Message}");
+            }
         }
 
         private void addEmployee_Click(object sender, EventArgs e)

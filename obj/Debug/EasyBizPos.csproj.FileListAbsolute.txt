@@ -153,3 +153,4 @@ C:\Users\Jeff\Source\Repos\EasyBizPos\obj\Debug\EasyBizPos.csproj.CoreCompileInp
 C:\Users\Jeff\Source\Repos\EasyBizPos\obj\Debug\EasyBizPos.csproj.Up2Date
 C:\Users\Jeff\Source\Repos\EasyBizPos\obj\Debug\EasyBizPos.exe
 C:\Users\Jeff\Source\Repos\EasyBizPos\obj\Debug\EasyBizPos.pdb
+C:\Users\Jeff\source\repos\EasyBizPos\obj\Debug\EasyBizPos.Forms.AdminForm.resources

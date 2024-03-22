@@ -30,6 +30,9 @@ namespace EasyBizPos
             activeUsernameLabel.Text = UserLogin.ActiveUsername;
             // Wire up the logout button click event
             logoutBtn.Click += LogoutBtn_Click;
+            adminBtn.Click += AdminBtn_Click;
+
+
         }
 
 
@@ -117,6 +120,24 @@ namespace EasyBizPos
 
             // Hide the current form (main form)
             this.Hide();
+        }
+
+        private void AdminBtn_Click(object sender, EventArgs e)
+        {
+            // Hides the panel
+            this.panelMdiParent.Visible = false;
+
+            // Create a new instance of the Admin form
+            AdminForm adminForm = new AdminForm();
+
+            // Sets the parent form to the main form
+            adminForm.MdiParent = this;
+
+            // Shows the Admin form
+            adminForm.Show();
+
+            // Set the main logo to Admin
+            labelMainLogo.Text = "Admin";
         }
 
 

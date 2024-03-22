@@ -43,7 +43,7 @@ namespace EasyBizPos.Forms
             if (isAuthenticated)
             {
                 string connectionString = Environment.GetEnvironmentVariable("DATABASE_CONNECTION_STRING");
-                string nameQuery = "SELECT name FROM employeeinfo WHERE employee_ID = @username";
+                string nameQuery = "SELECT name FROM employeeinfo WHERE username = @username";
                 string name;
 
                 try
@@ -71,7 +71,7 @@ namespace EasyBizPos.Forms
 
                 // Check if the username exists in the database
                 string connectionString = Environment.GetEnvironmentVariable("DATABASE_CONNECTION_STRING");
-                string userQuery = "SELECT COUNT(*) FROM employeeinfo WHERE employee_ID = @username";
+                string userQuery = "SELECT COUNT(*) FROM employeeinfo WHERE username = @username";
 
                 try
                 {
@@ -115,10 +115,10 @@ namespace EasyBizPos.Forms
             string connectionString = Environment.GetEnvironmentVariable("DATABASE_CONNECTION_STRING");
 
             // Query to check if the username exists in the database
-            string userQuery = "SELECT COUNT(*) FROM employeeinfo WHERE employee_ID = @username";
+            string userQuery = "SELECT COUNT(*) FROM employeeinfo WHERE username = @username";
 
             // Query to get the hashed password for the username
-            string passwordQuery = "SELECT Password FROM employeeinfo WHERE employee_ID = @username";
+            string passwordQuery = "SELECT Password FROM employeeinfo WHERE username = @username";
 
             try
             {

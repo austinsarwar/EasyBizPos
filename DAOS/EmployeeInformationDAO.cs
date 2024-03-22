@@ -17,9 +17,9 @@ namespace EasyBizPos.DAOS
     {
 
         string connectionString = Environment.GetEnvironmentVariable("DATABASE_CONNECTION_STRING");
-        
-        
-        
+
+
+
         public List<Employee> getAllEmployeeInfo()
         {
             // start with empty list
@@ -27,7 +27,7 @@ namespace EasyBizPos.DAOS
             // connect to mysql server
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
-            MySqlCommand command = new MySqlCommand("SELECT * FROM employeeinfo", connection);
+            MySqlCommand command = new MySqlCommand("SELECT employee_ID, username, name, role, phone_number, email, IF(admin = 1, 'yes', 'no') as admin FROM employeeinfo", connection);
             // Get All data from database and store it in a list
             using (MySqlDataReader reader = command.ExecuteReader())
             {
@@ -37,10 +37,12 @@ namespace EasyBizPos.DAOS
                     Employee e = new Employee
                     {
                         Employee_ID = reader.GetInt32(0),
-                        Name = reader.GetString(1),
-                        Role = reader.GetString(2),
-                        PhoneNumber = reader.GetString(3),
-                        Email = reader.GetString(4),
+                        Username = reader.GetString(1),
+                        Name = reader.GetString(2),
+                        Role = reader.GetString(3),
+                        PhoneNumber = reader.GetString(4),
+                        Email = reader.GetString(5),
+                        Admin = reader.GetString(6), // Admin is read as string ('yes' or 'no')
                     };
 
                     returnThese.Add(e);
@@ -51,9 +53,11 @@ namespace EasyBizPos.DAOS
             connection.Close();
             // return the list of employee
             return returnThese;
-
-
         }
+
+
+
+
         // Search database for data "like" the search string" 
         public List<Employee> searchEmployeeName(string searchTerm)
         {
@@ -96,32 +100,32 @@ namespace EasyBizPos.DAOS
 
 
         }
-        public void AddEmployee(string name, string role, string phone_number, string email)
-
+        public void AddEmployee(string name, string role, string phone_number, string email, string password, string username, int admin)
         {
-
+            // Get the current date and time
+            DateTime currentDate = DateTime.Now;
             // Connect to the database using the provided connection string.
             MySqlConnection connection = new MySqlConnection(connectionString);
             // Open the connection
             connection.Open();
-            // Prepare an INSERT command to add a new empoloyee to the 'employeeinfo' table.
-            MySqlCommand command = new MySqlCommand("INSERT INTO employeeinfo (name, role, phone_number, email) " +
-                                        "VALUES (@name, @role, @phone_number, @email)", connection);
+            // Prepare an INSERT command to add a new employee to the 'employeeinfo' table.
+            MySqlCommand command = new MySqlCommand("INSERT INTO employeeinfo (name, role, phone_number, email, Password, username, admin) " +
+                                            "VALUES (@name, @role, @phone_number, @email, @password, @username, @admin)", connection);
 
             // Add parameters to the command prevents SQL injection by ensuring that the value of id is treated as data,
-
-
             command.Parameters.AddWithValue("@name", name);
             command.Parameters.AddWithValue("@role", role);
             command.Parameters.AddWithValue("@phone_number", phone_number);
             command.Parameters.AddWithValue("@email", email);
-            
+            command.Parameters.AddWithValue("@password", password);
+            command.Parameters.AddWithValue("@username", username);
+            command.Parameters.AddWithValue("@admin", admin);
 
             // Execute the command
             command.ExecuteNonQuery();
-
-
         }
+
+
         public void DeleteEmployee(int employee_id)
         {
             // Connect to the database using the provided connection string.

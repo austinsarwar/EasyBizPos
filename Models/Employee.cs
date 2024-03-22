@@ -14,11 +14,8 @@ namespace EasyBizPos.Models
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
         public string Role { get; set; }
-<<<<<<< Updated upstream
-        public string Username { get; set; }
         public string Admin { get; set; } // Assuming 'yes' or 'no' as string values for admin
-=======
-        public string Admin { get; set; }
->>>>>>> Stashed changes
+
+
     }
 }

@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using EasyBizPos.DAOS;
 using System.Security.Cryptography;
-using System.Text;
 
 
 namespace EasyBizPos.Forms

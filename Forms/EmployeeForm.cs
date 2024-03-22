@@ -9,12 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using EasyBizPos.DAOS;
 using EasyBizPos.Models;
-<<<<<<< HEAD
-=======
-
-
-namespace EasyBizPos.Forms
->>>>>>> main
 
 namespace EasyBizPos.Forms
 {
@@ -41,6 +35,11 @@ namespace EasyBizPos.Forms
         {
             dataGridEmployee.AutoGenerateColumns = false;
             dataGridEmployee.Columns.Clear(); // Clear existing columns
+
+            DataGridViewColumn idColumn = new DataGridViewTextBoxColumn();
+            idColumn.DataPropertyName = "Employee_ID";
+            idColumn.HeaderText = "Employee ID";
+            dataGridEmployee.Columns.Add(idColumn);
 
             DataGridViewColumn usernameColumn = new DataGridViewTextBoxColumn();
             usernameColumn.DataPropertyName = "Username";
@@ -72,7 +71,8 @@ namespace EasyBizPos.Forms
             adminColumn.HeaderText = "Admin";
             dataGridEmployee.Columns.Add(adminColumn);
         }
-    private void SearchBtn_Click(object sender, EventArgs e)
+
+        private void SearchBtn_Click(object sender, EventArgs e)
         {
             string searchTerm = searchQuery.Text;
             EmployeeInformationDAO employeeFormInfo = new EmployeeInformationDAO();

@@ -54,12 +54,6 @@ namespace EasyBizPos.DAOS
             return returnThese;
         }
 
-<<<<<<< Updated upstream
-
-
-
-=======
->>>>>>> Stashed changes
         // Search database for data "like" the search string" 
         public List<Employee> searchEmployeeName(string searchTerm)
         {

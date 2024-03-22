@@ -1,7 +1,16 @@
 {
   "ExpandedNodes": [
+<<<<<<< HEAD
     ""
   ],
   "SelectedNode": "\\EasyBizPos.sln",
+=======
+    "",
+    "\\DAOS",
+    "\\Forms",
+    "\\Models"
+  ],
+  "SelectedNode": "\\DAOS\\EmployeeInformationDAO.cs",
+>>>>>>> main
   "PreviewInSolutionExplorer": false
 }

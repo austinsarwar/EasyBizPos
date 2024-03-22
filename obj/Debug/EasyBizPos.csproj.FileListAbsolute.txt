@@ -49,12 +49,11 @@ C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.Forms.CartFor
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.Forms.PreviewCartForm.resources
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.Forms.ToastSuccessForm.resources
 C:\Users\joedu\source\repos\EasyBizPos\obj\Debug\EasyBizPos.csproj.AssemblyReference.cache
-C:\Users\joedu\source\repos\EasyBizPos\obj\Debug\EasyBizPos.exe
-C:\Users\joedu\source\repos\EasyBizPos\obj\Debug\EasyBizPos.pdb
 C:\Users\joedu\source\repos\EasyBizPos\obj\Debug\EasyBizPos.Forms.AddEmployee.resources
 C:\Users\joedu\source\repos\EasyBizPos\obj\Debug\EasyBizPos.Forms.AddCustomer.resources
 C:\Users\joedu\source\repos\EasyBizPos\obj\Debug\EasyBizPos.Forms.CartForm.resources
 C:\Users\joedu\source\repos\EasyBizPos\obj\Debug\EasyBizPos.CatalogForm.resources
+C:\Users\joedu\source\repos\EasyBizPos\obj\Debug\EasyBizPos.Forms.EmployeeForm.resources
 C:\Users\joedu\source\repos\EasyBizPos\obj\Debug\EasyBizPos.Forms.CustomerForm.resources
 C:\Users\joedu\source\repos\EasyBizPos\obj\Debug\EasyBizPos.HomeFormMain.resources
 C:\Users\joedu\source\repos\EasyBizPos\obj\Debug\EasyBizPos.Forms.PreviewCartForm.resources
@@ -99,6 +98,7 @@ C:\Users\joedu\source\repos\EasyBizPos\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\joedu\source\repos\EasyBizPos\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\joedu\source\repos\EasyBizPos\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\joedu\source\repos\EasyBizPos\obj\Debug\EasyBizPos.csproj.Up2Date
+<<<<<<< HEAD
 C:\Users\joedu\source\repos\EasyBizPos\obj\Debug\EasyBizPos.Forms.EmployeeForm.resources
 C:\Users\Jeff\Source\Repos\EasyBizPos\bin\Debug\EasyBizPos.exe.config
 C:\Users\Jeff\Source\Repos\EasyBizPos\bin\Debug\EasyBizPos.exe
@@ -154,3 +154,7 @@ C:\Users\Jeff\Source\Repos\EasyBizPos\obj\Debug\EasyBizPos.csproj.Up2Date
 C:\Users\Jeff\Source\Repos\EasyBizPos\obj\Debug\EasyBizPos.exe
 C:\Users\Jeff\Source\Repos\EasyBizPos\obj\Debug\EasyBizPos.pdb
 C:\Users\Jeff\source\repos\EasyBizPos\obj\Debug\EasyBizPos.Forms.AdminForm.resources
+=======
+C:\Users\joedu\source\repos\EasyBizPos\obj\Debug\EasyBizPos.exe
+C:\Users\joedu\source\repos\EasyBizPos\obj\Debug\EasyBizPos.pdb
+>>>>>>> main

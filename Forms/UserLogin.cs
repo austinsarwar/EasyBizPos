@@ -9,6 +9,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BCrypt;
 
 namespace EasyBizPos.Forms
 {
@@ -34,11 +35,8 @@ namespace EasyBizPos.Forms
                 return;
             }
 
-            // Hash the password
-            string hashedPassword = HashPassword(password);
-
             // Check if the username and hashed password exist in the database
-            bool isAuthenticated = CheckCredentials(username, hashedPassword);
+            bool isAuthenticated = CheckCredentials(username, password);
 
             if (isAuthenticated)
             {
@@ -100,15 +98,14 @@ namespace EasyBizPos.Forms
         }
 
 
-        private string HashPassword(string password)
+        private string HashPassword(string password, string salt)
         {
-            // Use a secure hashing algorithm like SHA256
-            using (SHA256 sha256 = SHA256.Create())
-            {
-                byte[] hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-                return BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
-            }
+            // Hash the password with the stored salt
+            string hashedPassword = BCrypt.Net.BCrypt.HashPassword(password, salt);
+
+            return hashedPassword;
         }
+
 
         private bool CheckCredentials(string username, string password)
         {
@@ -117,8 +114,8 @@ namespace EasyBizPos.Forms
             // Query to check if the username exists in the database
             string userQuery = "SELECT COUNT(*) FROM employeeinfo WHERE username = @username";
 
-            // Query to get the hashed password for the username
-            string passwordQuery = "SELECT Password FROM employeeinfo WHERE username = @username";
+            // Query to get the hashed password and salt for the username
+            string passwordQuery = "SELECT Password, salt FROM employeeinfo WHERE username = @username";
 
             try
             {
@@ -138,21 +135,25 @@ namespace EasyBizPos.Forms
                         }
                     }
 
-                    // Get the hashed password for the username
+                    // Get the hashed password and salt for the username
                     using (MySqlCommand passwordCommand = new MySqlCommand(passwordQuery, connection))
                     {
                         passwordCommand.Parameters.AddWithValue("@username", username);
 
-                        string hashedPassword = passwordCommand.ExecuteScalar()?.ToString();
-
-                        if (hashedPassword == null)
+                        using (MySqlDataReader reader = passwordCommand.ExecuteReader())
                         {
-                            // Unable to retrieve hashed password
-                            return false;
-                        }
+                            if (reader.Read())
+                            {
+                                string hashedPassword = reader.GetString(0);
+                                string salt = reader.GetString(1);
 
-                        // Compare the hashed password with the input password
-                        return VerifyHashedPassword(password, hashedPassword);
+                                // Hash the user-supplied password with the retrieved salt
+                                string hashedInputPassword = HashPassword(password, salt);
+
+                                // Compare the hashed password with the input password
+                                return hashedInputPassword == hashedPassword;
+                            }
+                        }
                     }
                 }
             }
@@ -161,7 +162,10 @@ namespace EasyBizPos.Forms
                 MessageBox.Show($"Error connecting to the database: {ex.Message}");
                 return false;
             }
+
+            return false;
         }
+
 
 
         private bool VerifyHashedPassword(string password, string hashedPassword)

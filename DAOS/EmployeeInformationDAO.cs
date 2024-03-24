@@ -96,7 +96,7 @@ namespace EasyBizPos.DAOS
 
 
         }
-        public void AddEmployee(string name, string role, string phone_number, string email, string password, string username, int admin)
+        public void AddEmployee(string name, string role, string phone_number, string email, string password, string username, int admin, string salt)
         {
             // Get the current date and time
             DateTime currentDate = DateTime.Now;
@@ -105,8 +105,8 @@ namespace EasyBizPos.DAOS
             // Open the connection
             connection.Open();
             // Prepare an INSERT command to add a new employee to the 'employeeinfo' table.
-            MySqlCommand command = new MySqlCommand("INSERT INTO employeeinfo (name, role, phone_number, email, Password, username, admin) " +
-                                            "VALUES (@name, @role, @phone_number, @email, @password, @username, @admin)", connection);
+            MySqlCommand command = new MySqlCommand("INSERT INTO employeeinfo (name, role, phone_number, email, Password, username, admin, salt) " +
+                                                "VALUES (@name, @role, @phone_number, @email, @password, @username, @admin, @salt)", connection);
 
             // Add parameters to the command prevents SQL injection by ensuring that the value of id is treated as data,
             command.Parameters.AddWithValue("@name", name);
@@ -116,10 +116,13 @@ namespace EasyBizPos.DAOS
             command.Parameters.AddWithValue("@password", password);
             command.Parameters.AddWithValue("@username", username);
             command.Parameters.AddWithValue("@admin", admin);
+            command.Parameters.AddWithValue("@salt", salt);
 
             // Execute the command
             command.ExecuteNonQuery();
         }
+
+
 
 
         public void DeleteEmployee(int employee_id)

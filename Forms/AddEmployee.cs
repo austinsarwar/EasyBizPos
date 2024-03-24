@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using EasyBizPos.DAOS;
 using System.Security.Cryptography;
+using BCrypt;
 
 
 namespace EasyBizPos.Forms
@@ -22,25 +23,19 @@ namespace EasyBizPos.Forms
             InitializeComponent();
         }
 
-        public string HashPassword(string password)
+        public (string hashedPassword, string salt) HashPassword(string password)
         {
-            using (SHA256 sha256 = SHA256.Create())
-            {
-                byte[] hashBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-                StringBuilder builder = new StringBuilder();
-                for (int i = 0; i < hashBytes.Length; i++)
-                {
-                    builder.Append(hashBytes[i].ToString("x2"));
-                }
-                return builder.ToString();
-            }
+            // Generate a salt
+            string salt = BCrypt.Net.BCrypt.GenerateSalt(12);
+
+            // Hash the password with the salt
+            string hashedPassword = BCrypt.Net.BCrypt.HashPassword(password, salt);
+
+            return (hashedPassword, salt);
         }
-
-
 
         private void iconButton1_Click_1(object sender, EventArgs e)
         {
-
             // Check if the passwords match
             if (passwordBox.Text != reenterBox.Text)
             {
@@ -53,7 +48,7 @@ namespace EasyBizPos.Forms
             string role = roleTxt.Text;
             string phoneNumber = phoneNumberTxt.Text;
             string email = emailTxt.Text;
-            string password = HashPassword(passwordBox.Text);
+            (string hashedPassword, string salt) = HashPassword(passwordBox.Text);
             string[] nameParts = name.Split(' ');
             string firstName = nameParts[0].ToLower();
             string lastName = nameParts.Length > 1 ? nameParts[1].ToLower() : "";
@@ -64,11 +59,12 @@ namespace EasyBizPos.Forms
             EmployeeInformationDAO employeeInformationDAO = new EmployeeInformationDAO();
 
             // Add the employee info to the database
-            employeeInformationDAO.AddEmployee(name, role, phoneNumber, email, password, username, admin);
+            employeeInformationDAO.AddEmployee(name, role, phoneNumber, email, hashedPassword, username, admin, salt);
 
             // Close the form
             this.Close();
         }
+
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {

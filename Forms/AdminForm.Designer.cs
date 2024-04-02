@@ -1,4 +1,7 @@
-﻿namespace EasyBizPos.Forms
+﻿using EasyBizPos.Models;
+using System.Windows.Forms;
+
+namespace EasyBizPos.Forms
 {
     partial class AdminForm
     {
@@ -56,16 +59,17 @@
             this.adminBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.adminBtn.FlatAppearance.BorderSize = 0;
             this.adminBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.adminBtn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.adminBtn.ForeColor = AppColors.text;
             this.adminBtn.IconChar = FontAwesome.Sharp.IconChar.Binoculars;
-            this.adminBtn.IconColor = System.Drawing.Color.Gainsboro;
+            this.adminBtn.IconColor = AppColors.text;
             this.adminBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.adminBtn.IconSize = 55;
+            this.adminBtn.IconSize = 32;
             this.adminBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.adminBtn.Location = new System.Drawing.Point(0, 610);
+            this.adminBtn.Location = new System.Drawing.Point(0, 396);
+            this.adminBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.adminBtn.Name = "adminBtn";
-            this.adminBtn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.adminBtn.Size = new System.Drawing.Size(250, 60);
+            this.adminBtn.Padding = new System.Windows.Forms.Padding(7, 0, 13, 0);
+            this.adminBtn.Size = new System.Drawing.Size(167, 39);
             this.adminBtn.TabIndex = 19;
             this.adminBtn.Text = "Admin";
             this.adminBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -75,10 +79,11 @@
             // activeUser
             // 
             this.activeUser.AutoSize = true;
-            this.activeUser.ForeColor = System.Drawing.Color.White;
-            this.activeUser.Location = new System.Drawing.Point(3, 98);
+            this.activeUser.ForeColor = AppColors.text;
+            this.activeUser.Location = new System.Drawing.Point(2, 64);
+            this.activeUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.activeUser.Name = "activeUser";
-            this.activeUser.Size = new System.Drawing.Size(94, 20);
+            this.activeUser.Size = new System.Drawing.Size(65, 13);
             this.activeUser.TabIndex = 1;
             this.activeUser.Text = "Active User:";
             // 
@@ -87,10 +92,11 @@
             this.labelMainLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.labelMainLogo.AutoSize = true;
             this.labelMainLogo.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMainLogo.ForeColor = System.Drawing.Color.White;
-            this.labelMainLogo.Location = new System.Drawing.Point(395, 35);
+            this.labelMainLogo.ForeColor = AppColors.text;
+            this.labelMainLogo.Location = new System.Drawing.Point(263, 23);
+            this.labelMainLogo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMainLogo.Name = "labelMainLogo";
-            this.labelMainLogo.Size = new System.Drawing.Size(148, 54);
+            this.labelMainLogo.Size = new System.Drawing.Size(102, 37);
             this.labelMainLogo.TabIndex = 0;
             this.labelMainLogo.Text = "Admin";
             // 
@@ -99,16 +105,17 @@
             this.logoutBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.logoutBtn.FlatAppearance.BorderSize = 0;
             this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logoutBtn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.logoutBtn.ForeColor = AppColors.text;
             this.logoutBtn.IconChar = FontAwesome.Sharp.IconChar.ArrowRotateBackward;
-            this.logoutBtn.IconColor = System.Drawing.Color.Gainsboro;
+            this.logoutBtn.IconColor = AppColors.text;
             this.logoutBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.logoutBtn.IconSize = 55;
+            this.logoutBtn.IconSize = 32;
             this.logoutBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.logoutBtn.Location = new System.Drawing.Point(0, 550);
+            this.logoutBtn.Location = new System.Drawing.Point(0, 357);
+            this.logoutBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.logoutBtn.Name = "logoutBtn";
-            this.logoutBtn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.logoutBtn.Size = new System.Drawing.Size(250, 60);
+            this.logoutBtn.Padding = new System.Windows.Forms.Padding(7, 0, 13, 0);
+            this.logoutBtn.Size = new System.Drawing.Size(167, 39);
             this.logoutBtn.TabIndex = 18;
             this.logoutBtn.Text = "Logout";
             this.logoutBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -120,16 +127,17 @@
             this.EmployeeBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.EmployeeBtn.FlatAppearance.BorderSize = 0;
             this.EmployeeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EmployeeBtn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.EmployeeBtn.ForeColor = AppColors.text;
             this.EmployeeBtn.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
-            this.EmployeeBtn.IconColor = System.Drawing.Color.Gainsboro;
+            this.EmployeeBtn.IconColor = AppColors.text;
             this.EmployeeBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.EmployeeBtn.IconSize = 55;
+            this.EmployeeBtn.IconSize = 32;
             this.EmployeeBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.EmployeeBtn.Location = new System.Drawing.Point(0, 490);
+            this.EmployeeBtn.Location = new System.Drawing.Point(0, 318);
+            this.EmployeeBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.EmployeeBtn.Name = "EmployeeBtn";
-            this.EmployeeBtn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.EmployeeBtn.Size = new System.Drawing.Size(250, 60);
+            this.EmployeeBtn.Padding = new System.Windows.Forms.Padding(7, 0, 13, 0);
+            this.EmployeeBtn.Size = new System.Drawing.Size(167, 39);
             this.EmployeeBtn.TabIndex = 17;
             this.EmployeeBtn.Text = "Employee";
             this.EmployeeBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -141,16 +149,17 @@
             this.SettingBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.SettingBtn.FlatAppearance.BorderSize = 0;
             this.SettingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SettingBtn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.SettingBtn.ForeColor = AppColors.text;
             this.SettingBtn.IconChar = FontAwesome.Sharp.IconChar.Tools;
-            this.SettingBtn.IconColor = System.Drawing.Color.Gainsboro;
+            this.SettingBtn.IconColor = AppColors.text;
             this.SettingBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.SettingBtn.IconSize = 55;
+            this.SettingBtn.IconSize = 32;
             this.SettingBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.SettingBtn.Location = new System.Drawing.Point(0, 430);
+            this.SettingBtn.Location = new System.Drawing.Point(0, 279);
+            this.SettingBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SettingBtn.Name = "SettingBtn";
-            this.SettingBtn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.SettingBtn.Size = new System.Drawing.Size(250, 60);
+            this.SettingBtn.Padding = new System.Windows.Forms.Padding(7, 0, 13, 0);
+            this.SettingBtn.Size = new System.Drawing.Size(167, 39);
             this.SettingBtn.TabIndex = 16;
             this.SettingBtn.Text = "Setting";
             this.SettingBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -162,16 +171,17 @@
             this.TransactionsBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.TransactionsBtn.FlatAppearance.BorderSize = 0;
             this.TransactionsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TransactionsBtn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.TransactionsBtn.ForeColor = AppColors.text;
             this.TransactionsBtn.IconChar = FontAwesome.Sharp.IconChar.ChartColumn;
-            this.TransactionsBtn.IconColor = System.Drawing.Color.Gainsboro;
+            this.TransactionsBtn.IconColor = AppColors.text;
             this.TransactionsBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.TransactionsBtn.IconSize = 55;
+            this.TransactionsBtn.IconSize = 32;
             this.TransactionsBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.TransactionsBtn.Location = new System.Drawing.Point(0, 370);
+            this.TransactionsBtn.Location = new System.Drawing.Point(0, 240);
+            this.TransactionsBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TransactionsBtn.Name = "TransactionsBtn";
-            this.TransactionsBtn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.TransactionsBtn.Size = new System.Drawing.Size(250, 60);
+            this.TransactionsBtn.Padding = new System.Windows.Forms.Padding(7, 0, 13, 0);
+            this.TransactionsBtn.Size = new System.Drawing.Size(167, 39);
             this.TransactionsBtn.TabIndex = 15;
             this.TransactionsBtn.Text = "transactions";
             this.TransactionsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -183,16 +193,17 @@
             this.CustomerBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.CustomerBtn.FlatAppearance.BorderSize = 0;
             this.CustomerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CustomerBtn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.CustomerBtn.ForeColor = AppColors.text;
             this.CustomerBtn.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
-            this.CustomerBtn.IconColor = System.Drawing.Color.Gainsboro;
+            this.CustomerBtn.IconColor = AppColors.text;
             this.CustomerBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.CustomerBtn.IconSize = 55;
+            this.CustomerBtn.IconSize = 32;
             this.CustomerBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.CustomerBtn.Location = new System.Drawing.Point(0, 310);
+            this.CustomerBtn.Location = new System.Drawing.Point(0, 201);
+            this.CustomerBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CustomerBtn.Name = "CustomerBtn";
-            this.CustomerBtn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.CustomerBtn.Size = new System.Drawing.Size(250, 60);
+            this.CustomerBtn.Padding = new System.Windows.Forms.Padding(7, 0, 13, 0);
+            this.CustomerBtn.Size = new System.Drawing.Size(167, 39);
             this.CustomerBtn.TabIndex = 14;
             this.CustomerBtn.Text = "Customer";
             this.CustomerBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -204,16 +215,17 @@
             this.CartBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.CartBtn.FlatAppearance.BorderSize = 0;
             this.CartBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CartBtn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.CartBtn.ForeColor = AppColors.text;
             this.CartBtn.IconChar = FontAwesome.Sharp.IconChar.ShoppingCart;
-            this.CartBtn.IconColor = System.Drawing.Color.Gainsboro;
+            this.CartBtn.IconColor = AppColors.text;
             this.CartBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.CartBtn.IconSize = 55;
+            this.CartBtn.IconSize = 32;
             this.CartBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.CartBtn.Location = new System.Drawing.Point(0, 250);
+            this.CartBtn.Location = new System.Drawing.Point(0, 162);
+            this.CartBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CartBtn.Name = "CartBtn";
-            this.CartBtn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.CartBtn.Size = new System.Drawing.Size(250, 60);
+            this.CartBtn.Padding = new System.Windows.Forms.Padding(7, 0, 13, 0);
+            this.CartBtn.Size = new System.Drawing.Size(167, 39);
             this.CartBtn.TabIndex = 13;
             this.CartBtn.Text = "Cart";
             this.CartBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -223,33 +235,36 @@
             // activeUsernameLabel
             // 
             this.activeUsernameLabel.AutoSize = true;
-            this.activeUsernameLabel.ForeColor = System.Drawing.SystemColors.Window;
-            this.activeUsernameLabel.Location = new System.Drawing.Point(155, 98);
+            this.activeUsernameLabel.ForeColor = AppColors.text;
+            this.activeUsernameLabel.Location = new System.Drawing.Point(103, 64);
+            this.activeUsernameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.activeUsernameLabel.Name = "activeUsernameLabel";
-            this.activeUsernameLabel.Size = new System.Drawing.Size(51, 20);
+            this.activeUsernameLabel.Size = new System.Drawing.Size(35, 13);
             this.activeUsernameLabel.TabIndex = 3;
             this.activeUsernameLabel.Text = "label1";
             // 
             // activeUserLabel
             // 
             this.activeUserLabel.AutoSize = true;
-            this.activeUserLabel.ForeColor = System.Drawing.Color.White;
-            this.activeUserLabel.Location = new System.Drawing.Point(149, 98);
+            this.activeUserLabel.ForeColor = AppColors.text;
+            this.activeUserLabel.Location = new System.Drawing.Point(99, 64);
+            this.activeUserLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.activeUserLabel.Name = "activeUserLabel";
-            this.activeUserLabel.Size = new System.Drawing.Size(0, 20);
+            this.activeUserLabel.Size = new System.Drawing.Size(0, 13);
             this.activeUserLabel.TabIndex = 2;
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(49)))));
             this.panel3.Controls.Add(this.activeUsernameLabel);
             this.panel3.Controls.Add(this.activeUserLabel);
             this.panel3.Controls.Add(this.activeUser);
             this.panel3.Controls.Add(this.labelMainLogo);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(250, 0);
+            this.panel3.Location = new System.Drawing.Point(167, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1045, 130);
+            this.panel3.Size = new System.Drawing.Size(696, 84);
             this.panel3.TabIndex = 25;
             // 
             // CatalogBtn
@@ -257,16 +272,17 @@
             this.CatalogBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.CatalogBtn.FlatAppearance.BorderSize = 0;
             this.CatalogBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CatalogBtn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.CatalogBtn.ForeColor = AppColors.text;
             this.CatalogBtn.IconChar = FontAwesome.Sharp.IconChar.Store;
-            this.CatalogBtn.IconColor = System.Drawing.Color.Gainsboro;
+            this.CatalogBtn.IconColor = AppColors.text;
             this.CatalogBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.CatalogBtn.IconSize = 55;
+            this.CatalogBtn.IconSize = 32;
             this.CatalogBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.CatalogBtn.Location = new System.Drawing.Point(0, 190);
+            this.CatalogBtn.Location = new System.Drawing.Point(0, 123);
+            this.CatalogBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CatalogBtn.Name = "CatalogBtn";
-            this.CatalogBtn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.CatalogBtn.Size = new System.Drawing.Size(250, 60);
+            this.CatalogBtn.Padding = new System.Windows.Forms.Padding(7, 0, 13, 0);
+            this.CatalogBtn.Size = new System.Drawing.Size(167, 39);
             this.CatalogBtn.TabIndex = 12;
             this.CatalogBtn.Text = "Catalog";
             this.CatalogBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -278,16 +294,17 @@
             this.HomeBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.HomeBtn.FlatAppearance.BorderSize = 0;
             this.HomeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HomeBtn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.HomeBtn.ForeColor = AppColors.text;
             this.HomeBtn.IconChar = FontAwesome.Sharp.IconChar.House;
-            this.HomeBtn.IconColor = System.Drawing.Color.Gainsboro;
+            this.HomeBtn.IconColor = AppColors.text;
             this.HomeBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.HomeBtn.IconSize = 55;
+            this.HomeBtn.IconSize = 32;
             this.HomeBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.HomeBtn.Location = new System.Drawing.Point(0, 130);
+            this.HomeBtn.Location = new System.Drawing.Point(0, 84);
+            this.HomeBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.HomeBtn.Name = "HomeBtn";
-            this.HomeBtn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.HomeBtn.Size = new System.Drawing.Size(250, 60);
+            this.HomeBtn.Padding = new System.Windows.Forms.Padding(7, 0, 13, 0);
+            this.HomeBtn.Size = new System.Drawing.Size(167, 39);
             this.HomeBtn.TabIndex = 11;
             this.HomeBtn.Text = "Home";
             this.HomeBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -303,7 +320,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.panel1.BackColor = AppColors.ui;
             this.panel1.Controls.Add(this.adminBtn);
             this.panel1.Controls.Add(this.logoutBtn);
             this.panel1.Controls.Add(this.EmployeeBtn);
@@ -316,25 +333,29 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 724);
+            this.panel1.Size = new System.Drawing.Size(167, 471);
             this.panel1.TabIndex = 24;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panel2.BackColor = AppColors.ui2;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(250, 130);
+            this.panel2.Size = new System.Drawing.Size(167, 84);
             this.panel2.TabIndex = 8;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // RegisterBtn
             // 
-            this.RegisterBtn.BackColor = System.Drawing.Color.MidnightBlue;
+            this.RegisterBtn.BackColor = AppColors.bg;
             this.RegisterBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.RegisterBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.RegisterBtn.Location = new System.Drawing.Point(352, 343);
+            this.RegisterBtn.ForeColor = AppColors.text;
+            this.RegisterBtn.Location = new System.Drawing.Point(235, 223);
+            this.RegisterBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.RegisterBtn.Name = "RegisterBtn";
             this.RegisterBtn.Size = new System.Drawing.Size(0, 0);
             this.RegisterBtn.TabIndex = 23;
@@ -343,22 +364,24 @@
             // 
             // panelMdiParent
             // 
-            this.panelMdiParent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.panelMdiParent.BackColor = AppColors.bg;
             this.panelMdiParent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMdiParent.Location = new System.Drawing.Point(0, 0);
+            this.panelMdiParent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelMdiParent.Name = "panelMdiParent";
-            this.panelMdiParent.Size = new System.Drawing.Size(1295, 724);
+            this.panelMdiParent.Size = new System.Drawing.Size(863, 471);
             this.panelMdiParent.TabIndex = 26;
             // 
             // AdminForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1295, 724);
+            this.ClientSize = new System.Drawing.Size(863, 471);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.RegisterBtn);
             this.Controls.Add(this.panelMdiParent);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AdminForm";
             this.Text = "Form1";
             this.panel3.ResumeLayout(false);
@@ -389,5 +412,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button RegisterBtn;
         private System.Windows.Forms.Panel panelMdiParent;
+        private PaintEventHandler panel2_Paint;
     }
 }

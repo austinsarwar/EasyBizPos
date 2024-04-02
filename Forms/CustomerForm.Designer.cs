@@ -1,4 +1,6 @@
-﻿namespace EasyBizPos.Forms
+﻿using EasyBizPos.Models;
+
+namespace EasyBizPos.Forms
 {
     partial class CustomerForm
     {
@@ -42,14 +44,14 @@
             // 
             // btnSearchCustomer
             // 
-            this.btnSearchCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnSearchCustomer.BackColor = AppColors.bg;
             this.btnSearchCustomer.FlatAppearance.BorderSize = 0;
             this.btnSearchCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearchCustomer.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnSearchCustomer.ForeColor = AppColors.text;
             this.btnSearchCustomer.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btnSearchCustomer.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnSearchCustomer.IconColor = AppColors.text;
             this.btnSearchCustomer.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSearchCustomer.IconSize = 55;
+            this.btnSearchCustomer.IconSize = 32;
             this.btnSearchCustomer.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnSearchCustomer.Location = new System.Drawing.Point(300, 127);
             this.btnSearchCustomer.Name = "btnSearchCustomer";
@@ -73,15 +75,15 @@
             // 
             // btnAddCustomer
             // 
-            this.btnAddCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btnAddCustomer.BackColor = AppColors.green600;
             this.btnAddCustomer.FlatAppearance.BorderSize = 0;
             this.btnAddCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddCustomer.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnAddCustomer.ForeColor = AppColors.text;
             this.btnAddCustomer.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
-            this.btnAddCustomer.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnAddCustomer.IconColor = AppColors.text;
             this.btnAddCustomer.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddCustomer.IconSize = 55;
+            this.btnAddCustomer.IconSize = 48;
             this.btnAddCustomer.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnAddCustomer.Location = new System.Drawing.Point(1466, 1149);
             this.btnAddCustomer.Name = "btnAddCustomer";
@@ -96,15 +98,15 @@
             // 
             // btnDeleteCustomer
             // 
-            this.btnDeleteCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
+            this.btnDeleteCustomer.BackColor = AppColors.red600;
             this.btnDeleteCustomer.FlatAppearance.BorderSize = 0;
             this.btnDeleteCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteCustomer.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnDeleteCustomer.ForeColor = AppColors.text;
             this.btnDeleteCustomer.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
-            this.btnDeleteCustomer.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnDeleteCustomer.IconColor = AppColors.text;
             this.btnDeleteCustomer.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDeleteCustomer.IconSize = 55;
+            this.btnDeleteCustomer.IconSize = 48;
             this.btnDeleteCustomer.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnDeleteCustomer.Location = new System.Drawing.Point(1786, 1149);
             this.btnDeleteCustomer.Name = "btnDeleteCustomer";
@@ -126,47 +128,47 @@
             this.dataGridCustomer.AllowUserToResizeRows = false;
             this.dataGridCustomer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridCustomer.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridCustomer.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.dataGridCustomer.BackgroundColor = AppColors.bg2;
             this.dataGridCustomer.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridCustomer.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle13.BackColor = AppColors.red400;
             dataGridViewCellStyle13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.ForeColor = AppColors.text;
+            dataGridViewCellStyle13.SelectionBackColor = AppColors.text;
+            dataGridViewCellStyle13.SelectionForeColor = AppColors.text;
             dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridCustomer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridCustomer.ColumnHeadersHeight = 100;
             dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Salmon;
+            dataGridViewCellStyle14.BackColor = AppColors.red400;
             dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.ForeColor = AppColors.text;
+            dataGridViewCellStyle14.SelectionBackColor = AppColors.text;
+            dataGridViewCellStyle14.SelectionForeColor = AppColors.text;
             dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridCustomer.DefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridCustomer.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
             this.dataGridCustomer.EnableHeadersVisualStyles = false;
-            this.dataGridCustomer.GridColor = System.Drawing.Color.SlateBlue;
+            this.dataGridCustomer.GridColor = AppColors.ui2;
             this.dataGridCustomer.Location = new System.Drawing.Point(300, 193);
             this.dataGridCustomer.Name = "dataGridCustomer";
             this.dataGridCustomer.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dataGridCustomer.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle15.BackColor = AppColors.ui3;
             dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.SelectionForeColor = AppColors.text;
             dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridCustomer.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dataGridCustomer.RowHeadersWidth = 62;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle16.BackColor = AppColors.ui2;
             dataGridViewCellStyle16.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.ForeColor = AppColors.text;
             dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.SelectionForeColor = AppColors.text;
             this.dataGridCustomer.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dataGridCustomer.RowTemplate.Height = 28;
             this.dataGridCustomer.Size = new System.Drawing.Size(1800, 950);
@@ -176,7 +178,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.BackColor = AppColors.bg;
             this.ClientSize = new System.Drawing.Size(2425, 1354);
             this.ControlBox = false;
             this.Controls.Add(this.btnDeleteCustomer);

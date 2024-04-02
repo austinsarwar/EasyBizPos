@@ -1,4 +1,6 @@
-﻿namespace EasyBizPos.Forms
+﻿using EasyBizPos.Models;
+
+namespace EasyBizPos.Forms
 {
     partial class UserLogin
     {
@@ -44,7 +46,7 @@
             // 
             // panelMdiParent
             // 
-            this.panelMdiParent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.panelMdiParent.BackColor = AppColors.bg;
             this.panelMdiParent.Controls.Add(this.LoginBtn);
             this.panelMdiParent.Controls.Add(this.PasswordTextBox);
             this.panelMdiParent.Controls.Add(this.UsernameTextBox);
@@ -58,9 +60,9 @@
             // 
             // RegisterBtn
             // 
-            this.RegisterBtn.BackColor = System.Drawing.Color.MidnightBlue;
+            this.RegisterBtn.BackColor = AppColors.blue600;
             this.RegisterBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.RegisterBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.RegisterBtn.ForeColor = AppColors.text;
             this.RegisterBtn.Location = new System.Drawing.Point(352, 343);
             this.RegisterBtn.Name = "RegisterBtn";
             this.RegisterBtn.Size = new System.Drawing.Size(0, 0);
@@ -70,7 +72,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panel3.BackColor = AppColors.ui;
             this.panel3.Controls.Add(this.labelMainLogo);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
@@ -83,7 +85,7 @@
             this.labelMainLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.labelMainLogo.AutoSize = true;
             this.labelMainLogo.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMainLogo.ForeColor = System.Drawing.Color.White;
+            this.labelMainLogo.ForeColor = AppColors.text;
             this.labelMainLogo.Location = new System.Drawing.Point(436, 35);
             this.labelMainLogo.Name = "labelMainLogo";
             this.labelMainLogo.Size = new System.Drawing.Size(223, 54);
@@ -101,7 +103,7 @@
             // 
             this.PasswordLabel.AutoSize = true;
             this.PasswordLabel.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.PasswordLabel.ForeColor = AppColors.text;
             this.PasswordLabel.Location = new System.Drawing.Point(356, 267);
             this.PasswordLabel.Name = "PasswordLabel";
             this.PasswordLabel.Size = new System.Drawing.Size(160, 45);
@@ -112,7 +114,7 @@
             // 
             this.UserIdLabel.AutoSize = true;
             this.UserIdLabel.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserIdLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.UserIdLabel.ForeColor = AppColors.text;
             this.UserIdLabel.Location = new System.Drawing.Point(356, 155);
             this.UserIdLabel.Name = "UserIdLabel";
             this.UserIdLabel.Size = new System.Drawing.Size(131, 45);
@@ -144,7 +146,9 @@
             this.LoginBtn.Size = new System.Drawing.Size(101, 49);
             this.LoginBtn.TabIndex = 9;
             this.LoginBtn.Text = "Login";
-            this.LoginBtn.UseVisualStyleBackColor = true;
+            this.LoginBtn.UseVisualStyleBackColor = false;
+            this.LoginBtn.BackColor = AppColors.blue400;
+            this.LoginBtn.ForeColor = AppColors.text;
             this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
             // 
             // UserLogin

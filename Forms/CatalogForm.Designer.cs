@@ -1,4 +1,6 @@
-﻿namespace EasyBizPos
+﻿using EasyBizPos.Models;
+
+namespace EasyBizPos
 {
     partial class CatalogForm
     {
@@ -53,9 +55,9 @@
             // 
             // CartIcon
             // 
-            this.CartIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.CartIcon.BackColor = AppColors.bg;
             this.CartIcon.IconChar = FontAwesome.Sharp.IconChar.ShoppingCart;
-            this.CartIcon.IconColor = System.Drawing.Color.White;
+            this.CartIcon.IconColor = AppColors.text;
             this.CartIcon.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.CartIcon.IconSize = 110;
             this.CartIcon.Location = new System.Drawing.Point(1953, 102);
@@ -67,10 +69,10 @@
             // labelCartCounter
             // 
             this.labelCartCounter.AutoSize = true;
-            this.labelCartCounter.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.labelCartCounter.BackColor = AppColors.text;
             this.labelCartCounter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelCartCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCartCounter.ForeColor = System.Drawing.Color.Black;
+            this.labelCartCounter.ForeColor = AppColors.bg;
             this.labelCartCounter.Location = new System.Drawing.Point(2064, 158);
             this.labelCartCounter.Name = "labelCartCounter";
             this.labelCartCounter.Size = new System.Drawing.Size(0, 32);
@@ -78,13 +80,13 @@
             // 
             // btnAddToCart
             // 
-            this.btnAddToCart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(207)))), ((int)(((byte)(250)))));
+            this.btnAddToCart.BackColor = AppColors.green600;
             this.btnAddToCart.FlatAppearance.BorderSize = 0;
             this.btnAddToCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddToCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddToCart.ForeColor = System.Drawing.Color.Black;
+            this.btnAddToCart.ForeColor = AppColors.bg;
             this.btnAddToCart.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnAddToCart.IconColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAddToCart.IconColor = AppColors.text;
             this.btnAddToCart.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddToCart.Location = new System.Drawing.Point(1103, 3);
             this.btnAddToCart.Name = "btnAddToCart";
@@ -104,47 +106,47 @@
             this.dataGridCart.AllowUserToResizeRows = false;
             this.dataGridCart.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridCart.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridCart.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.dataGridCart.BackgroundColor = AppColors.bg;
             this.dataGridCart.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridCart.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle5.BackColor = AppColors.ui;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.ForeColor = AppColors.text;
+            dataGridViewCellStyle5.SelectionBackColor = AppColors.text;
+            dataGridViewCellStyle5.SelectionForeColor = AppColors.text;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridCart.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridCart.ColumnHeadersHeight = 100;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Salmon;
+            dataGridViewCellStyle6.BackColor = AppColors.red400;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.ForeColor = AppColors.text;
+            dataGridViewCellStyle6.SelectionBackColor = AppColors.text;
+            dataGridViewCellStyle6.SelectionForeColor = AppColors.text;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridCart.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridCart.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
             this.dataGridCart.EnableHeadersVisualStyles = false;
-            this.dataGridCart.GridColor = System.Drawing.Color.SlateBlue;
+            this.dataGridCart.GridColor = AppColors.ui2;
             this.dataGridCart.Location = new System.Drawing.Point(300, 193);
             this.dataGridCart.Name = "dataGridCart";
             this.dataGridCart.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dataGridCart.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle7.BackColor = AppColors.ui2;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.ForeColor = AppColors.text;
+            dataGridViewCellStyle7.SelectionBackColor = AppColors.ui3;
+            dataGridViewCellStyle7.SelectionForeColor = AppColors.text;
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridCart.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridCart.RowHeadersWidth = 62;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle8.BackColor = AppColors.ui2;
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.ForeColor = AppColors.text;
+            dataGridViewCellStyle8.SelectionBackColor = AppColors.ui2;
+            dataGridViewCellStyle8.SelectionForeColor = AppColors.text;
             this.dataGridCart.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridCart.RowTemplate.Height = 28;
             this.dataGridCart.Size = new System.Drawing.Size(1800, 950);
@@ -152,13 +154,13 @@
             // 
             // btnCartPreview
             // 
-            this.btnCartPreview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            this.btnCartPreview.BackColor = AppColors.bg;
             this.btnCartPreview.FlatAppearance.BorderSize = 0;
             this.btnCartPreview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCartPreview.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCartPreview.ForeColor = System.Drawing.Color.Black;
+            this.btnCartPreview.ForeColor = AppColors.bg;
             this.btnCartPreview.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnCartPreview.IconColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCartPreview.IconColor = AppColors.text;
             this.btnCartPreview.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCartPreview.Location = new System.Drawing.Point(1427, 3);
             this.btnCartPreview.Name = "btnCartPreview";
@@ -183,14 +185,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.BackColor = AppColors.bg;
             this.ClientSize = new System.Drawing.Size(2417, 1520);
             this.ControlBox = false;
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.dataGridCart);
             this.Controls.Add(this.labelCartCounter);
             this.Controls.Add(this.CartIcon);
-            this.ForeColor = System.Drawing.Color.White;
+            this.ForeColor = AppColors.text;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CatalogForm";
             this.ShowInTaskbar = false;

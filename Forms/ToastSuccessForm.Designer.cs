@@ -1,4 +1,6 @@
-﻿namespace EasyBizPos.Forms
+﻿using EasyBizPos.Models;
+
+namespace EasyBizPos.Forms
 {
     partial class ToastSuccessForm
     {
@@ -40,7 +42,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(155)))), ((int)(((byte)(53)))));
+            this.panel1.BackColor = AppColors.ui;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";

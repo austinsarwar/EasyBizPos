@@ -1,4 +1,6 @@
-﻿namespace EasyBizPos.Forms
+﻿using EasyBizPos.Models;
+
+namespace EasyBizPos.Forms
 {
     partial class EmployeeForm
     {
@@ -42,14 +44,14 @@
             // 
             // btnSearchEmployee
             // 
-            this.btnSearchEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnSearchEmployee.BackColor = AppColors.bg;
             this.btnSearchEmployee.FlatAppearance.BorderSize = 0;
             this.btnSearchEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearchEmployee.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnSearchEmployee.ForeColor = AppColors.text;
             this.btnSearchEmployee.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btnSearchEmployee.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnSearchEmployee.IconColor = AppColors.text;
             this.btnSearchEmployee.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSearchEmployee.IconSize = 55;
+            this.btnSearchEmployee.IconSize = 32;
             this.btnSearchEmployee.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnSearchEmployee.Location = new System.Drawing.Point(300, 127);
             this.btnSearchEmployee.Name = "btnSearchEmployee";
@@ -74,18 +76,18 @@
             // Clock In Button
             //
             this.btnClockIn = new FontAwesome.Sharp.IconButton();
-            this.btnClockIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btnClockIn.BackColor = AppColors.green600;
             this.btnClockIn.FlatAppearance.BorderSize = 0;
             this.btnClockIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClockIn.ForeColor = System.Drawing.Color.White;
+            this.btnClockIn.ForeColor = AppColors.text;
             this.btnClockIn.IconChar = FontAwesome.Sharp.IconChar.Clock;
-            this.btnClockIn.IconColor = System.Drawing.Color.White;
+            this.btnClockIn.IconColor = AppColors.text;
             this.btnClockIn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnClockIn.IconSize = 40;
+            this.btnClockIn.IconSize = 32;
             this.btnClockIn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClockIn.Location = new System.Drawing.Point(700, 1149);
             this.btnClockIn.Name = "btnClockIn";
-            this.btnClockIn.Size = new System.Drawing.Size(150, 50);
+            this.btnClockIn.Size = new System.Drawing.Size(200, 100);
             this.btnClockIn.Text = "Clock In";
             this.btnClockIn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClockIn.UseVisualStyleBackColor = false;
@@ -94,18 +96,18 @@
             // Clock Out Button
             //
             this.btnClockOut = new FontAwesome.Sharp.IconButton();
-            this.btnClockOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
+            this.btnClockOut.BackColor = AppColors.red600;
             this.btnClockOut.FlatAppearance.BorderSize = 0;
             this.btnClockOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClockOut.ForeColor = System.Drawing.Color.White;
+            this.btnClockOut.ForeColor = AppColors.text;
             this.btnClockOut.IconChar = FontAwesome.Sharp.IconChar.Clock;
-            this.btnClockOut.IconColor = System.Drawing.Color.White;
+            this.btnClockOut.IconColor = AppColors.text;
             this.btnClockOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnClockOut.IconSize = 40;
+            this.btnClockOut.IconSize = 32;
             this.btnClockOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClockOut.Location = new System.Drawing.Point(900, 1149); // Adjust location as needed
             this.btnClockOut.Name = "btnClockOut";
-            this.btnClockOut.Size = new System.Drawing.Size(150, 50); // Adjust size as needed
+            this.btnClockOut.Size = new System.Drawing.Size(200, 100); // Adjust size as needed
             this.btnClockOut.Text = "Clock Out";
             this.btnClockOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClockOut.UseVisualStyleBackColor = false;
@@ -113,15 +115,15 @@
             // 
             // btnAddEmployee
             // 
-            this.btnAddEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btnAddEmployee.BackColor = AppColors.green600;
             this.btnAddEmployee.FlatAppearance.BorderSize = 0;
             this.btnAddEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddEmployee.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnAddEmployee.ForeColor = AppColors.text;
             this.btnAddEmployee.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
-            this.btnAddEmployee.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnAddEmployee.IconColor = AppColors.text;
             this.btnAddEmployee.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddEmployee.IconSize = 55;
+            this.btnAddEmployee.IconSize = 48;
             this.btnAddEmployee.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnAddEmployee.Location = new System.Drawing.Point(1466, 1149);
             this.btnAddEmployee.Name = "btnAddEmployee";
@@ -136,15 +138,15 @@
             // 
             // btnDeleteEmployee
             // 
-            this.btnDeleteEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
+            this.btnDeleteEmployee.BackColor = AppColors.red600;
             this.btnDeleteEmployee.FlatAppearance.BorderSize = 0;
             this.btnDeleteEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteEmployee.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnDeleteEmployee.ForeColor = AppColors.text;
             this.btnDeleteEmployee.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
-            this.btnDeleteEmployee.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnDeleteEmployee.IconColor = AppColors.text;
             this.btnDeleteEmployee.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDeleteEmployee.IconSize = 55;
+            this.btnDeleteEmployee.IconSize = 48;
             this.btnDeleteEmployee.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnDeleteEmployee.Location = new System.Drawing.Point(1786, 1149);
             this.btnDeleteEmployee.Name = "btnDeleteEmployee";
@@ -166,47 +168,47 @@
             this.dataGridEmployee.AllowUserToResizeRows = false;
             this.dataGridEmployee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridEmployee.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridEmployee.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.dataGridEmployee.BackgroundColor = AppColors.bg2;
             this.dataGridEmployee.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridEmployee.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle13.BackColor = AppColors.ui2;
             dataGridViewCellStyle13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.ForeColor = AppColors.text;
+            dataGridViewCellStyle13.SelectionBackColor = AppColors.text;
+            dataGridViewCellStyle13.SelectionForeColor = AppColors.text;
             dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridEmployee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridEmployee.ColumnHeadersHeight = 100;
             dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Salmon;
+            dataGridViewCellStyle14.BackColor = AppColors.red400;
             dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.ForeColor = AppColors.text;
+            dataGridViewCellStyle14.SelectionBackColor = AppColors.text;
+            dataGridViewCellStyle14.SelectionForeColor = AppColors.text;
             dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridEmployee.DefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridEmployee.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
             this.dataGridEmployee.EnableHeadersVisualStyles = false;
-            this.dataGridEmployee.GridColor = System.Drawing.Color.SlateBlue;
+            this.dataGridEmployee.GridColor = AppColors.ui2;
             this.dataGridEmployee.Location = new System.Drawing.Point(300, 193);
             this.dataGridEmployee.Name = "dataGridEmployee";
             this.dataGridEmployee.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dataGridEmployee.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle15.BackColor = AppColors.ui3;
             dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.ForeColor = AppColors.text;
+            dataGridViewCellStyle15.SelectionBackColor = AppColors.ui2;
+            dataGridViewCellStyle15.SelectionForeColor = AppColors.text;
             dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridEmployee.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dataGridEmployee.RowHeadersWidth = 62;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle16.BackColor = AppColors.ui2;
             dataGridViewCellStyle16.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.ForeColor = AppColors.text;
+            dataGridViewCellStyle16.SelectionBackColor = AppColors.ui2;
+            dataGridViewCellStyle16.SelectionForeColor = AppColors.text;
             this.dataGridEmployee.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dataGridEmployee.RowTemplate.Height = 28;
             this.dataGridEmployee.Size = new System.Drawing.Size(1800, 950);
@@ -216,7 +218,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.BackColor = AppColors.bg;
             this.ClientSize = new System.Drawing.Size(2425, 1354);
             this.ControlBox = false;
             this.Controls.Add(this.btnDeleteEmployee);

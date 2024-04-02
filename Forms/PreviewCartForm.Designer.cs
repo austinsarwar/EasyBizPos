@@ -1,4 +1,6 @@
-﻿namespace EasyBizPos.Forms
+﻿using EasyBizPos.Models;
+
+namespace EasyBizPos.Forms
 {
     partial class PreviewCartForm
     {
@@ -45,22 +47,22 @@
             this.dataGridCartPreview.AllowUserToResizeRows = false;
             this.dataGridCartPreview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridCartPreview.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridCartPreview.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.dataGridCartPreview.BackgroundColor = AppColors.bg;
             this.dataGridCartPreview.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridCartPreview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.BackColor = AppColors.bg;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.ForeColor = AppColors.text;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridCartPreview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridCartPreview.ColumnHeadersHeight = 100;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Salmon;
+            dataGridViewCellStyle2.BackColor = AppColors.bg;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.ForeColor = AppColors.text;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -68,25 +70,25 @@
             this.dataGridCartPreview.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridCartPreview.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
             this.dataGridCartPreview.EnableHeadersVisualStyles = false;
-            this.dataGridCartPreview.GridColor = System.Drawing.Color.SlateBlue;
+            this.dataGridCartPreview.GridColor = AppColors.blue400;
             this.dataGridCartPreview.Location = new System.Drawing.Point(0, 0);
             this.dataGridCartPreview.Name = "dataGridCartPreview";
             this.dataGridCartPreview.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dataGridCartPreview.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle3.BackColor = AppColors.bg;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.ForeColor = AppColors.text;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridCartPreview.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridCartPreview.RowHeadersWidth = 62;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle4.BackColor = AppColors.bg;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.ForeColor = AppColors.text;
+            dataGridViewCellStyle4.SelectionBackColor = AppColors.blue400;
+            dataGridViewCellStyle4.SelectionForeColor = AppColors.text;
             this.dataGridCartPreview.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridCartPreview.RowTemplate.Height = 28;
             this.dataGridCartPreview.Size = new System.Drawing.Size(800, 450);

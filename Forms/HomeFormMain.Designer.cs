@@ -33,6 +33,7 @@ namespace EasyBizPos
         {
             this.RegisterBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.adminBtn = new FontAwesome.Sharp.IconButton();
             this.logoutBtn = new FontAwesome.Sharp.IconButton();
             this.EmployeeBtn = new FontAwesome.Sharp.IconButton();
             this.SettingBtn = new FontAwesome.Sharp.IconButton();
@@ -49,16 +50,15 @@ namespace EasyBizPos
             this.labelMainLogo = new System.Windows.Forms.Label();
             this.panelMdiParent = new System.Windows.Forms.Panel();
             this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
-            this.adminBtn = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // RegisterBtn
             // 
-            this.RegisterBtn.BackColor = AppColors.blue600;
+            this.RegisterBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(94)))), ((int)(((byte)(166)))));
             this.RegisterBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.RegisterBtn.ForeColor = AppColors.text;
+            this.RegisterBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.RegisterBtn.Location = new System.Drawing.Point(352, 343);
             this.RegisterBtn.Name = "RegisterBtn";
             this.RegisterBtn.Size = new System.Drawing.Size(0, 0);
@@ -68,7 +68,7 @@ namespace EasyBizPos
             // 
             // panel1
             // 
-            this.panel1.BackColor = AppColors.ui;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(39)))), ((int)(((byte)(38)))));
             this.panel1.Controls.Add(this.adminBtn);
             this.panel1.Controls.Add(this.logoutBtn);
             this.panel1.Controls.Add(this.EmployeeBtn);
@@ -82,17 +82,38 @@ namespace EasyBizPos
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 880);
+            this.panel1.Size = new System.Drawing.Size(250, 990);
             this.panel1.TabIndex = 7;
+            // 
+            // adminBtn
+            // 
+            this.adminBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.adminBtn.FlatAppearance.BorderSize = 0;
+            this.adminBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.adminBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
+            this.adminBtn.IconChar = FontAwesome.Sharp.IconChar.Binoculars;
+            this.adminBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
+            this.adminBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.adminBtn.IconSize = 32;
+            this.adminBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.adminBtn.Location = new System.Drawing.Point(0, 610);
+            this.adminBtn.Name = "adminBtn";
+            this.adminBtn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.adminBtn.Size = new System.Drawing.Size(250, 60);
+            this.adminBtn.TabIndex = 19;
+            this.adminBtn.Text = "Admin";
+            this.adminBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.adminBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.adminBtn.UseVisualStyleBackColor = true;
             // 
             // logoutBtn
             // 
             this.logoutBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.logoutBtn.FlatAppearance.BorderSize = 0;
             this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logoutBtn.ForeColor = AppColors.text;
+            this.logoutBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.logoutBtn.IconChar = FontAwesome.Sharp.IconChar.ArrowRotateBackward;
-            this.logoutBtn.IconColor = AppColors.text;
+            this.logoutBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.logoutBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.logoutBtn.IconSize = 32;
             this.logoutBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -111,9 +132,9 @@ namespace EasyBizPos
             this.EmployeeBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.EmployeeBtn.FlatAppearance.BorderSize = 0;
             this.EmployeeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EmployeeBtn.ForeColor = AppColors.text;
+            this.EmployeeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.EmployeeBtn.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
-            this.EmployeeBtn.IconColor = AppColors.text;
+            this.EmployeeBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.EmployeeBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.EmployeeBtn.IconSize = 32;
             this.EmployeeBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -133,9 +154,9 @@ namespace EasyBizPos
             this.SettingBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.SettingBtn.FlatAppearance.BorderSize = 0;
             this.SettingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SettingBtn.ForeColor = AppColors.text;
+            this.SettingBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.SettingBtn.IconChar = FontAwesome.Sharp.IconChar.Tools;
-            this.SettingBtn.IconColor = AppColors.text;
+            this.SettingBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.SettingBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.SettingBtn.IconSize = 32;
             this.SettingBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -154,9 +175,9 @@ namespace EasyBizPos
             this.TransactionsBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.TransactionsBtn.FlatAppearance.BorderSize = 0;
             this.TransactionsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TransactionsBtn.ForeColor = AppColors.text;
+            this.TransactionsBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.TransactionsBtn.IconChar = FontAwesome.Sharp.IconChar.ChartColumn;
-            this.TransactionsBtn.IconColor = AppColors.text;
+            this.TransactionsBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.TransactionsBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.TransactionsBtn.IconSize = 32;
             this.TransactionsBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -175,9 +196,9 @@ namespace EasyBizPos
             this.CustomerBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.CustomerBtn.FlatAppearance.BorderSize = 0;
             this.CustomerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CustomerBtn.ForeColor = AppColors.text;
+            this.CustomerBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.CustomerBtn.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
-            this.CustomerBtn.IconColor = AppColors.text;
+            this.CustomerBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.CustomerBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.CustomerBtn.IconSize = 32;
             this.CustomerBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -197,9 +218,9 @@ namespace EasyBizPos
             this.CartBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.CartBtn.FlatAppearance.BorderSize = 0;
             this.CartBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CartBtn.ForeColor = AppColors.text;
+            this.CartBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.CartBtn.IconChar = FontAwesome.Sharp.IconChar.ShoppingCart;
-            this.CartBtn.IconColor = AppColors.text;
+            this.CartBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.CartBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.CartBtn.IconSize = 32;
             this.CartBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -219,9 +240,9 @@ namespace EasyBizPos
             this.CatalogBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.CatalogBtn.FlatAppearance.BorderSize = 0;
             this.CatalogBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CatalogBtn.ForeColor = AppColors.text;
+            this.CatalogBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.CatalogBtn.IconChar = FontAwesome.Sharp.IconChar.Store;
-            this.CatalogBtn.IconColor = AppColors.text;
+            this.CatalogBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.CatalogBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.CatalogBtn.IconSize = 32;
             this.CatalogBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -241,9 +262,9 @@ namespace EasyBizPos
             this.HomeBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.HomeBtn.FlatAppearance.BorderSize = 0;
             this.HomeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HomeBtn.ForeColor = AppColors.text;
+            this.HomeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.HomeBtn.IconChar = FontAwesome.Sharp.IconChar.House;
-            this.HomeBtn.IconColor = AppColors.text;
+            this.HomeBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.HomeBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.HomeBtn.IconSize = 32;
             this.HomeBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -260,7 +281,7 @@ namespace EasyBizPos
             // 
             // panel2
             // 
-            this.panel2.BackColor = AppColors.ui2;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(49)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -269,7 +290,7 @@ namespace EasyBizPos
             // 
             // panel3
             // 
-            this.panel3.BackColor = AppColors.ui2;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(49)))));
             this.panel3.Controls.Add(this.activeUsernameLabel);
             this.panel3.Controls.Add(this.activeUserLabel);
             this.panel3.Controls.Add(this.activeUser);
@@ -277,7 +298,7 @@ namespace EasyBizPos
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(250, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1199, 130);
+            this.panel3.Size = new System.Drawing.Size(1295, 130);
             this.panel3.TabIndex = 18;
             // 
             // activeUsernameLabel
@@ -316,7 +337,7 @@ namespace EasyBizPos
             this.labelMainLogo.AutoSize = true;
             this.labelMainLogo.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMainLogo.ForeColor = System.Drawing.Color.White;
-            this.labelMainLogo.Location = new System.Drawing.Point(472, 35);
+            this.labelMainLogo.Location = new System.Drawing.Point(520, 35);
             this.labelMainLogo.Name = "labelMainLogo";
             this.labelMainLogo.Size = new System.Drawing.Size(137, 54);
             this.labelMainLogo.TabIndex = 0;
@@ -324,11 +345,11 @@ namespace EasyBizPos
             // 
             // panelMdiParent
             // 
-            this.panelMdiParent.BackColor = AppColors.bg2;
+            this.panelMdiParent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(27)))), ((int)(((byte)(26)))));
             this.panelMdiParent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMdiParent.Location = new System.Drawing.Point(250, 130);
             this.panelMdiParent.Name = "panelMdiParent";
-            this.panelMdiParent.Size = new System.Drawing.Size(1199, 750);
+            this.panelMdiParent.Size = new System.Drawing.Size(1295, 860);
             this.panelMdiParent.TabIndex = 22;
             // 
             // mySqlCommand1
@@ -338,33 +359,12 @@ namespace EasyBizPos
             this.mySqlCommand1.EnableCaching = false;
             this.mySqlCommand1.Transaction = null;
             // 
-            // adminBtn
-            // 
-            this.adminBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.adminBtn.FlatAppearance.BorderSize = 0;
-            this.adminBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.adminBtn.ForeColor = AppColors.text;
-            this.adminBtn.IconChar = FontAwesome.Sharp.IconChar.Binoculars;
-            this.adminBtn.IconColor = AppColors.text;
-            this.adminBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.adminBtn.IconSize = 32;
-            this.adminBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.adminBtn.Location = new System.Drawing.Point(0, 610);
-            this.adminBtn.Name = "adminBtn";
-            this.adminBtn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.adminBtn.Size = new System.Drawing.Size(250, 60);
-            this.adminBtn.TabIndex = 19;
-            this.adminBtn.Text = "Admin";
-            this.adminBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.adminBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.adminBtn.UseVisualStyleBackColor = true;
-            // 
             // HomeFormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = AppColors.text;
-            this.ClientSize = new System.Drawing.Size(1449, 880);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
+            this.ClientSize = new System.Drawing.Size(1545, 990);
             this.Controls.Add(this.panelMdiParent);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);

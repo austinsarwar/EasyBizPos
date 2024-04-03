@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using EasyBizPos.Forms;
 using FontAwesome.Sharp;
+using MySql.Data.MySqlClient;
 
 
 namespace EasyBizPos
@@ -18,6 +19,7 @@ namespace EasyBizPos
         // Binding source connects the database to the datagrid
         BindingSource customerInfoBindingSource = new BindingSource();
         BindingSource employeeInfoBindingSource = new BindingSource();
+        private MySqlConnection connection;
 
         public string ActiveUsername { get; set; }
 
@@ -31,14 +33,20 @@ namespace EasyBizPos
             // Wire up the logout button click event
             logoutBtn.Click += LogoutBtn_Click;
             adminBtn.Click += AdminBtn_Click;
-
+            
 
         }
 
+        private void InitializeDatabaseConnection()
+        {
+            // Connection string for your MySQL database
+            string connectionString = Environment.GetEnvironmentVariable("DATABASE_CONNECTION_STRING");
 
+            // Create MySqlConnection instance with connection string
+            connection = new MySqlConnection(connectionString);
+        }
 
-
-
+        
 
         private void CatalogBtn_Click(object sender, EventArgs e)
         {

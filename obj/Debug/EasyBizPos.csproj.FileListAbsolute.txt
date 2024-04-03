@@ -267,3 +267,5 @@ C:\Users\Jeff\Source\Repos\EasyBizPos5\bin\Debug\System.Threading.Tasks.Extensio
 C:\Users\Jeff\Source\Repos\EasyBizPos5\obj\Debug\EasyBizPos.csproj.Up2Date
 C:\Users\Jeff\source\repos\EasyBizPos\bin\Debug\BCrypt.Net-Next.dll
 C:\Users\Jeff\source\repos\EasyBizPos\bin\Debug\BCrypt.Net-Next.xml
+C:\Users\Jeff\Source\Repos\EasyBizPos\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Jeff\Source\Repos\EasyBizPos\bin\Debug\Newtonsoft.Json.xml

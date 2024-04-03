@@ -21,29 +21,33 @@ namespace EasyBizPos.Forms
         {
             InitializeComponent();
             cart = Cart.Instance;
-           
-              decimal totalPrice = cart.GetCartTotalPrice();
-              btnTotalPrice.Text = totalPrice.ToString();
-              cart.updateCartListQuantity();
-            
-              cartBindingSource.DataSource = cart.getCart();
-              dataGridCart.DataSource = cartBindingSource;
+
+            UpdateCartDetails();
         }
 
-      
+        private void UpdateCartDetails()
+        {
+            decimal subtotal = cart.GetCartSubtotal();
+            decimal taxRate = Convert.ToDecimal(ConfigManager.Instance.GetSalesTaxRate());
+            decimal tax = Math.Round(subtotal * taxRate, 2); 
+            decimal totalPrice = subtotal + tax;
+
+            subtotalPrice.Text = subtotal.ToString();
+            taxPrice.Text = tax.ToString();
+            totalPriceLabel.Text = totalPrice.ToString();
+
+            cart.updateCartListQuantity();
+
+            cartBindingSource.DataSource = cart.getCart();
+            dataGridCart.DataSource = cartBindingSource;
+        }
+
 
         private void btnClearCart_Click(object sender, EventArgs e)
         {
             cart.Clear();
             cartBindingSource.Clear();
-            btnTotalPrice.Text = "0";
-
-
-
-
-
-
-
+            UpdateCartDetails();
         }
     }
 }

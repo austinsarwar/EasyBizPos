@@ -42,6 +42,8 @@ namespace EasyBizPos.Forms
             this.taxLabel = new System.Windows.Forms.Label();
             this.totalPriceLabel = new System.Windows.Forms.Label();
             this.totalLabel = new System.Windows.Forms.Label();
+            this.taxRateTitle = new System.Windows.Forms.Label();
+            this.taxRateLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -196,12 +198,38 @@ namespace EasyBizPos.Forms
             this.totalLabel.TabIndex = 24;
             this.totalLabel.Text = "Total";
             // 
+            // taxRateTitle
+            // 
+            this.taxRateTitle.AutoSize = true;
+            this.taxRateTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.taxRateTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.taxRateTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
+            this.taxRateTitle.Location = new System.Drawing.Point(1048, 965);
+            this.taxRateTitle.Name = "taxRateTitle";
+            this.taxRateTitle.Size = new System.Drawing.Size(115, 29);
+            this.taxRateTitle.TabIndex = 26;
+            this.taxRateTitle.Text = "Tax Rate:";
+            // 
+            // taxRateLabel
+            // 
+            this.taxRateLabel.AutoSize = true;
+            this.taxRateLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.taxRateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.taxRateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
+            this.taxRateLabel.Location = new System.Drawing.Point(1189, 965);
+            this.taxRateLabel.Name = "taxRateLabel";
+            this.taxRateLabel.Size = new System.Drawing.Size(26, 29);
+            this.taxRateLabel.TabIndex = 27;
+            this.taxRateLabel.Text = "0";
+            // 
             // CartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(2013, 1214);
+            this.Controls.Add(this.taxRateLabel);
+            this.Controls.Add(this.taxRateTitle);
             this.Controls.Add(this.totalPriceLabel);
             this.Controls.Add(this.totalLabel);
             this.Controls.Add(this.taxPrice);
@@ -229,5 +257,7 @@ namespace EasyBizPos.Forms
         private System.Windows.Forms.Label taxLabel;
         private System.Windows.Forms.Label totalPriceLabel;
         private System.Windows.Forms.Label totalLabel;
+        private System.Windows.Forms.Label taxRateTitle;
+        private System.Windows.Forms.Label taxRateLabel;
     }
 }

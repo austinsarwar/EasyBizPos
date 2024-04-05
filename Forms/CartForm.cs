@@ -35,7 +35,7 @@ namespace EasyBizPos.Forms
             subtotalPrice.Text = subtotal.ToString();
             taxPrice.Text = tax.ToString();
             totalPriceLabel.Text = totalPrice.ToString();
-
+            taxRateLabel.Text = taxRate.ToString();
             cart.updateCartListQuantity();
 
             cartBindingSource.DataSource = cart.getCart();

@@ -17,6 +17,8 @@ namespace EasyBizPos.Forms
     {
         public HomeFormMain MainForm { get; set; }
         public static string ActiveUsername { get; private set; }
+        public static bool IsAdmin { get; private set; }
+
 
         public UserLogin()
         {
@@ -41,8 +43,9 @@ namespace EasyBizPos.Forms
             if (isAuthenticated)
             {
                 string connectionString = Environment.GetEnvironmentVariable("DATABASE_CONNECTION_STRING");
-                string nameQuery = "SELECT name FROM employeeinfo WHERE username = @username";
+                string nameQuery = "SELECT name, admin FROM employeeinfo WHERE username = @username";
                 string name;
+                int admin;
 
                 try
                 {
@@ -52,8 +55,16 @@ namespace EasyBizPos.Forms
                         {
                             command.Parameters.AddWithValue("@username", username);
                             connection.Open();
-                            name = command.ExecuteScalar()?.ToString();
-                            ActiveUsername = name;
+                            using (MySqlDataReader reader = command.ExecuteReader())
+                            {
+                                if (reader.Read())
+                                {
+                                    name = reader.GetString(0);
+                                    ActiveUsername = name;
+                                    admin = reader.GetInt32(1);
+                                    IsAdmin = admin == 1;
+                                }
+                            }
                         }
                         OpenMainForm();
                     }
@@ -96,6 +107,12 @@ namespace EasyBizPos.Forms
                 MessageBox.Show(errorMessage);
             }
         }
+
+        public static bool IsUserAdmin()
+        {
+            return IsAdmin;
+        }
+
 
 
         private string HashPassword(string password, string salt)

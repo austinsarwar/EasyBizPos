@@ -49,5 +49,11 @@ namespace EasyBizPos.Forms
             cartBindingSource.Clear();
             UpdateCartDetails();
         }
+
+        private void btnCheckout_Click(object sender, EventArgs e)
+        {
+            CheckoutForm popUpForm = new CheckoutForm();
+            popUpForm.Show();
+        }
     }
 }

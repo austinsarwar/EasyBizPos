@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace EasyBizPos.Models
 {
-    internal class TransactionClass
+    internal class Transaction
     {
         public int transaction_id { get; set; }
-        public int customer_id { get; set; }
-        public int product_id { get; set; }
-        public int quantity { get; set; }
-        public double total { get; set; }
+        public int? customer_id { get; set; }
+        public string customer_name { get; set; }
+        public decimal total { get; set; }
         public DateTime date { get; set; }
     }
 }

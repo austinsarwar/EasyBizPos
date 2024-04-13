@@ -190,16 +190,20 @@ namespace EasyBizPos.Forms
             // Compare the hashed input password with the stored hashed password
             return password == hashedPassword;
         }
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Close(); // Close the login form when the main form is closed
+        }
 
-        
         private void OpenMainForm()
         {
+            MainForm = new HomeFormMain(); 
+            MainForm.ActiveUsername = ActiveUsername; // Set the active username
             this.Hide(); // Hide the login form
-            HomeFormMain mainForm = new HomeFormMain();
-            mainForm.ActiveUsername = ActiveUsername; // Pass the active username to HomeFormMain
-            mainForm.ShowDialog(); // Show the main form as a dialog
-            this.Close(); // Close the login form after the main form is closed
+            MainForm.FormClosed += MainForm_FormClosed; // Subscribe to the FormClosed event
+            MainForm.Show(); // Show the main form
         }
+
         private void AddName_Click(object sender, EventArgs e)
         {
 

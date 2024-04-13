@@ -122,6 +122,7 @@
   <ItemGroup>
     <Compile Include="DAOS\EmployeeInformationDAO.cs" />
     <Compile Include="DAOS\TimeTrackingDAO.cs" />
+    <Compile Include="DAOS\TransactionDAO.cs" />
     <Compile Include="Forms\AddEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,7 +206,8 @@
       <DependentUpon>HomeFormMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\ICart.cs" />
-    <Compile Include="Models\TransactionClass.cs" />
+    <Compile Include="Models\Transaction.cs" />
+    <Compile Include="Models\TransactionDetail.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\AddEmployee.resx">

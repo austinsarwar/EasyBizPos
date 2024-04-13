@@ -19,6 +19,10 @@ namespace EasyBizPos.Models
         private decimal cartSubtotal = 0;
         private decimal cartTax = 0;
         private int cartItemCount = 0;
+        private string customerName = null;
+        private int customerId = -1;
+        private int transactionId = -1;
+
         private Cart()
         {
 
@@ -104,6 +108,41 @@ namespace EasyBizPos.Models
             cartSubtotal = 0;
             cartTax = 0;
             cartItemCount = 0;
+        }
+        // Setter for customerName
+        public void SetCustomerName(string name)
+        {
+            customerName = name;
+        }
+
+        // Getter for customerName
+        public string GetCustomerName()
+        {
+            return customerName;
+        }
+
+        // Setter for customerId
+        public void SetCustomerId(int id)
+        {
+            customerId = id;
+        }
+
+        // Getter for customerId
+        public int GetCustomerId()
+        {
+            return customerId;
+        }
+
+        // Setter for transactionId
+        public void SetTransactionId(int id)
+        {
+            transactionId = id;
+        }
+
+        // Getter for transactionId
+        public int GetTransactionId()
+        {
+            return transactionId;
         }
     }
 }

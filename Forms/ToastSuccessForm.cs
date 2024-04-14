@@ -13,37 +13,42 @@ namespace EasyBizPos.Forms
     public partial class ToastSuccessForm : Form
     {
         int toastX, toastY;
+        bool isGoingUp = true; // State to track whether the toast is going up or down
+
         public ToastSuccessForm()
         {
             InitializeComponent();
             Position();
+            toastTimerUp.Start(); // Start the 'going up' timer when the form loads
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            toastY -= 10;
-            this.Location = new Point(toastX, toastY);
-            if(toastY <= 1500)
+            if (isGoingUp)
             {
-                toastTimerUp.Stop();
+                // Going up
+                toastY -= 4; // Modify this value to adjust the speed
+                this.Location = new Point(toastX, toastY);
 
+                // When reached the desired height, start going down
+                if (toastY <= Screen.PrimaryScreen.WorkingArea.Height - 200) // Adjust target Y position as desired
+                {
+                    isGoingUp = false; // Change state to going down
+                    toastTimerUp.Stop();
+                    toastTimerDown.Start();
+                }
             }
         }
-        int y = 100;
+
         private void timerDown_Tick(object sender, EventArgs e)
-            
         {
-            y--;
-            if(y < 0)
+            // Going down
+            toastY += 4; // Modify this value to adjust the speed
+            this.Location = new Point(toastX, toastY);
+            if (toastY >= Screen.PrimaryScreen.WorkingArea.Height - this.Height)
             {
-                toastY += 1;
-                this.Location = new Point(toastX, toastY += 10);
-                if (toastY >= 800)
-                {
-                    toastTimerDown.Stop();
-                    y = 100;
-                    this.Close();
-                }
+                toastTimerDown.Stop();
+                this.Close(); // Close the form when it reaches the bottom
             }
         }
 
@@ -52,8 +57,8 @@ namespace EasyBizPos.Forms
             int ScreenWidth = Screen.PrimaryScreen.WorkingArea.Width;
             int ScreenHeight = Screen.PrimaryScreen.WorkingArea.Height;
             toastX = ScreenWidth - this.Width - 30;
-            toastY = ScreenHeight - this.Height + 150;
+            toastY = ScreenHeight - this.Height + 150; // Starting Y position
             this.Location = new Point(toastX, toastY);
         }
     }
-}
+ }

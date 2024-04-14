@@ -57,3 +57,4 @@ C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.csproj.CoreCo
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.csproj.Up2Date
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.exe
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.pdb
+C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.Forms.CustomerPhoneLookUpForm.resources

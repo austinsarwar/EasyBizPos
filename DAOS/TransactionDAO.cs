@@ -66,7 +66,7 @@ namespace EasyBizPos.DAOS
             {
                 connection.Open();
 
-                int customerId = cart.GetCustomerId();
+                int? customerId = cart.GetCustomerId();
                 decimal totalPrice = cart.GetCartTotalPrice();
 
                 using (MySqlCommand command = connection.CreateCommand())
@@ -140,51 +140,7 @@ namespace EasyBizPos.DAOS
             }
         }
 
-        public int? GetCustomerIdByName(string customerName)
-        {
-            using (MySqlConnection connection = new MySqlConnection(connectionString))
-            {
-                connection.Open();
-
-                string query = "SELECT id FROM customers WHERE name = @name LIMIT 1";
-                using (MySqlCommand command = new MySqlCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@name", customerName);
-
-                    object result = command.ExecuteScalar();
-
-                    if (result != null && result != DBNull.Value)
-                    {
-                        return Convert.ToInt32(result);
-                    }
-                }
-            }
-            // If no customer is found, or there's an error, return null
-            return null;
-        }
-
-        public int? GetCustomerIdByPhoneNumber(string phoneNumber)
-        {
-            using (MySqlConnection connection = new MySqlConnection(connectionString))
-            {
-                connection.Open();
-
-                string query = "SELECT id FROM customers WHERE phone_number = @phoneNumber LIMIT 1";
-                using (MySqlCommand command = new MySqlCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@phoneNumber", phoneNumber);
-
-                    object result = command.ExecuteScalar();
-
-                    if (result != null && result != DBNull.Value)
-                    {
-                        return Convert.ToInt32(result);
-                    }
-                }
-            }
-            // If no customer is found, or there's an error, return null
-            return null;
-        }
+      
 
     }
 }

@@ -46,11 +46,12 @@ namespace EasyBizPos.Forms
             cart.updateCartListQuantity();
 
             cartBindingSource.DataSource = cart.getCart();
-            dataGridCart.DataSource = cartBindingSource;
 
-            // Force the DataGridView to repaint itself
-            dataGridCart.Invalidate();
+            // Reset the DataSource of the DataGridView
+            dataGridCart.DataSource = null;
+            dataGridCart.DataSource = cartBindingSource;
         }
+
 
 
 
@@ -137,8 +138,13 @@ namespace EasyBizPos.Forms
                         MessageBox.Show($"Error connecting to the database: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+
+                // Reset the UPC text box and set focus to it
+                upcEnterBox.Text = "";
+                upcEnterBox.Focus();
             }
         }
+
 
 
     }

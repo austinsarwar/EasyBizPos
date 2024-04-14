@@ -185,17 +185,24 @@ namespace EasyBizPos.DAOS
                                 int quantity = item.Quantity;
                                 decimal price = item.Price;
 
+                                // Insert the transaction detail
                                 command.CommandText = "INSERT INTO transaction_detail (transaction_id, product_id, quantity, price) VALUES (@transactionId, @productId, @quantity, @price)";
                                 command.Parameters.Clear();
                                 command.Parameters.AddWithValue("@transactionId", transactionId);
                                 command.Parameters.AddWithValue("@productId", productId);
                                 command.Parameters.AddWithValue("@quantity", quantity);
                                 command.Parameters.AddWithValue("@price", price);
+                                command.ExecuteNonQuery();
 
+                                // Update the stock count
+                                command.CommandText = "UPDATE products SET stock = stock - @quantity WHERE product_id = @productId";
+                                command.Parameters.Clear();
+                                command.Parameters.AddWithValue("@quantity", quantity);
+                                command.Parameters.AddWithValue("@productId", productId);
                                 command.ExecuteNonQuery();
                             }
 
-                            // Commit transaction after all items are inserted
+                            // Commit transaction after all items are inserted and stock is updated
                             transaction.Commit();
                         }
                         catch (Exception ex)
@@ -207,9 +214,9 @@ namespace EasyBizPos.DAOS
                         }
                     }
                 }
-                // The connection will be closed automatically when the using block is exited
             }
         }
+
 
 
     }

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using EasyBizPos.DAOS;
 using EasyBizPos.Models;
 using EasyBizPos.Forms;
+using MySql.Data.MySqlClient;
 
 
 
@@ -22,9 +23,11 @@ namespace EasyBizPos
         BindingSource catalogBindingSource = new BindingSource();
         // instance of the cart class;
         private Cart cart;
+        private MySqlConnection connection;
+
         // Counter for the cart
-        
-    
+
+
 
         public CatalogForm()
         {
@@ -106,6 +109,12 @@ namespace EasyBizPos
         private void labelCartCounter_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void AddToCatalogue_click(object sender, EventArgs e)
+        {
+            AddNewProduct addNewProductForm = new AddNewProduct();
+            addNewProductForm.ShowDialog();
         }
     }
 }

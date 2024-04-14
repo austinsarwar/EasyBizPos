@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using EasyBizPos.Models;
 using EasyBizPos.DAOS;
+using MySql.Data.MySqlClient;
 
 
 namespace EasyBizPos.Forms
@@ -34,7 +35,7 @@ namespace EasyBizPos.Forms
         {
             decimal subtotal = cart.GetCartSubtotal();
             decimal taxRate = Convert.ToDecimal(ConfigManager.Instance.GetSalesTaxRate());
-            decimal tax = Math.Round(subtotal * taxRate, 2); 
+            decimal tax = Math.Round(subtotal * taxRate, 2);
             decimal totalPrice = subtotal + tax;
 
             subtotalPrice.Text = subtotal.ToString();
@@ -46,7 +47,11 @@ namespace EasyBizPos.Forms
 
             cartBindingSource.DataSource = cart.getCart();
             dataGridCart.DataSource = cartBindingSource;
+
+            // Force the DataGridView to repaint itself
+            dataGridCart.Invalidate();
         }
+
 
 
         public void btnClearCart_Click(object sender, EventArgs e)
@@ -79,6 +84,62 @@ namespace EasyBizPos.Forms
             }
            
         }
+
+        private void upcEnterBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                string upc = upcEnterBox.Text;
+                if (string.IsNullOrWhiteSpace(upc))
+                {
+                    MessageBox.Show("Please enter a UPC.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Establish a new MySqlConnection
+                string connectionString = Environment.GetEnvironmentVariable("DATABASE_CONNECTION_STRING");
+                using (var connection = new MySqlConnection(connectionString))
+                {
+                    try
+                    {
+                        connection.Open();
+                        // Search for the product in the database
+                        string query = "SELECT * FROM products WHERE UPC = @upc";
+                        using (var cmd = new MySqlCommand(query, connection))
+                        {
+                            cmd.Parameters.AddWithValue("@upc", upc);
+                            using (var reader = cmd.ExecuteReader())
+                            {
+                                if (reader.Read())
+                                {
+                                    // Product found, add it to the cart
+                                    int id = reader.GetInt32("product_id");
+                                    string name = reader.GetString("product_name");
+                                    decimal price = reader.GetDecimal("price");
+                                    int stock = reader.GetInt32("stock");
+
+                                    CartItem cartItem = new CartItem(id, name, price);
+                                    cart.Add(cartItem);
+                                    UpdateCartDetails();
+                                    // Refresh DataGridView
+                                    dataGridCart.Refresh();
+                                }
+                                else
+                                {
+                                    // Product not found
+                                    MessageBox.Show("UPC not found in the system.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error connecting to the database: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
 
     }
 }

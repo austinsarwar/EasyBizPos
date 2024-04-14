@@ -40,6 +40,7 @@ namespace EasyBizPos
             this.btnAddToCart = new FontAwesome.Sharp.IconButton();
             this.btnCartPreview = new FontAwesome.Sharp.IconButton();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.AddItemEntry = new FontAwesome.Sharp.IconButton();
             this.dataGridCart = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.CartIcon)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
@@ -122,11 +123,31 @@ namespace EasyBizPos
             // 
             this.flowLayoutPanel1.Controls.Add(this.btnCartPreview);
             this.flowLayoutPanel1.Controls.Add(this.btnAddToCart);
+            this.flowLayoutPanel1.Controls.Add(this.AddItemEntry);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(188, 1145);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1800, 125);
             this.flowLayoutPanel1.TabIndex = 19;
+            // 
+            // AddItemEntry
+            // 
+            this.AddItemEntry.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.AddItemEntry.FlatAppearance.BorderSize = 0;
+            this.AddItemEntry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddItemEntry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddItemEntry.ForeColor = System.Drawing.Color.White;
+            this.AddItemEntry.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.AddItemEntry.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
+            this.AddItemEntry.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.AddItemEntry.Location = new System.Drawing.Point(831, 3);
+            this.AddItemEntry.Name = "AddItemEntry";
+            this.AddItemEntry.Size = new System.Drawing.Size(318, 97);
+            this.AddItemEntry.TabIndex = 19;
+            this.AddItemEntry.Text = "Add New Item to Catalogue";
+            this.AddItemEntry.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.AddItemEntry.UseVisualStyleBackColor = false;
+            this.AddItemEntry.Click += new System.EventHandler(this.AddToCatalogue_click);
             // 
             // dataGridCart
             // 
@@ -217,5 +238,6 @@ namespace EasyBizPos
         private FontAwesome.Sharp.IconButton btnCartPreview;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.DataGridView dataGridCart;
+        private FontAwesome.Sharp.IconButton AddItemEntry;
     }
 }

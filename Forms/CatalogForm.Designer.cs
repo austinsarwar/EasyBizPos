@@ -42,6 +42,7 @@ namespace EasyBizPos
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.AddItemEntry = new FontAwesome.Sharp.IconButton();
             this.dataGridCart = new System.Windows.Forms.DataGridView();
+            this.editEntry = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.CartIcon)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCart)).BeginInit();
@@ -124,6 +125,7 @@ namespace EasyBizPos
             this.flowLayoutPanel1.Controls.Add(this.btnCartPreview);
             this.flowLayoutPanel1.Controls.Add(this.btnAddToCart);
             this.flowLayoutPanel1.Controls.Add(this.AddItemEntry);
+            this.flowLayoutPanel1.Controls.Add(this.editEntry);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(188, 1145);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -204,6 +206,25 @@ namespace EasyBizPos
             this.dataGridCart.Size = new System.Drawing.Size(1800, 951);
             this.dataGridCart.TabIndex = 19;
             // 
+            // editEntry
+            // 
+            this.editEntry.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.editEntry.FlatAppearance.BorderSize = 0;
+            this.editEntry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editEntry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editEntry.ForeColor = System.Drawing.Color.White;
+            this.editEntry.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.editEntry.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
+            this.editEntry.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.editEntry.Location = new System.Drawing.Point(507, 3);
+            this.editEntry.Name = "editEntry";
+            this.editEntry.Size = new System.Drawing.Size(318, 97);
+            this.editEntry.TabIndex = 20;
+            this.editEntry.Text = "Edit Product Information";
+            this.editEntry.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.editEntry.UseVisualStyleBackColor = false;
+            this.editEntry.Click += new System.EventHandler(this.editEntry_Click);
+            // 
             // CatalogForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -239,5 +260,6 @@ namespace EasyBizPos
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.DataGridView dataGridCart;
         private FontAwesome.Sharp.IconButton AddItemEntry;
+        private FontAwesome.Sharp.IconButton editEntry;
     }
 }

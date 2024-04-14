@@ -159,6 +159,12 @@
     <Compile Include="Forms\CustomerPhoneLookUpForm.Designer.cs">
       <DependentUpon>CustomerPhoneLookUpForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EditProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditProductForm.Designer.cs">
+      <DependentUpon>EditProductForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EmployeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +226,7 @@
     </Compile>
     <Compile Include="Models\Class1.cs" />
     <Compile Include="Models\ConfigManager.cs" />
+    <Compile Include="Models\DatabaseConfig.cs" />
     <Compile Include="Models\DatabaseManager.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -256,6 +263,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CustomerPhoneLookUpForm.resx">
       <DependentUpon>CustomerPhoneLookUpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditProductForm.resx">
+      <DependentUpon>EditProductForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EmployeeForm.resx">
       <DependentUpon>EmployeeForm.cs</DependentUpon>

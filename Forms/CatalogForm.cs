@@ -116,5 +116,54 @@ namespace EasyBizPos
             AddNewProduct addNewProductForm = new AddNewProduct();
             addNewProductForm.ShowDialog();
         }
+
+        private void editEntry_Click(object sender, EventArgs e)
+        {
+            // Get the ID of the highlighted item
+            int highlightedItemId = GetHighlightedItemId();
+
+            // Create an instance of the edit form, passing a reference to this CatalogForm instance
+            EditProductForm editProductForm = new EditProductForm(highlightedItemId, this);
+
+            // Display the edit form as a dialog
+            if (editProductForm.ShowDialog() == DialogResult.OK)
+            {
+                // The data grid should already be updated by the FormClosed event handler
+            }
+        }
+
+        public void RefreshDataGrid()
+        {
+            // Refresh the data grid to reflect the latest changes
+            CatalogDAO catalogDAO = new CatalogDAO();
+            catalogBindingSource.DataSource = catalogDAO.getAllCatalog();
+            dataGridCart.DataSource = catalogBindingSource;
+
+            // Refresh the DataGridView
+            dataGridCart.Refresh();
+        }
+
+
+
+
+
+
+
+
+        private int GetHighlightedItemId()
+        {
+            // Get the index of the current cell
+            int rowIndex = dataGridCart.CurrentCell.RowIndex;
+
+            // Get the value of the ID cell in the current row
+            int itemId = (int)dataGridCart.Rows[rowIndex].Cells[0].Value;
+
+            return itemId;
+        }
+
+
+
+
+
     }
 }

@@ -59,3 +59,4 @@ C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.exe
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.pdb
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.Forms.CustomerPhoneLookUpForm.resources
 C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.Forms.TransactionSummary.resources
+C:\Users\austin\Desktop\c_projects\EasyBizPos\obj\Debug\EasyBizPos.Forms.TransactionForm.resources

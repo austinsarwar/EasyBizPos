@@ -82,11 +82,11 @@ namespace EasyBizPos
             // 
             // btnAddToCart
             // 
-            this.btnAddToCart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(128)))), ((int)(((byte)(11)))));
+            this.btnAddToCart.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnAddToCart.FlatAppearance.BorderSize = 0;
             this.btnAddToCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddToCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddToCart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btnAddToCart.ForeColor = System.Drawing.Color.White;
             this.btnAddToCart.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnAddToCart.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.btnAddToCart.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -101,11 +101,11 @@ namespace EasyBizPos
             // 
             // btnCartPreview
             // 
-            this.btnCartPreview.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnCartPreview.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnCartPreview.FlatAppearance.BorderSize = 0;
             this.btnCartPreview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCartPreview.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCartPreview.ForeColor = System.Drawing.Color.Black;
+            this.btnCartPreview.ForeColor = System.Drawing.Color.White;
             this.btnCartPreview.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnCartPreview.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.btnCartPreview.IconFont = FontAwesome.Sharp.IconFont.Auto;

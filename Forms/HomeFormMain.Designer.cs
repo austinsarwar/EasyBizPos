@@ -33,6 +33,14 @@ namespace EasyBizPos
         {
             this.RegisterBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.activeUsernameLabel = new System.Windows.Forms.Label();
+            this.activeUserLabel = new System.Windows.Forms.Label();
+            this.activeUser = new System.Windows.Forms.Label();
+            this.labelMainLogo = new System.Windows.Forms.Label();
+            this.panelMdiParent = new System.Windows.Forms.Panel();
+            this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.adminBtn = new FontAwesome.Sharp.IconButton();
             this.logoutBtn = new FontAwesome.Sharp.IconButton();
             this.EmployeeBtn = new FontAwesome.Sharp.IconButton();
@@ -42,14 +50,6 @@ namespace EasyBizPos
             this.CartBtn = new FontAwesome.Sharp.IconButton();
             this.CatalogBtn = new FontAwesome.Sharp.IconButton();
             this.HomeBtn = new FontAwesome.Sharp.IconButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.activeUsernameLabel = new System.Windows.Forms.Label();
-            this.activeUserLabel = new System.Windows.Forms.Label();
-            this.activeUser = new System.Windows.Forms.Label();
-            this.labelMainLogo = new System.Windows.Forms.Label();
-            this.panelMdiParent = new System.Windows.Forms.Panel();
-            this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -84,6 +84,86 @@ namespace EasyBizPos
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 990);
             this.panel1.TabIndex = 7;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(49)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(250, 130);
+            this.panel2.TabIndex = 8;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(49)))));
+            this.panel3.Controls.Add(this.activeUsernameLabel);
+            this.panel3.Controls.Add(this.activeUserLabel);
+            this.panel3.Controls.Add(this.activeUser);
+            this.panel3.Controls.Add(this.labelMainLogo);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(250, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1295, 130);
+            this.panel3.TabIndex = 18;
+            // 
+            // activeUsernameLabel
+            // 
+            this.activeUsernameLabel.AutoSize = true;
+            this.activeUsernameLabel.ForeColor = System.Drawing.SystemColors.Window;
+            this.activeUsernameLabel.Location = new System.Drawing.Point(155, 98);
+            this.activeUsernameLabel.Name = "activeUsernameLabel";
+            this.activeUsernameLabel.Size = new System.Drawing.Size(79, 29);
+            this.activeUsernameLabel.TabIndex = 3;
+            this.activeUsernameLabel.Text = "label1";
+            // 
+            // activeUserLabel
+            // 
+            this.activeUserLabel.AutoSize = true;
+            this.activeUserLabel.ForeColor = System.Drawing.Color.White;
+            this.activeUserLabel.Location = new System.Drawing.Point(149, 98);
+            this.activeUserLabel.Name = "activeUserLabel";
+            this.activeUserLabel.Size = new System.Drawing.Size(0, 29);
+            this.activeUserLabel.TabIndex = 2;
+            // 
+            // activeUser
+            // 
+            this.activeUser.AutoSize = true;
+            this.activeUser.ForeColor = System.Drawing.Color.White;
+            this.activeUser.Location = new System.Drawing.Point(3, 98);
+            this.activeUser.Name = "activeUser";
+            this.activeUser.Size = new System.Drawing.Size(140, 29);
+            this.activeUser.TabIndex = 1;
+            this.activeUser.Text = "Active User:";
+            this.activeUser.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // labelMainLogo
+            // 
+            this.labelMainLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.labelMainLogo.AutoSize = true;
+            this.labelMainLogo.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMainLogo.ForeColor = System.Drawing.Color.White;
+            this.labelMainLogo.Location = new System.Drawing.Point(520, 35);
+            this.labelMainLogo.Name = "labelMainLogo";
+            this.labelMainLogo.Size = new System.Drawing.Size(137, 54);
+            this.labelMainLogo.TabIndex = 0;
+            this.labelMainLogo.Text = "Home";
+            // 
+            // panelMdiParent
+            // 
+            this.panelMdiParent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(27)))), ((int)(((byte)(26)))));
+            this.panelMdiParent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMdiParent.Location = new System.Drawing.Point(250, 130);
+            this.panelMdiParent.Name = "panelMdiParent";
+            this.panelMdiParent.Size = new System.Drawing.Size(1295, 860);
+            this.panelMdiParent.TabIndex = 22;
+            // 
+            // mySqlCommand1
+            // 
+            this.mySqlCommand1.CacheAge = 0;
+            this.mySqlCommand1.Connection = null;
+            this.mySqlCommand1.EnableCaching = false;
+            this.mySqlCommand1.Transaction = null;
             // 
             // adminBtn
             // 
@@ -190,6 +270,7 @@ namespace EasyBizPos
             this.TransactionsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.TransactionsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.TransactionsBtn.UseVisualStyleBackColor = true;
+            this.TransactionsBtn.Click += new System.EventHandler(this.TransactionsBtn_Click);
             // 
             // CustomerBtn
             // 
@@ -278,86 +359,6 @@ namespace EasyBizPos
             this.HomeBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.HomeBtn.UseVisualStyleBackColor = true;
             this.HomeBtn.Click += new System.EventHandler(this.HomeBtn_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(49)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(250, 130);
-            this.panel2.TabIndex = 8;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(49)))));
-            this.panel3.Controls.Add(this.activeUsernameLabel);
-            this.panel3.Controls.Add(this.activeUserLabel);
-            this.panel3.Controls.Add(this.activeUser);
-            this.panel3.Controls.Add(this.labelMainLogo);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(250, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1295, 130);
-            this.panel3.TabIndex = 18;
-            // 
-            // activeUsernameLabel
-            // 
-            this.activeUsernameLabel.AutoSize = true;
-            this.activeUsernameLabel.ForeColor = System.Drawing.SystemColors.Window;
-            this.activeUsernameLabel.Location = new System.Drawing.Point(155, 98);
-            this.activeUsernameLabel.Name = "activeUsernameLabel";
-            this.activeUsernameLabel.Size = new System.Drawing.Size(79, 29);
-            this.activeUsernameLabel.TabIndex = 3;
-            this.activeUsernameLabel.Text = "label1";
-            // 
-            // activeUserLabel
-            // 
-            this.activeUserLabel.AutoSize = true;
-            this.activeUserLabel.ForeColor = System.Drawing.Color.White;
-            this.activeUserLabel.Location = new System.Drawing.Point(149, 98);
-            this.activeUserLabel.Name = "activeUserLabel";
-            this.activeUserLabel.Size = new System.Drawing.Size(0, 29);
-            this.activeUserLabel.TabIndex = 2;
-            // 
-            // activeUser
-            // 
-            this.activeUser.AutoSize = true;
-            this.activeUser.ForeColor = System.Drawing.Color.White;
-            this.activeUser.Location = new System.Drawing.Point(3, 98);
-            this.activeUser.Name = "activeUser";
-            this.activeUser.Size = new System.Drawing.Size(140, 29);
-            this.activeUser.TabIndex = 1;
-            this.activeUser.Text = "Active User:";
-            this.activeUser.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // labelMainLogo
-            // 
-            this.labelMainLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.labelMainLogo.AutoSize = true;
-            this.labelMainLogo.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMainLogo.ForeColor = System.Drawing.Color.White;
-            this.labelMainLogo.Location = new System.Drawing.Point(520, 35);
-            this.labelMainLogo.Name = "labelMainLogo";
-            this.labelMainLogo.Size = new System.Drawing.Size(137, 54);
-            this.labelMainLogo.TabIndex = 0;
-            this.labelMainLogo.Text = "Home";
-            // 
-            // panelMdiParent
-            // 
-            this.panelMdiParent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(27)))), ((int)(((byte)(26)))));
-            this.panelMdiParent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMdiParent.Location = new System.Drawing.Point(250, 130);
-            this.panelMdiParent.Name = "panelMdiParent";
-            this.panelMdiParent.Size = new System.Drawing.Size(1295, 860);
-            this.panelMdiParent.TabIndex = 22;
-            // 
-            // mySqlCommand1
-            // 
-            this.mySqlCommand1.CacheAge = 0;
-            this.mySqlCommand1.Connection = null;
-            this.mySqlCommand1.EnableCaching = false;
-            this.mySqlCommand1.Transaction = null;
             // 
             // HomeFormMain
             // 

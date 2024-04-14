@@ -24,7 +24,7 @@ namespace EasyBizPos.DAOS
             connection.Open();
             cart = Cart.Instance;
             //MySqlCommand command = new MySqlCommand("SELECT transaction.transaction_id, customerinfo.NAME, transaction.total, transaction.date FROM transaction INNER JOIN customerinfo ON transaction.customer_id = customerinfo.ID"
-            using (MySqlCommand command = new MySqlCommand("SELECT transaction.transaction_id, customerinfo.NAME, transaction.total, transaction.date  FROM transaction INNER JOIN customerinfo ON transaction.customer_id=customerinfo.ID", connection))
+            using (MySqlCommand command = new MySqlCommand("SELECT transaction.transaction_id, customerinfo.NAME, transaction.total, transaction.date FROM transaction LEFT JOIN customerinfo ON transaction.customer_id=customerinfo.ID", connection))
             {
 
                 using (MySqlDataReader reader = command.ExecuteReader())
@@ -56,6 +56,57 @@ namespace EasyBizPos.DAOS
 
 
         }
+        public List<TransactionDetail> GetTransactionDetailsByTransactionId(int transactionId)
+        {
+            // Start with an empty list to store the transaction details
+            List<TransactionDetail> details = new List<TransactionDetail>();
+
+            // Check for valid customer ID
+            if (transactionId < 0)
+            {
+                throw new ArgumentException("Invalid Transaction ID.");
+            }
+
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                // Define the SQL query
+                string query = @"
+                SELECT p.product_name, td.quantity, td.price
+                FROM transaction_detail td
+                INNER JOIN products p ON td.product_id = p.product_id
+                WHERE td.transaction_id = @transactionId"; 
+
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    // Set the parameter value
+                    command.Parameters.AddWithValue("@transactionId", transactionId);
+
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        // Read the data from the database and store it in the list
+                        while (reader.Read())
+                        {
+                            TransactionDetail transactionDetail = new TransactionDetail
+                            {
+                          
+      
+                                productName = reader.GetString(0),
+                                quantity = reader.GetInt32(1),
+                                price = reader.GetDecimal(2)
+                            };
+
+                            details.Add(transactionDetail);
+                        }
+                    }
+                }
+            }
+
+            // Return the list of transaction details
+            return details;
+        }
+
         public void CreateTransaction()
         {
             // Get the current date and time

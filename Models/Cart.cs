@@ -22,6 +22,7 @@ namespace EasyBizPos.Models
         private string customerName = null;
         private int? customerId = -1;
         private int transactionId = -1;
+        private decimal changeDue = 0;
 
         private Cart()
         {
@@ -147,5 +148,11 @@ namespace EasyBizPos.Models
         {
             return transactionId;
         }
+        public void SetChange(decimal change)
+        {
+            changeDue = change;
+        }
+        public decimal GetChange() { return changeDue; }
+
     }
 }

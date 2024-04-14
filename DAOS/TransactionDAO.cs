@@ -60,7 +60,7 @@ namespace EasyBizPos.DAOS
         {
             // Get the current date and time
             DateTime currentDate = DateTime.Now;
-
+            cart = Cart.Instance;
             // Assume connectionString is a class-level variable that has been initialized
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
@@ -111,36 +111,55 @@ namespace EasyBizPos.DAOS
                 // No need to explicitly call Close when using is present, as it calls Dispose which takes care of closing the connection.
             }
         }
-        public void CreateTransactionDetails(MySqlTransaction transaction)
+        public void CreateTransactionDetails()
         {
             cart = Cart.Instance;
             int transactionId = cart.GetTransactionId();
 
-            using (MySqlCommand command = new MySqlCommand())
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
-                command.Connection = transaction.Connection;
-                command.Transaction = transaction;
-
-                foreach (var item in cart.getCart())
+                connection.Open();
+                using (MySqlTransaction transaction = connection.BeginTransaction())
                 {
-                    int productId = item.ProductId;
-                    int quantity = item.Quantity;
-                    decimal price = item.Price;
+                    using (MySqlCommand command = new MySqlCommand())
+                    {
+                        command.Connection = connection;
+                        command.Transaction = transaction;
 
-                    command.CommandText = "INSERT INTO transaction_detail (transaction_id, product_id, quantity, price) VALUES (@transactionId, @productId, @quantity, @price)";
+                        try
+                        {
+                            foreach (var item in cart.getCart())
+                            {
+                                int productId = item.ProductId;
+                                int quantity = item.Quantity;
+                                decimal price = item.Price;
 
-                    command.Parameters.Clear();
-                    command.Parameters.AddWithValue("@transactionId", transactionId);
-                    command.Parameters.AddWithValue("@productId", productId);
-                    command.Parameters.AddWithValue("@quantity", quantity);
-                    command.Parameters.AddWithValue("@price", price);
+                                command.CommandText = "INSERT INTO transaction_detail (transaction_id, product_id, quantity, price) VALUES (@transactionId, @productId, @quantity, @price)";
+                                command.Parameters.Clear();
+                                command.Parameters.AddWithValue("@transactionId", transactionId);
+                                command.Parameters.AddWithValue("@productId", productId);
+                                command.Parameters.AddWithValue("@quantity", quantity);
+                                command.Parameters.AddWithValue("@price", price);
 
-                    command.ExecuteNonQuery();
+                                command.ExecuteNonQuery();
+                            }
+
+                            // Commit transaction after all items are inserted
+                            transaction.Commit();
+                        }
+                        catch (Exception ex)
+                        {
+                            // If an error occurs, roll back the transaction
+                            transaction.Rollback();
+                            MessageBox.Show("An error occurred while creating transaction details: " + ex.Message);
+                            throw;
+                        }
+                    }
                 }
+                // The connection will be closed automatically when the using block is exited
             }
         }
 
-      
 
     }
 }

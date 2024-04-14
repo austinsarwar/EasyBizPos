@@ -104,7 +104,7 @@
             this.btnSelect.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSelect.IconSize = 55;
             this.btnSelect.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnSelect.Location = new System.Drawing.Point(398, 391);
+            this.btnSelect.Location = new System.Drawing.Point(417, 391);
             this.btnSelect.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);

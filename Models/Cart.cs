@@ -20,8 +20,9 @@ namespace EasyBizPos.Models
         private decimal cartTax = 0;
         private int cartItemCount = 0;
         private string customerName = null;
-        private int customerId = -1;
+        private int? customerId = -1;
         private int transactionId = -1;
+        private decimal changeDue = 0;
 
         private Cart()
         {
@@ -108,7 +109,10 @@ namespace EasyBizPos.Models
             cartSubtotal = 0;
             cartTax = 0;
             cartItemCount = 0;
-        }
+            customerName = null;
+            customerId = -1;
+            transactionId = -1;
+    }
         // Setter for customerName
         public void SetCustomerName(string name)
         {
@@ -122,13 +126,13 @@ namespace EasyBizPos.Models
         }
 
         // Setter for customerId
-        public void SetCustomerId(int id)
+        public void SetCustomerId(int? id)
         {
             customerId = id;
         }
 
         // Getter for customerId
-        public int GetCustomerId()
+        public int? GetCustomerId()
         {
             return customerId;
         }
@@ -144,5 +148,11 @@ namespace EasyBizPos.Models
         {
             return transactionId;
         }
+        public void SetChange(decimal change)
+        {
+            changeDue = change;
+        }
+        public decimal GetChange() { return changeDue; }
+
     }
 }

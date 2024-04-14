@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EasyBizPos.DAOS;
 
 namespace EasyBizPos.Forms
 {
@@ -19,6 +20,8 @@ namespace EasyBizPos.Forms
         {
             InitializeComponent();
             cart = Cart.Instance;
+            txtEnterCash.Hide();
+            btnCompleteTransaction.Hide();
 
             UpdateTotal();
         }
@@ -35,8 +38,44 @@ namespace EasyBizPos.Forms
 
         private void buyBtn_Click(object sender, EventArgs e)
         {
+            txtEnterCash.Show();
+            btnCompleteTransaction.Show();
+        }
+
+        private void btnCompleteTransaction_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                decimal amountEntered = Convert.ToDecimal(txtEnterCash.Text);
+                if(amountEntered >= cart.GetCartTotalPrice()) {
+                    TransactionDAO transaction = new TransactionDAO();
+                    transaction.CreateTransaction();
+                    transaction.CreateTransactionDetails();
+                    decimal changeDue = amountEntered - cart.GetCartTotalPrice();
+                    cart.SetChange(changeDue);
+                    this.Close();
+                    TransactionSummary summary = new TransactionSummary();  
+                    summary.Show();
+
+
+                }else
+                {
+                    MessageBox.Show("Insufficient amount");
+                }
+               
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Incorrect input", ex.Message.ToString());
+
+            }
+           
+
 
         }
 
+        private void txtEnterCash_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

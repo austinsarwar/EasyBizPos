@@ -12,8 +12,8 @@ namespace EasyBizPos.Models
         public int transactionId { get; set; }
         public int productId { get; set; }
         public string productName { get; set; }
-        int quantity { get; set; }
-        int price { get; set; }
+        public int quantity { get; set; }
+        public decimal price { get; set; }
 
     }
 }

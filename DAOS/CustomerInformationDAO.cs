@@ -141,5 +141,50 @@ namespace EasyBizPos.DAOS
             connection.Close();
 
         }
+        public int? GetCustomerIdByPhoneNumber(string phoneNumber)
+        {
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = "SELECT ID FROM customerinfo WHERE PHONE_NUMBER = @phoneNumber LIMIT 1";
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@phoneNumber", phoneNumber);
+
+                    object result = command.ExecuteScalar();
+
+                    if (result != null && result != DBNull.Value)
+                    {
+                        return Convert.ToInt32(result);
+                    }
+                }
+            }
+            // If no customer is found, or there's an error, return null
+            return null;
+        }
+        
+        public string GetCustomerNameById(int? id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = "SELECT NAME FROM customerinfo WHERE ID = @id LIMIT 1";
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@id", id);
+
+                    object result = command.ExecuteScalar();
+
+                    if (result != null && result != DBNull.Value)
+                    {
+                        return Convert.ToString(result);
+                    }
+                }
+            }
+            // If no customer is found, or there's an error, return null
+            return null;
+        }
     }
     }

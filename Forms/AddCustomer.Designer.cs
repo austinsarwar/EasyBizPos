@@ -43,7 +43,7 @@ namespace EasyBizPos.Forms
             // 
             this.AddName.AutoSize = true;
             this.AddName.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddName.ForeColor = AppColors.text;
+            this.AddName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.AddName.Location = new System.Drawing.Point(293, 178);
             this.AddName.Name = "AddName";
             this.AddName.Size = new System.Drawing.Size(171, 45);
@@ -70,7 +70,7 @@ namespace EasyBizPos.Forms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = AppColors.text;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.label1.Location = new System.Drawing.Point(212, 287);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(243, 45);
@@ -89,7 +89,7 @@ namespace EasyBizPos.Forms
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = AppColors.text;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.label2.Location = new System.Drawing.Point(332, 411);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 45);
@@ -99,9 +99,9 @@ namespace EasyBizPos.Forms
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = AppColors.ui;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(39)))), ((int)(((byte)(38)))));
             this.label3.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = AppColors.text;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.label3.Location = new System.Drawing.Point(601, 49);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(294, 54);
@@ -110,14 +110,13 @@ namespace EasyBizPos.Forms
             // 
             // iconButton1
             // 
-            this.iconButton1.BackColor = AppColors.blue400;
+            this.iconButton1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.iconButton1.FlatAppearance.BorderSize = 0;
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.ForeColor = AppColors.text;
+            this.iconButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
-            this.iconButton1.IconColor = AppColors.text;
+            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 48;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.iconButton1.Location = new System.Drawing.Point(894, 589);
             this.iconButton1.Name = "iconButton1";
@@ -134,7 +133,7 @@ namespace EasyBizPos.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = AppColors.ui;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(39)))), ((int)(((byte)(38)))));
             this.ClientSize = new System.Drawing.Size(1491, 984);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.label3);

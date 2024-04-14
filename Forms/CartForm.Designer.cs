@@ -45,6 +45,8 @@ namespace EasyBizPos.Forms
             this.taxRateTitle = new System.Windows.Forms.Label();
             this.taxRateLabel = new System.Windows.Forms.Label();
             this.btnCheckout = new FontAwesome.Sharp.IconButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.labelCustomerName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,10 +56,9 @@ namespace EasyBizPos.Forms
             this.labelSubtotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.labelSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSubtotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
-            this.labelSubtotal.Location = new System.Drawing.Point(483, 651);
-            this.labelSubtotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelSubtotal.Location = new System.Drawing.Point(724, 1002);
             this.labelSubtotal.Name = "labelSubtotal";
-            this.labelSubtotal.Size = new System.Drawing.Size(159, 44);
+            this.labelSubtotal.Size = new System.Drawing.Size(233, 64);
             this.labelSubtotal.TabIndex = 0;
             this.labelSubtotal.Text = "Subtotal";
             // 
@@ -67,10 +68,9 @@ namespace EasyBizPos.Forms
             this.subtotalPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.subtotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subtotalPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
-            this.subtotalPrice.Location = new System.Drawing.Point(483, 712);
-            this.subtotalPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.subtotalPrice.Location = new System.Drawing.Point(724, 1095);
             this.subtotalPrice.Name = "subtotalPrice";
-            this.subtotalPrice.Size = new System.Drawing.Size(36, 39);
+            this.subtotalPrice.Size = new System.Drawing.Size(54, 59);
             this.subtotalPrice.TabIndex = 1;
             this.subtotalPrice.Text = "0";
             // 
@@ -83,7 +83,7 @@ namespace EasyBizPos.Forms
             this.dataGridCart.AllowUserToResizeRows = false;
             this.dataGridCart.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridCart.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridCart.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.dataGridCart.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(27)))), ((int)(((byte)(26)))));
             this.dataGridCart.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridCart.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -106,8 +106,7 @@ namespace EasyBizPos.Forms
             this.dataGridCart.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
             this.dataGridCart.EnableHeadersVisualStyles = false;
             this.dataGridCart.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(49)))));
-            this.dataGridCart.Location = new System.Drawing.Point(180, 8);
-            this.dataGridCart.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridCart.Location = new System.Drawing.Point(270, 12);
             this.dataGridCart.Name = "dataGridCart";
             this.dataGridCart.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dataGridCart.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -127,26 +126,25 @@ namespace EasyBizPos.Forms
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.dataGridCart.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridCart.RowTemplate.Height = 28;
-            this.dataGridCart.Size = new System.Drawing.Size(1200, 618);
+            this.dataGridCart.Size = new System.Drawing.Size(1800, 951);
             this.dataGridCart.TabIndex = 18;
             // 
             // btnClearCart
             // 
-            this.btnClearCart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btnClearCart.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnClearCart.FlatAppearance.BorderSize = 0;
             this.btnClearCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClearCart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
+            this.btnClearCart.ForeColor = System.Drawing.Color.White;
             this.btnClearCart.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
             this.btnClearCart.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.btnClearCart.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClearCart.IconSize = 55;
             this.btnClearCart.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnClearCart.Location = new System.Drawing.Point(254, 696);
-            this.btnClearCart.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClearCart.Location = new System.Drawing.Point(381, 1071);
             this.btnClearCart.Name = "btnClearCart";
-            this.btnClearCart.Padding = new System.Windows.Forms.Padding(7, 0, 13, 0);
-            this.btnClearCart.Size = new System.Drawing.Size(209, 55);
+            this.btnClearCart.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnClearCart.Size = new System.Drawing.Size(314, 85);
             this.btnClearCart.TabIndex = 21;
             this.btnClearCart.Text = "Clear Cart";
             this.btnClearCart.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -160,10 +158,9 @@ namespace EasyBizPos.Forms
             this.taxPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.taxPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taxPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
-            this.taxPrice.Location = new System.Drawing.Point(669, 712);
-            this.taxPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.taxPrice.Location = new System.Drawing.Point(1004, 1095);
             this.taxPrice.Name = "taxPrice";
-            this.taxPrice.Size = new System.Drawing.Size(36, 39);
+            this.taxPrice.Size = new System.Drawing.Size(54, 59);
             this.taxPrice.TabIndex = 23;
             this.taxPrice.Text = "0";
             // 
@@ -173,10 +170,9 @@ namespace EasyBizPos.Forms
             this.taxLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.taxLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taxLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
-            this.taxLabel.Location = new System.Drawing.Point(669, 651);
-            this.taxLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.taxLabel.Location = new System.Drawing.Point(1004, 1002);
             this.taxLabel.Name = "taxLabel";
-            this.taxLabel.Size = new System.Drawing.Size(187, 44);
+            this.taxLabel.Size = new System.Drawing.Size(275, 64);
             this.taxLabel.TabIndex = 22;
             this.taxLabel.Text = "Sales Tax";
             // 
@@ -187,10 +183,9 @@ namespace EasyBizPos.Forms
             this.totalPriceLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.totalPriceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalPriceLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
-            this.totalPriceLabel.Location = new System.Drawing.Point(889, 712);
-            this.totalPriceLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.totalPriceLabel.Location = new System.Drawing.Point(1334, 1095);
             this.totalPriceLabel.Name = "totalPriceLabel";
-            this.totalPriceLabel.Size = new System.Drawing.Size(36, 39);
+            this.totalPriceLabel.Size = new System.Drawing.Size(54, 59);
             this.totalPriceLabel.TabIndex = 25;
             this.totalPriceLabel.Text = "0";
             // 
@@ -200,10 +195,9 @@ namespace EasyBizPos.Forms
             this.totalLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.totalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
-            this.totalLabel.Location = new System.Drawing.Point(889, 651);
-            this.totalLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.totalLabel.Location = new System.Drawing.Point(1334, 1002);
             this.totalLabel.Name = "totalLabel";
-            this.totalLabel.Size = new System.Drawing.Size(104, 44);
+            this.totalLabel.Size = new System.Drawing.Size(152, 64);
             this.totalLabel.TabIndex = 24;
             this.totalLabel.Text = "Total";
             // 
@@ -213,10 +207,9 @@ namespace EasyBizPos.Forms
             this.taxRateTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.taxRateTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taxRateTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
-            this.taxRateTitle.Location = new System.Drawing.Point(699, 627);
-            this.taxRateTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.taxRateTitle.Location = new System.Drawing.Point(1048, 965);
             this.taxRateTitle.Name = "taxRateTitle";
-            this.taxRateTitle.Size = new System.Drawing.Size(77, 20);
+            this.taxRateTitle.Size = new System.Drawing.Size(115, 29);
             this.taxRateTitle.TabIndex = 26;
             this.taxRateTitle.Text = "Tax Rate:";
             // 
@@ -226,28 +219,29 @@ namespace EasyBizPos.Forms
             this.taxRateLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.taxRateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taxRateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
-            this.taxRateLabel.Location = new System.Drawing.Point(793, 627);
-            this.taxRateLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.taxRateLabel.Location = new System.Drawing.Point(1190, 965);
             this.taxRateLabel.Name = "taxRateLabel";
-            this.taxRateLabel.Size = new System.Drawing.Size(18, 20);
+            this.taxRateLabel.Size = new System.Drawing.Size(26, 29);
             this.taxRateLabel.TabIndex = 27;
             this.taxRateLabel.Text = "0";
             // 
             // btnCheckout
             // 
+            this.btnCheckout.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnCheckout.FlatAppearance.BorderSize = 0;
             this.btnCheckout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCheckout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheckout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
+            this.btnCheckout.ForeColor = System.Drawing.Color.White;
             this.btnCheckout.IconChar = FontAwesome.Sharp.IconChar.ShoppingCart;
             this.btnCheckout.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.btnCheckout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCheckout.IconSize = 55;
             this.btnCheckout.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnCheckout.Location = new System.Drawing.Point(1024, 696);
+            this.btnCheckout.Location = new System.Drawing.Point(1536, 1071);
+            this.btnCheckout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCheckout.Name = "btnCheckout";
-            this.btnCheckout.Padding = new System.Windows.Forms.Padding(7, 0, 13, 0);
-            this.btnCheckout.Size = new System.Drawing.Size(209, 55);
+            this.btnCheckout.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnCheckout.Size = new System.Drawing.Size(314, 85);
             this.btnCheckout.TabIndex = 28;
             this.btnCheckout.Text = "Checkout";
             this.btnCheckout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -255,12 +249,36 @@ namespace EasyBizPos.Forms
             this.btnCheckout.UseVisualStyleBackColor = false;
             this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(852, 1241);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(260, 37);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Customer Name:";
+            // 
+            // labelCustomerName
+            // 
+            this.labelCustomerName.AutoSize = true;
+            this.labelCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCustomerName.ForeColor = System.Drawing.Color.White;
+            this.labelCustomerName.Location = new System.Drawing.Point(1104, 1244);
+            this.labelCustomerName.Name = "labelCustomerName";
+            this.labelCustomerName.Size = new System.Drawing.Size(298, 32);
+            this.labelCustomerName.TabIndex = 30;
+            this.labelCustomerName.Text = "No Customer Selected";
+            // 
             // CartForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(1342, 789);
+            this.ClientSize = new System.Drawing.Size(2564, 1570);
+            this.Controls.Add(this.labelCustomerName);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCheckout);
             this.Controls.Add(this.taxRateLabel);
             this.Controls.Add(this.taxRateTitle);
@@ -272,7 +290,6 @@ namespace EasyBizPos.Forms
             this.Controls.Add(this.dataGridCart);
             this.Controls.Add(this.subtotalPrice);
             this.Controls.Add(this.labelSubtotal);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CartForm";
             this.Text = "CartForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -295,5 +312,7 @@ namespace EasyBizPos.Forms
         private System.Windows.Forms.Label taxRateTitle;
         private System.Windows.Forms.Label taxRateLabel;
         private FontAwesome.Sharp.IconButton btnCheckout;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelCustomerName;
     }
 }

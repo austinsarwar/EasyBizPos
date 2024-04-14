@@ -23,6 +23,10 @@ namespace EasyBizPos.Forms
             cart = Cart.Instance;
 
             UpdateCartDetails();
+            if(cart.GetCustomerName() != null)
+            {
+                labelCustomerName.Text = cart.GetCustomerName();
+            }
         }
 
         private void UpdateCartDetails()
@@ -52,8 +56,27 @@ namespace EasyBizPos.Forms
 
         private void btnCheckout_Click(object sender, EventArgs e)
         {
-            CheckoutForm popUpForm = new CheckoutForm();
-            popUpForm.Show();
+            CustomerPhoneLookUpForm customerLookUp = new CustomerPhoneLookUpForm(this);
+            if(cart.GetCustomerId() < 0 ) {
+                
+               
+                customerLookUp.Show();
+            }
+            else
+            {
+                
+                CheckoutForm form = new CheckoutForm();
+                form.Show();
+            }
         }
+        public void UpdateCustomerNameLabel()
+        {
+            if (cart.GetCustomerName() != null)
+            {
+                labelCustomerName.Text = cart.GetCustomerName();
+            }
+           
+        }
+
     }
 }

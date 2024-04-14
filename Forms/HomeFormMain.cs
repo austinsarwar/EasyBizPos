@@ -155,5 +155,13 @@ namespace EasyBizPos
         {
 
         }
+
+        private void TransactionsBtn_Click(object sender, EventArgs e)
+        {
+            this.panelMdiParent.Visible = false;
+            TransactionForm transactionForm = new TransactionForm();
+            transactionForm.MdiParent = this;
+            transactionForm.Show();
+        }
     }
 }

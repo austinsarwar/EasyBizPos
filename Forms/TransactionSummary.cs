@@ -38,8 +38,6 @@ namespace EasyBizPos.Forms
         private void btnClose_Click(object sender, EventArgs e)
         {
             _cartForm.btnClearCart_Click(sender, e);
-
-            MessageBox.Show("Cart has been cleared.");
             this.Close();
         }
 

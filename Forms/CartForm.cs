@@ -41,6 +41,7 @@ namespace EasyBizPos.Forms
             taxPrice.Text = tax.ToString();
             totalPriceLabel.Text = totalPrice.ToString();
             taxRateLabel.Text = taxRate.ToString();
+            labelCustomerName.Text = "No Customer Selected";
             cart.updateCartListQuantity();
 
             cartBindingSource.DataSource = cart.getCart();

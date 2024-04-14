@@ -108,7 +108,10 @@ namespace EasyBizPos.Models
             cartSubtotal = 0;
             cartTax = 0;
             cartItemCount = 0;
-        }
+            customerName = null;
+            customerId = -1;
+            transactionId = -1;
+    }
         // Setter for customerName
         public void SetCustomerName(string name)
         {

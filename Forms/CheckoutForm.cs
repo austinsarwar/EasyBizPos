@@ -19,6 +19,7 @@ namespace EasyBizPos.Forms
         {
             InitializeComponent();
             cart = Cart.Instance;
+            txtEnterCash.Hide();
 
             UpdateTotal();
         }
@@ -35,7 +36,7 @@ namespace EasyBizPos.Forms
 
         private void buyBtn_Click(object sender, EventArgs e)
         {
-
+            txtEnterCash.Show();
         }
 
     }

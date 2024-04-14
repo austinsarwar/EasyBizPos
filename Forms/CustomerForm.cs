@@ -16,6 +16,7 @@ namespace EasyBizPos.Forms
     public partial class CustomerForm : Form
     {
         BindingSource customerInfoBindingSource = new BindingSource();
+        private Cart cart;
 
         public CustomerForm()
         {
@@ -25,6 +26,7 @@ namespace EasyBizPos.Forms
             CustomerInformationDAO customerInfoDAO = new CustomerInformationDAO();
             customerInfoBindingSource.DataSource = customerInfoDAO.getAllCustomerInfo();
             dataGridCustomer.DataSource = customerInfoBindingSource;
+            cart = Cart.Instance;
         }
 
      
@@ -77,6 +79,17 @@ namespace EasyBizPos.Forms
 
 
             }
+
+        }
+
+        private void btnSelectCustomer_Click(object sender, EventArgs e)
+        {
+            int rowIndex = dataGridCustomer.CurrentCell.RowIndex;
+            int customerId = (int)dataGridCustomer.Rows[rowIndex].Cells[0].Value;
+            string name = (string)dataGridCustomer.Rows[rowIndex].Cells[1].Value;
+
+            cart.SetCustomerId(customerId);
+            cart.SetCustomerName(name);
 
         }
     }

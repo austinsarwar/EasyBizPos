@@ -97,5 +97,15 @@ namespace EasyBizPos
 
 
         }
+
+        private void CartIcon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelCartCounter_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

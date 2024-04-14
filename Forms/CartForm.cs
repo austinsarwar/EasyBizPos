@@ -23,6 +23,10 @@ namespace EasyBizPos.Forms
             cart = Cart.Instance;
 
             UpdateCartDetails();
+            if(cart.GetCustomerName() != null)
+            {
+                labelCustomerName.Text = cart.GetCustomerName();
+            }
         }
 
         private void UpdateCartDetails()

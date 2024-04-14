@@ -13,12 +13,23 @@ namespace EasyBizPos.Forms
     public partial class TransactionSummary : Form
     {
         private Cart cart;
-        public TransactionSummary()
+        private CartForm _cartForm;
+        public TransactionSummary(CartForm cartForm)
         {
             InitializeComponent();
             cart = Cart.Instance;
+            _cartForm = cartForm;
+
             labelChange.Text = cart.GetChange().ToString();
-            labelCustomerName.Text = cart.GetCustomerName().ToString(); 
+            if(cart.GetCustomerName() != null)
+            {
+                labelCustomerName.Text = cart.GetCustomerName().ToString();
+            }
+            else
+            {
+                labelCustomerName.Text = "No Customer Selected";
+            }
+            
             labelTotal.Text = cart.GetCartTotalPrice().ToString();
             
 
@@ -26,7 +37,9 @@ namespace EasyBizPos.Forms
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            cart.Clear();
+            _cartForm.btnClearCart_Click(sender, e);
+
+            MessageBox.Show("Cart has been cleared.");
             this.Close();
         }
 

@@ -17,11 +17,12 @@ namespace EasyBizPos.Forms
     {
         private Cart cart;
         BindingSource cartBindingSource = new BindingSource();
+      
         public CartForm()
         {
             InitializeComponent();
             cart = Cart.Instance;
-
+            
             UpdateCartDetails();
             if(cart.GetCustomerName() != null)
             {
@@ -47,7 +48,7 @@ namespace EasyBizPos.Forms
         }
 
 
-        private void btnClearCart_Click(object sender, EventArgs e)
+        public void btnClearCart_Click(object sender, EventArgs e)
         {
             cart.Clear();
             cartBindingSource.Clear();
@@ -65,7 +66,7 @@ namespace EasyBizPos.Forms
             else
             {
                 
-                CheckoutForm form = new CheckoutForm();
+                CheckoutForm form = new CheckoutForm(this);
                 form.Show();
             }
         }

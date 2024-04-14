@@ -35,7 +35,7 @@ namespace EasyBizPos.Forms
                 _cartForm.UpdateCustomerNameLabel();
                 MessageBox.Show("Customer Selected");
                 this.Close();
-                CheckoutForm checkoutForm = new CheckoutForm();
+                CheckoutForm checkoutForm = new CheckoutForm(_cartForm);
                 checkoutForm.Show();
             }
             else
@@ -54,7 +54,7 @@ namespace EasyBizPos.Forms
         {
             MessageBox.Show("No Customer Selected");
             this.Close();
-            CheckoutForm checkoutForm = new CheckoutForm();
+            CheckoutForm checkoutForm = new CheckoutForm(_cartForm);
             checkoutForm.Show();
 
         }

@@ -90,7 +90,7 @@ namespace EasyBizPos.Forms
 
             cart.SetCustomerId(customerId);
             cart.SetCustomerName(name);
-
+            MessageBox.Show($"{name} Selected for transaction");
         }
     }
 }

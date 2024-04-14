@@ -16,14 +16,16 @@ namespace EasyBizPos.Forms
     {
         private Cart cart;
         BindingSource cartBindingSource = new BindingSource();
-        public CheckoutForm()
+        private CartForm _cartForm;
+        public CheckoutForm(CartForm cartForm)
         {
             InitializeComponent();
             cart = Cart.Instance;
             txtEnterCash.Hide();
             btnCompleteTransaction.Hide();
-
+            _cartForm = cartForm;
             UpdateTotal();
+            _cartForm = cartForm;
         }
 
         private void UpdateTotal()
@@ -54,7 +56,7 @@ namespace EasyBizPos.Forms
                     decimal changeDue = amountEntered - cart.GetCartTotalPrice();
                     cart.SetChange(changeDue);
                     this.Close();
-                    TransactionSummary summary = new TransactionSummary();  
+                    TransactionSummary summary = new TransactionSummary(_cartForm);  
                     summary.Show();
 
 

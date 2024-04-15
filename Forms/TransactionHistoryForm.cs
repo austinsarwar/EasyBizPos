@@ -15,7 +15,8 @@ namespace EasyBizPos.Forms
     public partial class TransactionHistoryForm : Form
     {
         private int customerId;
-
+        TransactionDAO transactionInfoDAO = new TransactionDAO();
+        BindingSource transacationBindingSource = new BindingSource();
         public TransactionHistoryForm(int customerId)
         {
             InitializeComponent();
@@ -26,11 +27,12 @@ namespace EasyBizPos.Forms
         private void LoadTransactionHistory()
         {
             TransactionDAO transactionDAO = new TransactionDAO();
-            List<Transaction> transactions = transactionDAO.GetAllTransactionsByCustomerId(customerId);
+            var transactions = transactionDAO.GetAllTransactionsByCustomerId(customerId);
 
-            // Bind the transaction history to the DataGridView
-            dataGridTransaction.DataSource = transactions;
+            transacationBindingSource.DataSource = transactions;
+            dataGridTransaction.DataSource = transacationBindingSource;
         }
+
 
         private void TransactionHistoryForm_Load(object sender, EventArgs e)
         {
@@ -50,13 +52,22 @@ namespace EasyBizPos.Forms
         private void btnBack_Click(object sender, EventArgs e)
         {
             // Close the current form
-            this.Close();
+            LoadTransactionHistory();
         }
 
         private void btnDetails_Click(object sender, EventArgs e)
         {
-            // functionality not yet added
-           
+            TransactionDAO transactionDAO = new TransactionDAO();
+            int rowIndex = dataGridTransaction.CurrentCell.RowIndex;
+            int transactionId = (int)dataGridTransaction.Rows[rowIndex].Cells[0].Value;
+
+            transacationBindingSource.DataSource = transactionInfoDAO.GetTransactionDetailsByTransactionId(transactionId);
+            dataGridTransaction.DataSource = transacationBindingSource;
+            dataGridTransaction.Columns["transactionDetailId"].Visible = false;
+            dataGridTransaction.Columns["transactionId"].Visible = false;
+
+            dataGridTransaction.Columns["productId"].Visible = false;
+
         }
 
     }

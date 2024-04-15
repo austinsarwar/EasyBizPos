@@ -58,52 +58,34 @@ namespace EasyBizPos.DAOS
         }
         public List<TransactionDetail> GetTransactionDetailsByTransactionId(int transactionId)
         {
-            // Start with an empty list to store the transaction details
             List<TransactionDetail> details = new List<TransactionDetail>();
-
-            // Check for valid customer ID
-            if (transactionId < 0)
-            {
-                throw new ArgumentException("Invalid Transaction ID.");
-            }
 
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
 
-                // Define the SQL query
-                string query = @"
-                SELECT p.product_name, td.quantity, td.price
-                FROM transaction_detail td
-                INNER JOIN products p ON td.product_id = p.product_id
-                WHERE td.transaction_id = @transactionId"; 
-
-                using (MySqlCommand command = new MySqlCommand(query, connection))
+                using (MySqlCommand command = new MySqlCommand("SELECT product_id, quantity, price FROM transaction_detail WHERE transaction_id = @transactionId", connection))
                 {
-                    // Set the parameter value
                     command.Parameters.AddWithValue("@transactionId", transactionId);
 
                     using (MySqlDataReader reader = command.ExecuteReader())
                     {
-                        // Read the data from the database and store it in the list
                         while (reader.Read())
+                     
                         {
-                            TransactionDetail transactionDetail = new TransactionDetail
+                            TransactionDetail detail = new TransactionDetail
                             {
-                          
-      
-                                productName = reader.GetString(0),
-                                quantity = reader.GetInt32(1),
-                                price = reader.GetDecimal(2)
-                            };
 
-                            details.Add(transactionDetail);
+                                productId = reader.GetInt32("product_id"),
+                                quantity = reader.GetInt32("quantity"),
+                                price = reader.GetDecimal("price")
+                            };
+                            details.Add(detail);
                         }
                     }
                 }
             }
 
-            // Return the list of transaction details
             return details;
         }
 
@@ -220,20 +202,17 @@ namespace EasyBizPos.DAOS
         public List<Transaction> GetAllTransactionsByCustomerId(int customerId)
         {
             List<Transaction> transactions = new List<Transaction>();
-
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
-
-                string query = @"
-                    SELECT t.transaction_id, t.total, t.date, c.ID as customer_id, c.NAME as customer_name
-                    FROM transaction t
-                    LEFT JOIN customerinfo c ON t.customer_id = c.ID
-                    WHERE t.customer_id = @customerId";
-
-
+                // Adjusted SQL to include a parameter for customer_id
+                string query = "SELECT transaction.transaction_id, customerinfo.ID as customer_id, customerinfo.NAME as customer_name, transaction.total, transaction.date " +
+                               "FROM transaction " +
+                               "LEFT JOIN customerinfo ON transaction.customer_id = customerinfo.ID " +
+                               "WHERE transaction.customer_id = @customerId";
                 using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
+                    // Set the customerId parameter in the command
                     command.Parameters.AddWithValue("@customerId", customerId);
 
                     using (MySqlDataReader reader = command.ExecuteReader())
@@ -242,23 +221,19 @@ namespace EasyBizPos.DAOS
                         {
                             Transaction transaction = new Transaction
                             {
-                                transaction_id = reader.GetInt32(0),
-                                total = reader.GetDecimal(1),
-                                date = reader.GetDateTime(2),
-                                customer_id = reader.IsDBNull(3) ? 0 : reader.GetInt32(3), // Assuming customer_id is an int
-                                customer_name = reader.IsDBNull(4) ? null : reader.GetString(4) // Assuming customer_name is a string
+                                transaction_id = reader.GetInt32("transaction_id"),
+                                customer_id = reader.IsDBNull(reader.GetOrdinal("customer_id")) ? (int?)null : reader.GetInt32("customer_id"),
+                                customer_name = reader.IsDBNull(reader.GetOrdinal("customer_name")) ? null : reader.GetString("customer_name"),
+                                total = reader.GetDecimal("total"),
+                                date = reader.GetDateTime("date")
                             };
-
                             transactions.Add(transaction);
                         }
-
                     }
                 }
             }
-
             return transactions;
         }
-
 
 
     }

@@ -92,5 +92,16 @@ namespace EasyBizPos.Forms
             cart.SetCustomerName(name);
             MessageBox.Show($"{name} Selected for transaction");
         }
+
+        private void btnTransactionHistory_Click(object sender, EventArgs e)
+        {
+            int rowIndex = dataGridCustomer.CurrentCell.RowIndex;
+            int customerId = (int)dataGridCustomer.Rows[rowIndex].Cells[0].Value;
+
+            // Open the TransactionHistoryForm with the selected customer's ID
+            TransactionHistoryForm transactionHistoryForm = new TransactionHistoryForm(customerId);
+            transactionHistoryForm.ShowDialog();
+        }
+
     }
 }

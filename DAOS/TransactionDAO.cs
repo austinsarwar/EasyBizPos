@@ -217,6 +217,48 @@ namespace EasyBizPos.DAOS
             }
         }
 
+        public List<Transaction> GetAllTransactionsByCustomerId(int customerId)
+        {
+            List<Transaction> transactions = new List<Transaction>();
+
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = @"
+                    SELECT t.transaction_id, t.total, t.date, c.ID as customer_id, c.NAME as customer_name
+                    FROM transaction t
+                    LEFT JOIN customerinfo c ON t.customer_id = c.ID
+                    WHERE t.customer_id = @customerId";
+
+
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@customerId", customerId);
+
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Transaction transaction = new Transaction
+                            {
+                                transaction_id = reader.GetInt32(0),
+                                total = reader.GetDecimal(1),
+                                date = reader.GetDateTime(2),
+                                customer_id = reader.IsDBNull(3) ? 0 : reader.GetInt32(3), // Assuming customer_id is an int
+                                customer_name = reader.IsDBNull(4) ? null : reader.GetString(4) // Assuming customer_name is a string
+                            };
+
+                            transactions.Add(transaction);
+                        }
+
+                    }
+                }
+            }
+
+            return transactions;
+        }
+
 
 
     }

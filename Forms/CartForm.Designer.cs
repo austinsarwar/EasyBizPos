@@ -30,6 +30,7 @@ namespace EasyBizPos.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -48,6 +49,7 @@ namespace EasyBizPos.Forms
             this.label1 = new System.Windows.Forms.Label();
             this.labelCustomerName = new System.Windows.Forms.Label();
             this.upcEnterBox = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -274,11 +276,16 @@ namespace EasyBizPos.Forms
             // 
             // upcEnterBox
             // 
-            this.upcEnterBox.Location = new System.Drawing.Point(270, 973);
+            this.upcEnterBox.Location = new System.Drawing.Point(270, 979);
             this.upcEnterBox.Name = "upcEnterBox";
-            this.upcEnterBox.Size = new System.Drawing.Size(531, 26);
+            this.upcEnterBox.Size = new System.Drawing.Size(425, 26);
             this.upcEnterBox.TabIndex = 31;
-            this.upcEnterBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.upcEnterBox_KeyPress);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // CartForm
             // 
@@ -325,5 +332,6 @@ namespace EasyBizPos.Forms
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelCustomerName;
         private System.Windows.Forms.TextBox upcEnterBox;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

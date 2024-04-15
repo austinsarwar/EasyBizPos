@@ -28,5 +28,10 @@ namespace EasyBizPos.Forms
             
 
         }
+
+        private void dataGridCartPreview_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

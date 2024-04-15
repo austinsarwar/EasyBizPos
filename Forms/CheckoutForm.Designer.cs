@@ -188,6 +188,7 @@
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "CheckoutForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Checkout";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

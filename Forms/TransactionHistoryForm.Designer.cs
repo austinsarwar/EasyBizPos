@@ -34,7 +34,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridTransaction = new System.Windows.Forms.DataGridView();
             this.btnDetails = new FontAwesome.Sharp.IconButton();
-            this.btnBack = new FontAwesome.Sharp.IconButton();
+            this.btnReturn = new FontAwesome.Sharp.IconButton();
+            this.btnClose = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridTransaction)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,7 +71,7 @@
             this.dataGridTransaction.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
             this.dataGridTransaction.EnableHeadersVisualStyles = false;
             this.dataGridTransaction.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(49)))));
-            this.dataGridTransaction.Location = new System.Drawing.Point(301, 139);
+            this.dataGridTransaction.Location = new System.Drawing.Point(230, 152);
             this.dataGridTransaction.Name = "dataGridTransaction";
             this.dataGridTransaction.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dataGridTransaction.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -90,7 +91,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.dataGridTransaction.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridTransaction.RowTemplate.Height = 28;
-            this.dataGridTransaction.Size = new System.Drawing.Size(1800, 951);
+            this.dataGridTransaction.Size = new System.Drawing.Size(2091, 1072);
             this.dataGridTransaction.TabIndex = 25;
             // 
             // btnDetails
@@ -104,7 +105,7 @@
             this.btnDetails.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.btnDetails.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDetails.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnDetails.Location = new System.Drawing.Point(1787, 1114);
+            this.btnDetails.Location = new System.Drawing.Point(230, 1243);
             this.btnDetails.Name = "btnDetails";
             this.btnDetails.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnDetails.Size = new System.Drawing.Size(314, 84);
@@ -115,39 +116,67 @@
             this.btnDetails.UseVisualStyleBackColor = false;
             this.btnDetails.Click += new System.EventHandler(this.btnDetails_Click);
             // 
-            // btnBack
+            // btnReturn
             // 
-            this.btnBack.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnBack.FlatAppearance.BorderSize = 0;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
-            this.btnBack.IconChar = FontAwesome.Sharp.IconChar.Backward;
-            this.btnBack.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
-            this.btnBack.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBack.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnBack.Location = new System.Drawing.Point(1467, 1114);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnBack.Size = new System.Drawing.Size(314, 84);
-            this.btnBack.TabIndex = 27;
-            this.btnBack.Text = "Go Back";
-            this.btnBack.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            this.btnReturn.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnReturn.FlatAppearance.BorderSize = 0;
+            this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReturn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
+            this.btnReturn.IconChar = FontAwesome.Sharp.IconChar.Backward;
+            this.btnReturn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
+            this.btnReturn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnReturn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnReturn.Location = new System.Drawing.Point(550, 1243);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnReturn.Size = new System.Drawing.Size(314, 84);
+            this.btnReturn.TabIndex = 27;
+            this.btnReturn.Text = "Return";
+            this.btnReturn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReturn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReturn.UseVisualStyleBackColor = false;
+            this.btnReturn.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.Xmark;
+            this.btnClose.IconColor = System.Drawing.Color.White;
+            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnClose.IconSize = 55;
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnClose.Location = new System.Drawing.Point(1997, 1244);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnClose.Size = new System.Drawing.Size(324, 85);
+            this.btnClose.TabIndex = 32;
+            this.btnClose.Text = "Close";
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // TransactionHistoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(2388, 1435);
-            this.Controls.Add(this.btnBack);
+            this.ClientSize = new System.Drawing.Size(2447, 1452);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnDetails);
             this.Controls.Add(this.dataGridTransaction);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TransactionHistoryForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TransactionHistory";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridTransaction)).EndInit();
             this.ResumeLayout(false);
 
@@ -156,6 +185,7 @@
         #endregion
         private System.Windows.Forms.DataGridView dataGridTransaction;
         private FontAwesome.Sharp.IconButton btnDetails;
-        private FontAwesome.Sharp.IconButton btnBack;
+        private FontAwesome.Sharp.IconButton btnReturn;
+        private FontAwesome.Sharp.IconButton btnClose;
     }
 }

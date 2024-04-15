@@ -17,8 +17,8 @@ namespace EasyBizPos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UserLogin()); // Start the application with UserLogin as the main form
-            //Application.Run(new HomeFormMain()); // bypass login for development
+            //Application.Run(new UserLogin()); // Start the application with UserLogin as the main form
+            Application.Run(new HomeFormMain()); // bypass login for development
         }
     }
     }

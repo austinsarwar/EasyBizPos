@@ -41,7 +41,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(205, 127);
+            this.label1.Location = new System.Drawing.Point(199, 127);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(381, 37);
             this.label1.TabIndex = 0;
@@ -50,10 +50,10 @@
             // txtPhoneNumber
             // 
             this.txtPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhoneNumber.Location = new System.Drawing.Point(173, 228);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(65, 237);
             this.txtPhoneNumber.Multiline = true;
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(450, 74);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(668, 74);
             this.txtPhoneNumber.TabIndex = 1;
             // 
             // panel1
@@ -63,7 +63,7 @@
             this.panel1.Controls.Add(this.btnSelect);
             this.panel1.Controls.Add(this.txtPhoneNumber);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(240, 94);
+            this.panel1.Location = new System.Drawing.Point(312, 102);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(839, 653);
             this.panel1.TabIndex = 2;
@@ -76,11 +76,11 @@
             this.btnSkip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSkip.ForeColor = System.Drawing.Color.White;
             this.btnSkip.IconChar = FontAwesome.Sharp.IconChar.Cancel;
-            this.btnSkip.IconColor = System.Drawing.Color.Red;
+            this.btnSkip.IconColor = System.Drawing.Color.White;
             this.btnSkip.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSkip.IconSize = 55;
             this.btnSkip.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnSkip.Location = new System.Drawing.Point(76, 391);
+            this.btnSkip.Location = new System.Drawing.Point(65, 368);
             this.btnSkip.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSkip.Name = "btnSkip";
             this.btnSkip.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
@@ -104,7 +104,7 @@
             this.btnSelect.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSelect.IconSize = 55;
             this.btnSelect.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnSelect.Location = new System.Drawing.Point(417, 391);
+            this.btnSelect.Location = new System.Drawing.Point(419, 368);
             this.btnSelect.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
@@ -124,6 +124,7 @@
             this.ClientSize = new System.Drawing.Size(1433, 845);
             this.Controls.Add(this.panel1);
             this.Name = "CustomerPhoneLookUpForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomerPhoneLookUpForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

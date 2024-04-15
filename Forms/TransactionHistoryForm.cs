@@ -62,16 +62,26 @@ namespace EasyBizPos.Forms
         private void btnDetails_Click(object sender, EventArgs e)
         {
             TransactionDAO transactionDAO = new TransactionDAO();
+
+            // Check if any row is selected
+            if (dataGridTransaction.CurrentRow == null || dataGridTransaction.CurrentRow.Index < 0)
+            {
+                MessageBox.Show("Please select a transaction.");
+                return; // Exit the method if no row is selected
+            }
+
             int rowIndex = dataGridTransaction.CurrentCell.RowIndex;
             int transactionId = (int)dataGridTransaction.Rows[rowIndex].Cells[0].Value;
 
+            // Assuming TransactionInfoDAO is correctly instantiated somewhere else as transactionInfoDAO
             transacationBindingSource.DataSource = transactionInfoDAO.GetTransactionDetailsByTransactionId(transactionId);
             dataGridTransaction.DataSource = transacationBindingSource;
+
+            // Hiding specific columns
             dataGridTransaction.Columns["transactionDetailId"].Visible = false;
             dataGridTransaction.Columns["transactionId"].Visible = false;
-
             dataGridTransaction.Columns["productId"].Visible = false;
-           
+
         }
 
     }

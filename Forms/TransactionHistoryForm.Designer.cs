@@ -70,7 +70,7 @@
             this.dataGridTransaction.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
             this.dataGridTransaction.EnableHeadersVisualStyles = false;
             this.dataGridTransaction.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(49)))));
-            this.dataGridTransaction.Location = new System.Drawing.Point(12, 35);
+            this.dataGridTransaction.Location = new System.Drawing.Point(301, 139);
             this.dataGridTransaction.Name = "dataGridTransaction";
             this.dataGridTransaction.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dataGridTransaction.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -104,7 +104,7 @@
             this.btnDetails.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.btnDetails.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDetails.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnDetails.Location = new System.Drawing.Point(1497, 992);
+            this.btnDetails.Location = new System.Drawing.Point(1787, 1114);
             this.btnDetails.Name = "btnDetails";
             this.btnDetails.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnDetails.Size = new System.Drawing.Size(314, 84);
@@ -126,7 +126,7 @@
             this.btnBack.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.btnBack.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBack.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnBack.Location = new System.Drawing.Point(1168, 992);
+            this.btnBack.Location = new System.Drawing.Point(1467, 1114);
             this.btnBack.Name = "btnBack";
             this.btnBack.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnBack.Size = new System.Drawing.Size(314, 84);
@@ -142,7 +142,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(2325, 1170);
+            this.ClientSize = new System.Drawing.Size(2388, 1435);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnDetails);
             this.Controls.Add(this.dataGridTransaction);

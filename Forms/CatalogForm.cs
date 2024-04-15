@@ -23,7 +23,7 @@ namespace EasyBizPos
         BindingSource catalogBindingSource = new BindingSource();
         // instance of the cart class;
         private Cart cart;
-        private MySqlConnection connection;
+       
 
         // Counter for the cart
 
@@ -41,7 +41,9 @@ namespace EasyBizPos
             catalogBindingSource.DataSource = catalogDAO.getAllCatalog();
             //  Sets the datagrid to the database
             dataGridCart.DataSource = catalogBindingSource;
+          
             labelCartCounter.Text = cart.getCartItemCount().ToString();
+            dataGridCart.Columns["ProductId"].Visible = false;
 
         }
 

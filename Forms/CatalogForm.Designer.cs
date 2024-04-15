@@ -30,21 +30,19 @@ namespace EasyBizPos
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
             this.mySqlDataAdapter1 = new MySql.Data.MySqlClient.MySqlDataAdapter();
             this.CartIcon = new FontAwesome.Sharp.IconPictureBox();
             this.labelCartCounter = new System.Windows.Forms.Label();
             this.btnAddToCart = new FontAwesome.Sharp.IconButton();
             this.btnCartPreview = new FontAwesome.Sharp.IconButton();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.AddItemEntry = new FontAwesome.Sharp.IconButton();
-            this.dataGridCart = new System.Windows.Forms.DataGridView();
             this.editEntry = new FontAwesome.Sharp.IconButton();
+            this.dataGridCart = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.CartIcon)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,7 +60,7 @@ namespace EasyBizPos
             this.CartIcon.IconColor = System.Drawing.Color.White;
             this.CartIcon.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.CartIcon.IconSize = 113;
-            this.CartIcon.Location = new System.Drawing.Point(1639, 47);
+            this.CartIcon.Location = new System.Drawing.Point(1886, 64);
             this.CartIcon.Name = "CartIcon";
             this.CartIcon.Size = new System.Drawing.Size(192, 113);
             this.CartIcon.TabIndex = 1;
@@ -76,7 +74,7 @@ namespace EasyBizPos
             this.labelCartCounter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelCartCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCartCounter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.labelCartCounter.Location = new System.Drawing.Point(1766, 114);
+            this.labelCartCounter.Location = new System.Drawing.Point(2013, 110);
             this.labelCartCounter.Name = "labelCartCounter";
             this.labelCartCounter.Size = new System.Drawing.Size(0, 32);
             this.labelCartCounter.TabIndex = 2;
@@ -84,7 +82,7 @@ namespace EasyBizPos
             // 
             // btnAddToCart
             // 
-            this.btnAddToCart.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAddToCart.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnAddToCart.FlatAppearance.BorderSize = 0;
             this.btnAddToCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddToCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -92,7 +90,7 @@ namespace EasyBizPos
             this.btnAddToCart.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnAddToCart.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.btnAddToCart.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddToCart.Location = new System.Drawing.Point(1155, 3);
+            this.btnAddToCart.Location = new System.Drawing.Point(278, 1137);
             this.btnAddToCart.Name = "btnAddToCart";
             this.btnAddToCart.Size = new System.Drawing.Size(318, 97);
             this.btnAddToCart.TabIndex = 3;
@@ -111,7 +109,7 @@ namespace EasyBizPos
             this.btnCartPreview.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnCartPreview.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.btnCartPreview.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCartPreview.Location = new System.Drawing.Point(1479, 3);
+            this.btnCartPreview.Location = new System.Drawing.Point(1102, 1137);
             this.btnCartPreview.Name = "btnCartPreview";
             this.btnCartPreview.Size = new System.Drawing.Size(318, 97);
             this.btnCartPreview.TabIndex = 18;
@@ -119,18 +117,6 @@ namespace EasyBizPos
             this.btnCartPreview.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCartPreview.UseVisualStyleBackColor = false;
             this.btnCartPreview.Click += new System.EventHandler(this.btnCartPreview_Click);
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.btnCartPreview);
-            this.flowLayoutPanel1.Controls.Add(this.btnAddToCart);
-            this.flowLayoutPanel1.Controls.Add(this.AddItemEntry);
-            this.flowLayoutPanel1.Controls.Add(this.editEntry);
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(188, 1145);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1800, 125);
-            this.flowLayoutPanel1.TabIndex = 19;
             // 
             // AddItemEntry
             // 
@@ -142,7 +128,7 @@ namespace EasyBizPos
             this.AddItemEntry.IconChar = FontAwesome.Sharp.IconChar.None;
             this.AddItemEntry.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
             this.AddItemEntry.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.AddItemEntry.Location = new System.Drawing.Point(831, 3);
+            this.AddItemEntry.Location = new System.Drawing.Point(1426, 1137);
             this.AddItemEntry.Name = "AddItemEntry";
             this.AddItemEntry.Size = new System.Drawing.Size(318, 97);
             this.AddItemEntry.TabIndex = 19;
@@ -150,6 +136,25 @@ namespace EasyBizPos
             this.AddItemEntry.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AddItemEntry.UseVisualStyleBackColor = false;
             this.AddItemEntry.Click += new System.EventHandler(this.AddToCatalogue_click);
+            // 
+            // editEntry
+            // 
+            this.editEntry.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.editEntry.FlatAppearance.BorderSize = 0;
+            this.editEntry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editEntry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editEntry.ForeColor = System.Drawing.Color.White;
+            this.editEntry.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.editEntry.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
+            this.editEntry.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.editEntry.Location = new System.Drawing.Point(1760, 1137);
+            this.editEntry.Name = "editEntry";
+            this.editEntry.Size = new System.Drawing.Size(318, 97);
+            this.editEntry.TabIndex = 20;
+            this.editEntry.Text = "Edit Product Information";
+            this.editEntry.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.editEntry.UseVisualStyleBackColor = false;
+            this.editEntry.Click += new System.EventHandler(this.editEntry_Click);
             // 
             // dataGridCart
             // 
@@ -163,67 +168,48 @@ namespace EasyBizPos
             this.dataGridCart.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(27)))), ((int)(((byte)(26)))));
             this.dataGridCart.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridCart.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(39)))), ((int)(((byte)(38)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridCart.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(39)))), ((int)(((byte)(38)))));
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridCart.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
             this.dataGridCart.ColumnHeadersHeight = 100;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(77)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridCart.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(77)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridCart.DefaultCellStyle = dataGridViewCellStyle30;
             this.dataGridCart.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
             this.dataGridCart.EnableHeadersVisualStyles = false;
             this.dataGridCart.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(49)))));
-            this.dataGridCart.Location = new System.Drawing.Point(164, 149);
+            this.dataGridCart.Location = new System.Drawing.Point(278, 162);
             this.dataGridCart.Name = "dataGridCart";
             this.dataGridCart.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dataGridCart.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridCart.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(62)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
+            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridCart.RowHeadersDefaultCellStyle = dataGridViewCellStyle31;
             this.dataGridCart.RowHeadersWidth = 62;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
-            this.dataGridCart.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(51)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
+            this.dataGridCart.RowsDefaultCellStyle = dataGridViewCellStyle32;
             this.dataGridCart.RowTemplate.Height = 28;
             this.dataGridCart.Size = new System.Drawing.Size(1800, 951);
             this.dataGridCart.TabIndex = 19;
-            // 
-            // editEntry
-            // 
-            this.editEntry.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.editEntry.FlatAppearance.BorderSize = 0;
-            this.editEntry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editEntry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editEntry.ForeColor = System.Drawing.Color.White;
-            this.editEntry.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.editEntry.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(205)))), ((int)(((byte)(195)))));
-            this.editEntry.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.editEntry.Location = new System.Drawing.Point(507, 3);
-            this.editEntry.Name = "editEntry";
-            this.editEntry.Size = new System.Drawing.Size(318, 97);
-            this.editEntry.TabIndex = 20;
-            this.editEntry.Text = "Edit Product Information";
-            this.editEntry.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.editEntry.UseVisualStyleBackColor = false;
-            this.editEntry.Click += new System.EventHandler(this.editEntry_Click);
             // 
             // CatalogForm
             // 
@@ -232,7 +218,10 @@ namespace EasyBizPos
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(2417, 1520);
             this.ControlBox = false;
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.btnCartPreview);
+            this.Controls.Add(this.editEntry);
+            this.Controls.Add(this.btnAddToCart);
+            this.Controls.Add(this.AddItemEntry);
             this.Controls.Add(this.labelCartCounter);
             this.Controls.Add(this.dataGridCart);
             this.Controls.Add(this.CartIcon);
@@ -244,7 +233,6 @@ namespace EasyBizPos
             this.Text = "CatalogView";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.CartIcon)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -257,7 +245,6 @@ namespace EasyBizPos
         private System.Windows.Forms.Label labelCartCounter;
         private FontAwesome.Sharp.IconButton btnAddToCart;
         private FontAwesome.Sharp.IconButton btnCartPreview;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.DataGridView dataGridCart;
         private FontAwesome.Sharp.IconButton AddItemEntry;
         private FontAwesome.Sharp.IconButton editEntry;

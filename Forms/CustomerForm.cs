@@ -26,6 +26,7 @@ namespace EasyBizPos.Forms
             CustomerInformationDAO customerInfoDAO = new CustomerInformationDAO();
             customerInfoBindingSource.DataSource = customerInfoDAO.getAllCustomerInfo();
             dataGridCustomer.DataSource = customerInfoBindingSource;
+            dataGridCustomer.Columns["ID"].Visible = false;
             cart = Cart.Instance;
         }
 
@@ -45,7 +46,7 @@ namespace EasyBizPos.Forms
             CustomerInformationDAO customerFormInfo = new CustomerInformationDAO();
             customerInfoBindingSource.DataSource = customerFormInfo.searchCustomerName(searchTerm);
             dataGridCustomer.DataSource = customerInfoBindingSource;
-
+            
         }
 
         private void addCustomer_Click(object sender, EventArgs e)

@@ -64,19 +64,24 @@ namespace EasyBizPos.DAOS
             {
                 connection.Open();
 
-                using (MySqlCommand command = new MySqlCommand("SELECT product_id, quantity, price FROM transaction_detail WHERE transaction_id = @transactionId", connection))
+                // Adjust the query to join the transaction_detail table with the products table
+                string query = @"
+            SELECT p.product_name, td.quantity, td.price
+            FROM transaction_detail td
+            INNER JOIN products p ON td.product_id = p.product_id
+            WHERE td.transaction_id = @transactionId";
+
+                using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@transactionId", transactionId);
 
                     using (MySqlDataReader reader = command.ExecuteReader())
                     {
                         while (reader.Read())
-                     
                         {
                             TransactionDetail detail = new TransactionDetail
                             {
-
-                                productId = reader.GetInt32("product_id"),
+                                productName = reader.GetString("product_name"),  // Correctly retrieving from the joined products table
                                 quantity = reader.GetInt32("quantity"),
                                 price = reader.GetDecimal("price")
                             };

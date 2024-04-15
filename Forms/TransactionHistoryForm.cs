@@ -30,7 +30,11 @@ namespace EasyBizPos.Forms
             var transactions = transactionDAO.GetAllTransactionsByCustomerId(customerId);
 
             transacationBindingSource.DataSource = transactions;
+
             dataGridTransaction.DataSource = transacationBindingSource;
+            dataGridTransaction.Columns["customer_id"].Visible = false;
+
+            dataGridTransaction.Columns["transaction_id"].Visible = false;
         }
 
 
@@ -67,7 +71,7 @@ namespace EasyBizPos.Forms
             dataGridTransaction.Columns["transactionId"].Visible = false;
 
             dataGridTransaction.Columns["productId"].Visible = false;
-
+           
         }
 
     }

@@ -101,6 +101,7 @@ namespace EasyBizPos.Forms
             // Open the TransactionHistoryForm with the selected customer's ID
             TransactionHistoryForm transactionHistoryForm = new TransactionHistoryForm(customerId);
             transactionHistoryForm.Show();
+
         }
 
     }

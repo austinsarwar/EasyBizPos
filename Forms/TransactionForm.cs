@@ -13,14 +13,14 @@ namespace EasyBizPos.Forms
 {
     public partial class TransactionForm : Form
     {
-        BindingSource transacationBindingSource = new BindingSource();
+        BindingSource transactionBindingSource = new BindingSource();
         TransactionDAO transactionInfoDAO = new TransactionDAO();
         public TransactionForm()
         {
             InitializeComponent();
             
-            transacationBindingSource.DataSource = transactionInfoDAO.GetAllTransaction();
-            dataGridTransaction.DataSource = transacationBindingSource;
+            transactionBindingSource.DataSource = transactionInfoDAO.GetAllTransaction();
+            dataGridTransaction.DataSource = transactionBindingSource;
 
             dataGridTransaction.Columns["transaction_id"].Visible = false;
             dataGridTransaction.Columns["customer_id"].Visible = false;
@@ -41,8 +41,8 @@ namespace EasyBizPos.Forms
             int transactionId = (int)dataGridTransaction.Rows[rowIndex].Cells[0].Value;
 
             // Assuming transactionInfoDAO is correctly instantiated somewhere as an instance of TransactionInfoDAO
-            transacationBindingSource.DataSource = transactionInfoDAO.GetTransactionDetailsByTransactionId(transactionId);
-            dataGridTransaction.DataSource = transacationBindingSource;
+            transactionBindingSource.DataSource = transactionInfoDAO.GetTransactionDetailsByTransactionId(transactionId);
+            dataGridTransaction.DataSource = transactionBindingSource;
 
             // Hiding specific columns
             dataGridTransaction.Columns["transactionDetailId"].Visible = false;
@@ -53,8 +53,8 @@ namespace EasyBizPos.Forms
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            transacationBindingSource.DataSource = transactionInfoDAO.GetAllTransaction();
-            dataGridTransaction.DataSource = transacationBindingSource;
+            transactionBindingSource.DataSource = transactionInfoDAO.GetAllTransaction();
+            dataGridTransaction.DataSource = transactionBindingSource;
             dataGridTransaction.Columns["customer_id"].Visible = false;
 
             dataGridTransaction.Columns["transaction_id"].Visible = false;

@@ -106,6 +106,7 @@
             this.cardBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cardBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cardBtn.UseVisualStyleBackColor = false;
+            this.cardBtn.Click += new System.EventHandler(this.cardBtn_Click);
             // 
             // cashBtn
             // 

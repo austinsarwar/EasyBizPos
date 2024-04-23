@@ -79,5 +79,26 @@ namespace EasyBizPos.Forms
         {
 
         }
+
+        private void cardBtn_Click(object sender, EventArgs e)
+        {
+            // Initialize the StripePaymentProcessor
+            var processor = new StripePaymentProcessor();
+
+            // Create the checkout session and get the URL
+            string checkoutUrl = processor.CreateCheckoutSession();
+
+            if (!string.IsNullOrEmpty(checkoutUrl))
+            {
+                // Open the default browser to the checkout URL
+                System.Diagnostics.Process.Start(checkoutUrl);
+                _cartForm.btnClearCart_Click(sender, e);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Failed to create Stripe Checkout session.");
+            }
+        }
     }
 }

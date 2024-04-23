@@ -94,6 +94,7 @@ namespace EasyBizPos.Forms
                 System.Diagnostics.Process.Start(checkoutUrl);
                 _cartForm.btnClearCart_Click(sender, e);
                 this.Close();
+              
             }
             else
             {

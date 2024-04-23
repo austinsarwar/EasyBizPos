@@ -8,6 +8,30 @@ public class StripePaymentProcessor
 {
     public StripePaymentProcessor()
     {
+        // Stripe Test Card Information for Demo Purposes
+        // Use these details for testing Stripe payment integration in test mode.
+
+        // Test card number for a successful payment:
+        // - Card Number: '4242 4242 4242 4242' (Visa)
+
+        // Test card expiration date (any future date):
+        // - Expiration Month: '12' (December)
+        // - Expiration Year: '34' (Year 2034)
+
+        // Test card CVC (any 3 digits):
+        // - CVC: '123'
+
+        // Test card ZIP/postal code (any 5 digits):
+        // - ZIP Code: '90210'
+
+        // Test cardholder name:
+        // - Name: 'Test User'
+
+        // Test email (Stripe does not send emails in test mode):
+        // - Email: 'test@example.com'
+
+        // Fake phone number (Stripe does not validate phone numbers in test mode):
+        // - Phone Number: '(555) 555-5555'
         // Set your secret key. Remember to switch to your live secret key in production!
         // See your keys here: https://dashboard.stripe.com/apikeys
         StripeConfiguration.ApiKey = "sk_test_51P8a0FP52rhBuEmxhnNVealsHcOoQxbYIQ6qXIRmdOwSPVQkzGlKAweiKBbpUrNVl78tU2agivfVAlpjF5YvlPYG00MDC9UvIo";

@@ -42,6 +42,11 @@ public class StripePaymentProcessor
         // Get the cart instance
         Cart cart = Cart.Instance;
 
+        if (cart.getCart().Count == 0)
+        {
+            throw new InvalidOperationException("Cannot create a checkout session for an empty cart.");
+        }
+
         var lineItems = new List<SessionLineItemOptions>();
 
         // Adding each cart item as a line item in the Stripe session

@@ -1,9 +1,15 @@
+# EasyBizPos README
+Windows Download
 [![Download](https://github.com/austinsarwar/EasyBizPos/raw/main/images/download_button.png)](https://github.com/austinsarwar/EasyBizPos/releases/download/v1.0.0/EzBizPosInstaller.zip)
 
+1. Download the ZIP file by clicking the "Download" button above.
+2. Extract the contents of the ZIP file to a folder on your computer.
+3. Run the `EzBizPosInstaller.exe` file to start the installation process.
+4. Follow the on-screen instructions to complete the installation.
+5. Once the installation is finished, you can launch EasyBizPos from the Start menu or desktop shortcut.
 
 
-# EasyBizPos README
-https://imgur.com/a/3hkjgDG
+
 ## Introduction
 
 
@@ -21,12 +27,5 @@ https://imgur.com/a/3hkjgDG
 - **.NET Framework:** (specific version required)
 - **MySQL:** (specific version required), hosted on an Amazon Cloud server. Detailed configuration settings for cloud hosting will be provided separately as needed.
 
-## Installation
 
-1. **Clone the repository:** `git clone https://github.com/austinsarwar/EasyBizPos.git`
-2. **Set up the database** on your Amazon Cloud server using the provided SQL dump file. Instructions for cloud database setup will ensure seamless integration.
-3. **Open the project** in Visual Studio, ensuring all NuGet packages are restored as necessary.
-4. **Build and run** the solution to launch EasyBizPos.
-
-This setup ensures your environment is correctly prepared for EasyBizPos, leveraging cloud technology for enhanced performance and scalability.
 

@@ -4,7 +4,7 @@
 # EasyBizPos README
 https://imgur.com/a/3hkjgDG
 ## Introduction
-[![Download](https://cdn.pixabay.com/photo/2014/04/03/10/24/download-button-310427_960_720.png)](https://github.com/austinsarwar/EasyBizPos/releases/tag/v1.0.0)
+
 
 **EasyBizPos** is a user-friendly and visually appealing POS system designed to enhance the efficiency and accessibility of retail operations. It prioritizes ease of use and a clean interface, offering a range of accessibility features and customization options. This ensures that every team member can personalize their interaction with the system, making them feel right at home.
 

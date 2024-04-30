@@ -1,4 +1,4 @@
-[![Download](https://github.com/austinsarwar/EasyBizPos/images/download_button.png)](https://github.com/austinsarwar/EasyBizPos/releases/tag/v1.0.0)
+[![Download](https://github.com/austinsarwar/EasyBizPos/raw/main/images/download_button.png)](https://github.com/austinsarwar/EasyBizPos/releases/tag/v1.0.0)
 
 
 # EasyBizPos README

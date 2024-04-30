@@ -1,3 +1,6 @@
+[![Download](https://github.com/austinsarwar/EasyBizPos/raw/main/images/your-image-name.png)](https://github.com/austinsarwar/EasyBizPos/releases/tag/v1.0.0)
+
+
 # EasyBizPos README
 https://imgur.com/a/3hkjgDG
 ## Introduction

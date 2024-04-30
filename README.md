@@ -1,5 +1,5 @@
 # EasyBizPos README
-Windows Download
+# Windows Download
 [![Download](https://github.com/austinsarwar/EasyBizPos/raw/main/images/download_button.png)](https://github.com/austinsarwar/EasyBizPos/releases/download/v1.0.0/EzBizPosInstaller.zip)
 
 1. Download the ZIP file by clicking the "Download" button above.

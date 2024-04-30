@@ -21,7 +21,6 @@ namespace EasyBizPos.Forms
             
             transactionBindingSource.DataSource = transactionInfoDAO.GetAllTransaction();
             dataGridTransaction.DataSource = transactionBindingSource;
-
             dataGridTransaction.Columns["transaction_id"].Visible = false;
             dataGridTransaction.Columns["customer_id"].Visible = false;
 
@@ -36,14 +35,11 @@ namespace EasyBizPos.Forms
                 MessageBox.Show("Please select a transaction from the grid.");
                 return; // Exit the method if no row is selected
             }
-
             int rowIndex = dataGridTransaction.CurrentCell.RowIndex;
             int transactionId = (int)dataGridTransaction.Rows[rowIndex].Cells[0].Value;
-
             // Assuming transactionInfoDAO is correctly instantiated somewhere as an instance of TransactionInfoDAO
             transactionBindingSource.DataSource = transactionInfoDAO.GetTransactionDetailsByTransactionId(transactionId);
             dataGridTransaction.DataSource = transactionBindingSource;
-
             // Hiding specific columns
             dataGridTransaction.Columns["transactionDetailId"].Visible = false;
             dataGridTransaction.Columns["transactionId"].Visible = false;
@@ -56,7 +52,6 @@ namespace EasyBizPos.Forms
             transactionBindingSource.DataSource = transactionInfoDAO.GetAllTransaction();
             dataGridTransaction.DataSource = transactionBindingSource;
             dataGridTransaction.Columns["customer_id"].Visible = false;
-
             dataGridTransaction.Columns["transaction_id"].Visible = false;
         }
     }
